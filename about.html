@@ -1,0 +1,2683 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stackly Sports Club | Elite Training</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div id ="preloader">
+        <div class="loader-container">
+            <div class="loader-ring"></div>
+    <svg class="loader-icon" viewBox="0 0 24 24">
+    <path d="M18 2H6v2H2v3c0 3.2 2.1 5.8 5 6.7V17H4v2h16v-2h-3v-3.3c2.9-.9 5-3.5 5-6.7V4h-4V2zM4 7V6h2v3.4C4.8 8.8 4 8 4 7zm16 0c0 1-.8 1.8-2 2.4V6h2v1z"/>
+</svg>
+
+        </div>
+    <div class="loader-text">Stackly<span>Club</span></div>
+    </div>
+
+<script>
+    window.addEventListener ('load',()=>{
+        const preloader = document.getElementById('preloader');
+        setTimeout(() =>{
+
+             preloader.classList.add('preloader-hidden');
+
+        },2500);
+
+    }
+    )
+
+</script>
+
+<!-- FLOATING GLASSMORPHIC NAVIGATION ARCHITECTURE -->
+<nav class="floating-navbar">
+    <div class="nav-container">
+        
+        <!-- Interactive Brand Logo Wrap -->
+        <a href="javascript:void(0)" class="nav-logo" id="logoRefreshBtn" title="Refresh Page">
+            <img src="https://unsplash.com" alt="Apex Logo" class="logo-img">
+            <span class="logo-text">Stackly<span>CLUB</span></span>
+        </a>
+
+        <!-- Responsive Hamburger Trigger -->
+        <button class="menu-toggle" id="mobileMenuBtn" aria-label="Toggle Navigation Menu">
+            <span class="hamburger-bar"></span>
+            <span class="hamburger-bar"></span>
+            <span class="hamburger-bar"></span>
+        </button>
+
+        <!-- Navigation Menus & Action Deck -->
+        <div class="nav-menu-wrapper" id="navMenuWrapper">
+            <ul class="nav-links">
+                <li><a href="index.html" class="nav-item ">Home</a></li>
+                <li><a href="about.html" class="nav-item active">About Us</a></li>
+                <li><a href="programs.html" class="nav-item">Programs</a></li>
+                <li><a href="blogs.html" class="nav-item">Blogs</a></li>
+                <li><a href="contact.html" class="nav-item">Contact Us</a></li>
+            </ul>
+            
+            <div class="nav-auth-deck">
+                <a href="login.html" class="btn-login">
+                    <span>Login</span>
+                    <svg viewBox="0 0 24 24" class="auth-icon">
+                        <path d="M11 16l-4-4m0 0l4-4m-4 4h14m-5 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h7a3 3 0 013 3v1" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+                    </svg>
+                </a>
+            </div>
+        </div>
+
+    </div>
+</nav>
+
+
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const logoRefreshBtn = document.getElementById('logoRefreshBtn');
+        const mobileMenuBtn = document. getElementById ('mobileMenuBtn');
+        const navMenusWrapper = document. getElementById ('navMenuWrapper');
+        const navItems = document. querySelectorAll('.nav-item');
+    
+     logoRefreshBtn.addEventListener('click', (e) => {
+        e.preventDefault();
+        window.location.reload();
+         });
+    
+     mobileMenuBtn.addEventListener('click', () => {
+        mobileMenuBtn.classList.toggle('open');
+        navMenuWrapper.classList.toggle('mobile-open');
+    
+     if (navMenuWrapper.classList.contains('mobile-open')) {
+            document.body.style.overflow = 'hidden';
+        } else {
+            document.body.style.overflow = '';
+        }
+    });
+navItems.forEach(item => {
+        item.addEventListener('click', () => {
+          
+            navItems.forEach(el => el.classList.remove('active'));
+            
+    
+            item.classList.add('active');
+
+            if (navMenuWrapper.classList.contains('mobile-open')) {
+                mobileMenuBtn.classList.remove('open');
+                navMenuWrapper.classList.remove('mobile-open');
+                document.body.style.overflow = '';
+            }
+        });
+    });
+});
+</script>
+
+<!-- SYSTEM REPLICATED HIGH-VELOCITY HERO ENGINE -->
+<section class="apex-hero-section scroll-reveal-view" id="hero-arena">
+    <div class="hero-master-container">
+        
+        <!-- Left Deck Column: Core Content Elements -->
+        <div class="hero-text-column">
+            <div class="hero-announcement-tag">
+                <svg viewBox="0 0 24 24" class="tag-svg-vector"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 12 10 10-4.48 10-12S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg>
+                <span>Recruiting Phase Alpha Open</span>
+            </div>
+            
+            <h1 class="hero-glitch-title">Unleash Your <br><span>Absolute Power</span></h1>
+            
+            <p class="hero-interactive-desc">
+                Access advanced biometric tracking frameworks, high-velocity recovery compounds, and world-class tactical training matrices engineered for champions.
+            </p>
+            
+            <div class="hero-button-deck">
+                <a href="404.html" class="hero-cta-btn-primary">
+                    <span>Deploy Profile</span>
+                    <svg viewBox="0 0 24 24" class="btn-arrow-vector"><path d="M5 12h14M12 5l7 7-7 7" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg>
+                </a>
+                <a href="404.html" class="hero-cta-btn-secondary">Explore Compound</a>
+            </div>
+        </div>
+
+        <!-- Right Deck Column: Dual Layer Asymmetric Image Compositing -->
+        <div class="hero-image-column">
+            <div class="hero-backdrop-glow-mesh"></div>
+            
+            <!-- Layer 1: Absolute Background Context Action Frame -->
+            <div class="hero-img-hull bg-hull-layer">
+                <div class="image-neon-overlay"></div>
+                <img src="./Assests/pro infra.webp" alt="Apex training facility arena layout overview" class="hero-content-img">
+            </div>
+
+            <!-- Layer 2: Absolute Foreground Floating Focus Portrait Frame -->
+            <div class="hero-img-hull fg-hull-layer">
+                <div class="image-neon-overlay"></div>
+                <img src="./Assests/athletic running.webp" alt="Professional sports track athlete sprint posture acceleration" class="hero-content-img">
+                <div class="live-telemetry-badge">Telemetry Sync: 100%</div>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<style>
+    /* --- MODERN COMPACT HERO DESIGN SYSTEM --- */
+.apex-hero-section {
+    padding: 100px 5% 30px 5%; /* Exact requested 50px Top, 30px Bottom compression track bounds */
+    background-color: #ffffff; /* Smooth integration with clean light layout frameworks */
+    width: 100%;
+    min-height: 90vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    position: relative;
+}
+
+.hero-master-container {
+    width: 100%;
+    max-width: 1300px;
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr; /* Asymmetric grid separation balance layout */
+    gap: 50px;
+    align-items: center;
+}
+
+/* Left Grid Column Core Typography Deck */
+.hero-text-column {
+    display: flex;
+    flex-direction: column;
+    z-index: 10;
+}
+
+.hero-announcement-tag {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: rgba(255, 74, 17, 0.05);
+    border: 1px solid rgba(255, 74, 17, 0.15);
+    padding: 6px 14px;
+    border-radius: 20px;
+    width: max-content;
+    margin-bottom: 20px;
+}
+
+.hero-announcement-tag span {
+    color: #ff4a11; /* System Neon Orange Primary */
+    font-size: 11.5px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.tag-svg-vector {
+    width: 13px;
+    height: 13px;
+    fill: #ff4a11;
+}
+
+.hero-glitch-title {
+    font-size: clamp(38px, 5.5vw, 64px);
+    font-weight: 900;
+    color: #0f1115; /* Sharp high-contrast dark text focus node */
+    text-transform: uppercase;
+    line-height: 1.05;
+    margin-bottom: 20px;
+}
+
+.hero-glitch-title span {
+    color: #ff4a11;
+    display: inline-block;
+    transition: text-shadow 0.4s ease, transform 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+/* Master content hover chain reactions trigger glowing title outputs */
+.apex-hero-section:hover .hero-glitch-title span {
+    text-shadow: 0 0 25px rgba(255, 74, 17, 0.4), 0 0 50px rgba(255, 74, 17, 0.15);
+    transform: scale(1.01) rotate(0.5deg);
+}
+
+.hero-interactive-desc {
+    font-size: clamp(14.5px, 1.8vw, 17.5px);
+    color: #555e6b;
+    line-height: 1.6;
+    margin-bottom: 35px;
+    max-width: 560px;
+    cursor: default;
+    display: inline-block;
+    transition: color 0.4s ease, text-shadow 0.4s ease, transform 0.4s ease;
+    will-change: transform, text-shadow;
+}
+
+.hero-interactive-desc:hover {
+    color: #0f1115;
+    transform: scale(1.015);
+    text-shadow: 0 0 15px rgba(255, 74, 17, 0.12);
+}
+
+/* Hero Actions Control Button Deck Matrix */
+.hero-button-deck {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.hero-cta-btn-primary, .hero-cta-btn-secondary {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 15px 35px;
+    border-radius: 8px;
+    font-size: 13.5px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    text-decoration: none;
+    transition: all 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.hero-cta-btn-primary {
+    background-color: #0f1115;
+    color: #ffffff;
+    gap: 10px;
+    box-shadow: 0 8px 22px rgba(9, 10, 15, 0.12);
+}
+
+.btn-arrow-vector {
+    width: 15px;
+    height: 15px;
+    transition: transform 0.3s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.hero-cta-btn-primary:hover {
+    background-color: #ff4a11;
+    box-shadow: 0 10px 25px rgba(255, 74, 17, 0.35);
+    transform: translateY(-3px);
+}
+
+.hero-cta-btn-primary:hover .btn-arrow-vector {
+    transform: translateX(5px) scale(1.05);
+}
+
+.hero-cta-btn-secondary {
+    background: transparent;
+    color: #0f1115;
+    border: 2px solid #e1e4eb;
+}
+
+.hero-cta-btn-secondary:hover {
+    border-color: #0f1115;
+    background-color: rgba(9, 10, 15, 0.02);
+    transform: translateY(-2px);
+}
+
+/* Right Grid Column Layered Compositing Deck Layout */
+.hero-image-column {
+    position: relative;
+    width: 100%;
+    height: 480px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-backdrop-glow-mesh {
+    position: absolute;
+    width: 120%;
+    height: 120%;
+    background: radial-gradient(circle at center, rgba(255, 74, 17, 0.12) 0%, transparent 65%);
+    z-index: 1;
+    pointer-events: none;
+}
+
+/* Modular Image Card Hull Configurations */
+.hero-img-hull {
+    position: absolute;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.08);
+    border: 5px solid #ffffff;
+    outline: 1px solid #e1e4eb;
+    transition: transform 0.5s cubic-bezier(0.25, 1, 0.5, 1), 
+                border-color 0.4s ease, 
+                box-shadow 0.4s ease;
+    will-change: transform, box-shadow;
+}
+
+.hero-content-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.6s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.image-neon-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at center, rgba(255, 74, 17, 0.18) 0%, transparent 80%);
+    opacity: 0;
+    z-index: 2;
+    pointer-events: none;
+    transition: opacity 0.4s ease;
+}
+
+/* Layering Offsets Assignments */
+.bg-hull-layer {
+    width: 75%;
+    height: 340px;
+    left: 0;
+    top: 20px;
+    z-index: 2;
+    transform: rotate(-2deg);
+}
+
+.fg-hull-layer {
+    width: 60%;
+    height: 280px;
+    right: 0;
+    bottom: 20px;
+    z-index: 3;
+    transform: rotate(3deg);
+}
+
+.live-telemetry-badge {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: rgba(15, 17, 21, 0.85);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    color: #ffffff;
+    padding: 5px 12px;
+    border-radius: 4px;
+    font-size: 10.5px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    z-index: 4;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Collective Hover Chain Transformations on Graphics Assets Grid */
+.hero-img-hull:hover {
+    z-index: 5; /* Forces hovered layer card to focus directly on top stack */
+    border-color: #ff4a11;
+    box-shadow: 0 20px 45px rgba(0, 0, 0, 0.12), 0 0 25px rgba(255, 74, 17, 0.2);
+}
+
+.hero-img-hull:hover .hero-content-img {
+    transform: scale(1.05);
+}
+
+.hero-img-hull:hover .image-neon-overlay {
+    opacity: 1;
+}
+
+.bg-hull-layer:hover { transform: scale(1.02) rotate(-0.5deg) translateY(-5px); }
+.fg-hull-layer:hover { transform: scale(1.03) rotate(0.5deg) translateY(-5px); }
+
+/* --- ADAPTIVE GRAPHIC RESPONSIVENESS BREAKPOINTS --- */
+@media (max-width: 992px) {
+    .apex-hero-section {
+        padding-top: 100px;
+    }
+    .hero-master-container {
+        grid-template-columns: 1fr;
+        gap: 40px;
+        text-align: center;
+    }
+    .hero-announcement-tag, .hero-interactive-desc {
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .hero-button-deck {
+        justify-content: center;
+    }
+    .hero-image-column {
+        height: 400px;
+        max-width: 600px;
+        margin: 0 auto;
+    }
+    .bg-hull-layer { height: 280px; }
+    .fg-hull-layer { height: 220px; }
+}
+
+@media (max-width: 576px) {
+    .hero-image-column { height: 320px; }
+    .bg-hull-layer { height: 220px; width: 80%; }
+    .fg-hull-layer { height: 180px; width: 65%; }
+}
+
+</style>
+
+<section class="metrics-section" id="metrics">
+    <div class="metrics-header">
+        <h2 class="metrics-title">Unrivalled <span>Performance Scale</span></h2>
+       <p class="metrics-interactive-subtitle">Numbers that define our dedication to raw athletic engineering and competitive triumph.</p>
+
+    </div>
+
+    <div class="metrics-container">
+      
+        <div class="metric-card">
+            <div class="metric-icon-box">
+                <svg viewBox="0 0 24 24" class="metric-svg">
+                    <path d="M19 5h-2V3H7v2H5c-1.1 0-2 .9-2 2v3c0 2.42 1.72 4.44 4.01 4.9.44 1.15 1.25 2.12 2.29 2.72l-.3 2.38H6v2h12v-2h-3l-.3-2.38c1.04-.6 1.85-1.57 2.29-2.72C19.28 14.44 21 12.42 21 10V7c0-1.1-.9-2-2-2zM5 10V7h2v3c0 .55-.45 1-1 1s-1-.45-1-1zm14 0c0 .55-.45 1-1 1s-1-.45-1-1V7h2v3z"/>
+                </svg>
+            </div>
+            <div class="metric-numbers">24+</div>
+            <div class="metric-label">Elite Disciplines</div>
+        </div>
+
+      
+        <div class="metric-card">
+            <div class="metric-icon-box">
+                <svg viewBox="0 0 24 24" class="metric-svg">
+                    <path d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5c-1.66 0-3 1.34-3 3s1.34 3 3 3zm-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5C6.34 5 5 6.34 5 8s1.34 3 3 3zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5zm8 0c-.29 0-.62.02-.97.05 1.16.84 1.97 1.97 1.97 3.45V19h6v-2.5c0-2.33-4.67-3.5-7-3.5z"/>
+                </svg>
+            </div>
+            <div class="metric-numbers">5,000+</div>
+            <div class="metric-label">Active Athletes</div>
+        </div>
+
+      
+        <div class="metric-card">
+            <div class="metric-icon-box">
+               
+                <svg viewBox="0 0 24 24" class="metric-svg">
+                    <path d="M12 9c-2.76 0-5 2.24-5 5s2.24 5 5 5 5-2.24 5-5-2.24-5-5-5zm0 8c-1.66 0-3-1.34-3-3s1.34-3 3-3 3 1.34 3 3-1.34 3-3 3zM17.11 2H6.89L5.1 7.37c.72.39 1.55.63 2.44.63 1.63 0 3.09-.78 4.02-2 .24.31.51.59.81.84.4.34.85.62 1.33.82.72.3 1.5.47 2.3.47.89 0 1.72-.24 2.44-.63L17.11 2z"/>
+                </svg>
+            </div>
+            <div class="metric-numbers">450+</div>
+            <div class="metric-label">Championship Medals</div>
+        </div>
+
+        <div class="metric-card">
+            <div class="metric-icon-box">
+                <svg viewBox="0 0 24 24" class="metric-svg">
+                    <path d="M12 2A10 10 0 1 0 22 12A10 10 0 0 0 12 2zm0 18a8 8 0 1 1 8-8a8 8 0 0 1-8 8zm1-13h-2v6h5v-2h-3z"/>
+                </svg>
+            </div>
+            <div class="metric-numbers">98%</div>
+            <div class="metric-label">Success Rate</div>
+        </div>
+
+    </div>
+</section>
+
+<style>
+
+.metrics-interactive-subtitle {
+    font-size: clamp(14px, 1.6vw, 16px);
+    color: #667085;
+    line-height: 1.5;
+    cursor: default;
+    display: inline-block;
+    transform: scale(1);
+    transition: color 0.4s ease, text-shadow 0.4s ease, transform 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+    will-change: transform, text-shadow;
+}
+
+.metrics-interactive-subtitle:hover {
+    color: #0f1115; 
+    transform: scale(1.03); 
+    text-shadow: 0 0 15px rgba(255, 74, 17, 0.2), 0 0 30px rgba(255, 74, 17, 0.05); 
+}
+
+  
+.metrics-section {
+    padding: 100px 5%;
+    background-color: #ffffff;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    border-top: 1px solid #f0f2f5;
+}
+
+.metrics-header {
+    text-align: center;
+    margin-bottom: 60px;
+    max-width: 700px;
+}
+
+.metrics-title {
+    font-size: clamp(28px, 4vw, 42px);
+    font-weight: 900;
+    color: #0f1115;
+    text-transform: uppercase;
+    letter-spacing: -0.5px;
+    margin-bottom: 15px;
+    line-height: 1.1;
+}
+
+.metrics-title span {
+    color: var(--primary);
+    text-shadow: 0 0 20px rgba(255, 74, 17, 0.15);
+}
+
+.metrics-subtitle {
+    font-size: clamp(14px, 1.6vw, 16px);
+    color: #667085;
+    line-height: 1.5;
+}
+
+
+.metrics-section {
+    padding: 50px 5%;
+    background-color: #ffffff; 
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    border-top: 1px solid #f0f2f5;
+}
+
+.metrics-container {
+    width: 100%;
+    max-width: 1300px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 30px;
+}
+
+.metric-card {
+    background: #ffffff;
+    border: 1px solid #e1e4eb;
+    border-radius: 16px;
+    padding: 40px 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;   
+    text-align: center;
+    position: relative;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.02);
+    
+   
+    transform: translateY(0);
+    transition: transform 0.4s cubic-bezier(0.25, 1, 0.5, 1), 
+                border-color 0.4s ease, 
+                box-shadow 0.4s ease;
+    will-change: transform, box-shadow;
+}
+
+
+.metric-card:hover {
+    transform: translateY(-8px);
+    border-color: var(--primary);
+    box-shadow: 0 20px 45px rgba(0, 0, 0, 0.06), 0 0 25px rgba(255, 74, 17, 0.08);
+}
+
+.metric-icon-box {
+    width: 65px;
+    height: 65px;
+    border-radius: 50%;
+    background-color: rgba(255, 74, 17, 0.05);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+    transition: background-color 0.3s ease, transform 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.metric-svg {
+    width: 28px;
+    height: 28px;
+    fill: var(--primary);
+    transition: fill 0.3s ease, filter 0.3s ease;
+}
+
+
+.metric-card:hover .metric-icon-box {
+    background-color: var(--primary);
+    transform: scale(1.05) rotate(5deg);
+}
+
+.metric-card:hover .metric-svg {
+    fill: #ffffff;
+}
+
+
+.metric-numbers {
+    font-size: clamp(32px, 3.5vw, 44px);
+    font-weight: 900;
+    color: #0f1115;
+    letter-spacing: -1px;
+    margin-bottom: 8px;
+    line-height: 1.1;
+    transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+
+.metric-card:hover .metric-numbers {
+    color: var(--primary);
+    text-shadow: 0 0 15px rgba(255, 74, 17, 0.2);
+}
+
+.metric-label {
+    font-size: 14px;
+    font-weight: 700;
+    color: #667085;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+</style>
+
+<!-- SYSTEM RESPONSIVE ATHLETIC FRAMEWORK DISPLAY SECTION -->
+<section class="about-grid-section scroll-reveal-view" id="about-compound">
+    <div class="about-master-wrapper">
+        
+        <!-- Left Wing Column: Dual Layer Offset Image Composite -->
+        <div class="about-graphic-deck">
+            <div class="about-mesh-glow"></div>
+            
+            <!-- Structural Layer 1: Background Foundation Asset Frame -->
+            <div class="about-img-hull about-bg-layer">
+                <div class="about-neon-filter"></div>
+                <img src="./Assests/blueprint.webp" alt="Apex Training Bio-Analytics Lab Compound" class="about-asset-img">
+            </div>
+
+            <!-- Structural Layer 2: Foreground Elevation Focus Badge Frame -->
+            <div class="about-img-hull about-fg-layer">
+                <div class="about-neon-filter"></div>
+                <img src="./Assests/weightlifting.webp" alt="Elite weightlifting sprint acceleration telemetry mechanics" class="about-asset-img">
+                <div class="about-floating-stat-card">Est. 2018</div>
+            </div>
+        </div>
+
+        <!-- Right Wing Column: Strategical Content Messaging Deck -->
+        <div class="about-text-deck">
+            <span class="about-mini-badge">Our Structural Blueprint</span>
+            <h2 class="about-main-heading">Bridging Raw Biomechanics <br><span>With Pure Triumph</span></h2>
+            
+            <p class="about-interactive-body">
+                Founded with a core focus on expanding traditional coaching limitations, we combine advanced digital telemetry arrays with metric recovery pools to develop balanced elite athletes.
+            </p>
+
+            <!-- Operational Blueprint Feature Rows List Grid -->
+            <div class="about-bullet-stack">
+                
+                <div class="about-bullet-row">
+                    <div class="about-vector-box">
+                        <svg viewBox="0 0 24 24" class="about-row-svg"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10zm-1-6l-3-3 1.41-1.41L11 13.17l4.59-4.59L17 10l-6 6z"/></svg>
+                    </div>
+                    <div>
+                        <h4>Precision Metric Mapping</h4>
+                        <p class="about-interactive-body-small">Continuous performance telemetry tracking to isolate and repair movement loop latency chains.</p>
+                    </div>
+                </div>
+
+                <div class="about-bullet-row">
+                    <div class="about-vector-box">
+                        <svg viewBox="0 0 24 24" class="about-row-svg"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+                    </div>
+                    <div>
+                        <h4>Championship Culture Matrix</h4>
+                        <p class="about-interactive-body-small">Cultivating elite mental focus thresholds alongside rigid physical conditioning parameters.</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<style>
+    /* --- COMPACT ABOUT PAGE STRATEGY BLOCK --- */
+.about-grid-section {
+    padding: 50px 5% 30px 5%; /* Configured requested 50px Top, 30px Bottom padding bounds */
+    background-color: #ffffff; /* Clean white canvas background alignment */
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+    position: relative;
+}
+
+.about-master-wrapper {
+    width: 100%;
+    max-width: 1300px;
+    display: grid;
+    grid-template-columns: 0.95fr 1.05fr; /* Asymmetric balance layout allocation favoring text metrics */
+    gap: 60px;
+    align-items: center;
+}
+
+/* Left Grid Column Graphics Assembly */
+.about-graphic-deck {
+    position: relative;
+    width: 100%;
+    height: 460px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.about-mesh-glow {
+    position: absolute;
+    width: 110%;
+    height: 110%;
+    background: radial-gradient(circle at center, rgba(255, 74, 17, 0.1) 0%, transparent 65%);
+    z-index: 1;
+    pointer-events: none;
+}
+
+.about-img-hull {
+    position: absolute;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.06);
+    border: 5px solid #ffffff;
+    outline: 1px solid #e1e4eb;
+    transition: transform 0.5s cubic-bezier(0.25, 1, 0.5, 1), 
+                border-color 0.4s ease, 
+                box-shadow 0.4s ease;
+    will-change: transform, box-shadow;
+}
+
+.about-asset-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.6s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.about-neon-filter {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at center, rgba(255, 74, 17, 0.16) 0%, transparent 80%);
+    opacity: 0;
+    z-index: 2;
+    transition: opacity 0.4s ease;
+    pointer-events: none;
+}
+
+/* Asymmetric Image Multi-Layer Shifts Layout Setup */
+.about-bg-layer {
+    width: 70%;
+    height: 320px;
+    left: 0;
+    top: 20px;
+    z-index: 2;
+    transform: rotate(-3deg);
+}
+
+.about-fg-layer {
+    width: 60%;
+    height: 260px;
+    right: 0;
+    bottom: 20px;
+    z-index: 3;
+    transform: rotate(2deg);
+}
+
+.about-floating-stat-card {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    background: #0f1115;
+    color: #ffffff;
+    padding: 6px 16px;
+    border-radius: 6px;
+    font-size: 11.5px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    z-index: 4;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Individual Image Hover State Changes Chains */
+.about-img-hull:hover {
+    z-index: 5; /* Focuses hovered grid item directly onto top stack ceiling line */
+    border-color: #ff4a11;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1), 0 0 25px rgba(255, 74, 17, 0.18);
+}
+
+.about-img-hull:hover .about-asset-img { transform: scale(1.05); }
+.about-img-hull:hover .about-neon-filter { opacity: 1; }
+
+.about-bg-layer:hover { transform: scale(1.02) rotate(-0.5deg) translateY(-4px); }
+.about-fg-layer:hover { transform: scale(1.02) rotate(0.5deg) translateY(-4px); }
+
+/* Right Grid Column Typography Deck Styling */
+.about-text-deck {
+    display: flex;
+    flex-direction: column;
+}
+
+.about-mini-badge {
+    color: #ff4a11;
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 12px;
+}
+
+.about-main-heading {
+    font-size: clamp(28px, 4vw, 40px);
+    font-weight: 900;
+    color: #0f1115;
+    text-transform: uppercase;
+    line-height: 1.1;
+    margin-bottom: 20px;
+}
+
+.about-main-heading span {
+    color: #ff4a11;
+    text-shadow: 0 0 20px rgba(255, 74, 17, 0.05);
+}
+
+.about-interactive-body {
+    font-size: 15px;
+    color: #555e6b;
+    line-height: 1.6;
+    margin-bottom: 35px;
+    cursor: default;
+    display: inline-block;
+    transition: color 0.4s ease, text-shadow 0.4s ease, transform 0.4s ease;
+    will-change: transform, text-shadow;
+}
+
+.about-grid-section:hover .about-main-heading span {
+    text-shadow: 0 0 20px rgba(255, 74, 17, 0.35);
+}
+
+.about-interactive-body:hover {
+    color: #0f1115;
+    transform: scale(1.015);
+    text-shadow: 0 0 15px rgba(255, 74, 17, 0.12);
+}
+
+/* Bullet Feature Rows List Setup */
+.about-bullet-stack {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.about-bullet-row {
+    display: flex;
+    gap: 15px;
+    align-items: flex-start;
+}
+
+.about-vector-box {
+    width: 44px;
+    height: 44px;
+    border-radius: 8px;
+    background-color: rgba(15, 17, 21, 0.04);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+    transition: background-color 0.3s ease, transform 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.about-row-svg {
+    width: 20px;
+    height: 20px;
+    fill: #0f1115;
+    transition: fill 0.3s ease;
+}
+
+.about-bullet-row:hover .about-vector-box {
+    background-color: #ff4a11;
+    transform: scale(1.05) rotate(5deg);
+}
+
+.about-bullet-row:hover .about-row-svg {
+    fill: #ffffff;
+}
+
+.about-bullet-row h4 {
+    font-size: 16px;
+    font-weight: 700;
+    color: #0f1115;
+    margin-bottom: 4px;
+    transition: color 0.3s ease;
+}
+
+.about-bullet-row:hover h4 { color: #ff4a11; }
+
+.about-interactive-body-small {
+    font-size: 13.5px;
+    color: #667085;
+    line-height: 1.5;
+    cursor: default;
+    transition: color 0.3s ease;
+}
+
+.about-bullet-row:hover .about-interactive-body-small { color: #0f1115; }
+
+/* --- ADAPTIVE GRAPHIC RESPONSIVENESS OVERLAYS BREAKPOINTS --- */
+@media (max-width: 992px) {
+    .about-master-wrapper {
+        grid-template-columns: 1fr;
+        gap: 45px;
+    }
+    .about-text-deck { text-align: center; }
+    .about-mini-badge, .about-interactive-body { margin-left: auto; margin-right: auto; }
+    .about-bullet-row { text-align: left; }
+    .about-graphic-deck {
+        height: 380px;
+        max-width: 580px;
+        margin: 0 auto;
+    }
+    .about-bg-layer { height: 260px; }
+    .about-fg-layer { height: 200px; }
+}
+
+@media (max-width: 576px) {
+    .about-graphic-deck { height: 300px; }
+    .about-bg-layer { height: 200px; width: 75%; }
+    .about-fg-layer { height: 160px; width: 62%; }
+}
+
+</style>
+
+<!-- SYSTEM RESPONSIVE CLUB VALUES TIMELINE GRID -->
+<section class="values-grid-section scroll-reveal-view" id="about-values">
+    
+    <!-- Decorative Layout Accent Ring Shapes -->
+    <div class="values-background-mesh"></div>
+
+    <div class="values-header">
+        <span class="values-mini-badge">Our North Star</span>
+        <h2 class="values-main-heading">The Pillars Of <span>Apex Elite</span></h2>
+        <p class="values-interactive-subtitle">Our structural core values shape the daily training micro-cycles of every athlete passing our compound perimeter grid.</p>
+    </div>
+
+    <div class="values-container">
+        
+        <!-- Value Block 01: Core Mission -->
+        <div class="value-card-box">
+            <div class="value-card-glow-halo"></div>
+            <div class="value-image-frame">
+                <div class="value-image-glow-overlay"></div>
+                <img src="./Assests/mission.webp" alt="Apex Training Core Mission Posture" class="value-card-img">
+                <div class="value-numeric-badge">01</div>
+            </div>
+            <div class="value-card-content">
+                <h3>Absolute Mission</h3>
+                <p class="value-interactive-body">To systematically democratize sports science architecture and biometric load tracking loops for maximum, safe athletic velocity expansion.</p>
+            </div>
+        </div>
+
+        <!-- Value Block 02: Core Vision -->
+        <div class="value-card-box">
+            <div class="value-card-glow-halo"></div>
+            <div class="value-image-frame">
+                <div class="value-image-glow-overlay"></div>
+                <img src="./Assests/vision.webp" alt="Apex Club Vision Future Infrastructure" class="value-card-img">
+                <div class="value-numeric-badge">02</div>
+            </div>
+            <div class="value-card-content">
+                <h3>Futuristic Vision</h3>
+                <p class="value-interactive-body">Cultivating a hyper-modern global playground ecosystem where algorithmic telemetry meets human raw passion to forge sustainable legacy triumphs.</p>
+            </div>
+        </div>
+
+        <!-- Value Block 03: Core Impact -->
+        <div class="value-card-box">
+            <div class="value-card-glow-halo"></div>
+            <div class="value-image-frame">
+                <div class="value-image-glow-overlay"></div>
+                <img src="./Assests/sports analytics.webp" alt="Apex Community Athletic Impact" class="value-card-img">
+                <div class="value-numeric-badge">03</div>
+            </div>
+            <div class="value-card-content">
+                <h3>Kinetic Impact</h3>
+                <p class="value-interactive-body">Transforming regional competitive brackets by lowering recovery thresholds and providing pro-tier coaching analytical dashboards to local talent pools.</p>
+            </div>
+        </div>
+
+    </div>
+</section>
+<style>
+    /* --- COMPACT ABOUT VALUES GRID SECTION --- */
+.values-grid-section {
+    padding: 50px 5% 30px 5%; /* Configured requested 50px Top, 30px Bottom compression track bounds */
+    background-color: #ffffff; /* Seamless integration with white layout framework */
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: hidden;
+    position: relative;
+    border-top: 1px solid #f0f2f5;
+}
+
+/* Background Shading Ring Element */
+.values-background-mesh {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at 10% 80%, rgba(255, 74, 17, 0.05) 0%, transparent 50%);
+    pointer-events: none;
+    z-index: 1;
+}
+
+/* Header Elements Typography Layout */
+.values-header {
+    text-align: center;
+    margin-bottom: 40px;
+    max-width: 700px;
+    z-index: 2;
+}
+
+.values-mini-badge {
+    color: #ff4a11; /* System Neon Orange Primary */
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 12px;
+    display: inline-block;
+}
+
+.values-main-heading {
+    font-size: clamp(28px, 4vw, 40px);
+    font-weight: 900;
+    color: #0f1115;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+    line-height: 1.1;
+}
+
+.values-main-heading span {
+    color: #ff4a11;
+    text-shadow: 0 0 20px rgba(255, 74, 17, 0.05);
+}
+
+.values-interactive-subtitle {
+    font-size: 15px;
+    color: #667085;
+    line-height: 1.5;
+    cursor: default;
+    display: inline-block;
+    transition: color 0.4s ease, text-shadow 0.4s ease, transform 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+    will-change: transform, text-shadow;
+}
+
+.values-grid-section:hover .values-main-heading span {
+    text-shadow: 0 0 25px rgba(255, 74, 17, 0.35);
+}
+
+.values-interactive-subtitle:hover {
+    color: #0f1115;
+    transform: scale(1.02);
+    text-shadow: 0 0 15px rgba(255, 74, 17, 0.15);
+}
+
+/* Three-Column Fluid Grid Layout Deck */
+.values-container {
+    width: 100%;
+    max-width: 1300px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    z-index: 2;
+}
+
+/* Individual Value Card Structuring Blocks */
+.value-card-box {
+    background: #ffffff;
+    border-radius: 16px;
+    overflow: hidden;
+    border: 1px solid #e1e4eb;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.01);
+    position: relative;
+    transition: transform 0.5s cubic-bezier(0.25, 1, 0.5, 1), 
+                border-color 0.4s ease, 
+                box-shadow 0.4s ease;
+    will-change: transform, box-shadow;
+}
+
+.value-image-frame {
+    position: relative;
+    height: 200px;
+    overflow: hidden;
+    background-color: #f8f9fa;
+}
+
+.value-card-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.6s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+/* Custom Neon Glow Overlay Mesh */
+.value-image-glow-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at center, rgba(255, 74, 17, 0.22) 0%, transparent 75%);
+    opacity: 0;
+    z-index: 2;
+    pointer-events: none;
+    transition: opacity 0.4s ease;
+}
+
+.value-numeric-badge {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: #0f1115;
+    color: #ffffff;
+    padding: 4px 12px;
+    font-size: 12px;
+    font-weight: 800;
+    border-radius: 4px;
+    z-index: 3;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+/* Card Content Details Framing */
+.value-card-content {
+    padding: 25px;
+}
+
+.value-card-content h3 {
+    font-size: 20px;
+    color: #0f1115;
+    margin-bottom: 12px;
+    font-weight: 800;
+    transition: color 0.3s ease;
+}
+
+.value-interactive-body {
+    font-size: 14px;
+    color: #555e6b;
+    line-height: 1.6;
+    cursor: default;
+    display: inline-block;
+    transition: color 0.4s ease, text-shadow 0.4s ease, transform 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+    will-change: transform, text-shadow;
+}
+
+/* Collective Hover Chain Reactions Triggers */
+.value-card-box:hover {
+    transform: translateY(-6px);
+    border-color: #ff4a11;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.05), 0 0 25px rgba(255, 74, 17, 0.1);
+}
+
+.value-card-box:hover .value-card-img {
+    transform: scale(1.05);
+}
+
+.value-card-box:hover .value-image-glow-overlay {
+    opacity: 1;
+}
+
+.value-card-box:hover .value-card-content h3 {
+    color: #ff4a11;
+}
+
+.value-card-box:hover .value-interactive-body {
+    color: #0f1115;
+    transform: scale(1.015);
+    text-shadow: 0 0 12px rgba(255, 74, 17, 0.12);
+}
+
+/* --- ADAPTIVE GRAPHIC RESPONSIVENESS OVERLAYS BREAKPOINTS --- */
+@media (max-width: 768px) {
+    .values-grid-section {
+        padding: 50px 6% 30px 6%;
+    }
+}
+
+</style>
+
+
+<!-- SYSTEM TWO-LINE SCROLL KINETIC BANNER -->
+<section class="action-banner scroll-reveal-view" id="cta-banner">
+    <!-- Clean Background Image Layer -->
+    <img src="./Assests/cycling.webp" alt="Apex Stadium Background" class="banner-bg-asset">
+    <div class="banner-dark-overlay"></div>
+    <div class="banner-glow-halo"></div>
+
+    <div class="banner-container">
+        <!-- Line 1: Primed Heading -->
+        <h2 class="banner-line-one">Break Your Boundaries.</h2>
+        
+        <!-- Line 2: Glow-Accentuated Sub-Heading -->
+        <p class="banner-line-two">Join the elite athletic movement and claim your <span>Stackly Rank Today</span></p>
+        
+        <!-- Interactive Action Button -->
+        <div class="banner-action-row">
+            <a href="404.html" class="banner-btn">
+                <span>Access Registration</span>
+                <svg viewBox="0 0 24 24">
+                    <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10zM9 11l2 2 4-4" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+                </svg>
+            </a>
+        </div>
+    </div>
+</section>
+
+<style>
+    /* --- TWO-LINE HIGH-ENERGY ACTION BANNER --- */
+.action-banner {
+    position: relative;
+    width: 100%;
+    padding: 80px 5%; /* Tight, balanced vertical spacing architecture */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    background-color: #090a0f; /* Fallback baseline dark canvas */
+}
+
+/* Background Image Layer Logic */
+.banner-bg-asset {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 1;
+    transform: scale(1.05);
+    transition: transform 0.8s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.action-banner:hover .banner-bg-asset {
+    transform: scale(1.01); /* Subtle kinetic pull on background during hover states */
+}
+
+/* Overlay Layer Shields */
+.banner-dark-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, rgba(9, 10, 15, 0.9) 0%, rgba(9, 10, 15, 0.7) 100%);
+    z-index: 2;
+}
+
+.banner-glow-halo {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at center, rgba(255, 74, 17, 0.15) 0%, transparent 70%);
+    opacity: 0;
+    z-index: 3;
+    pointer-events: none;
+    transition: opacity 0.5s ease;
+}
+
+.action-banner:hover .banner-glow-halo {
+    opacity: 1;
+}
+
+/* Content Container Architecture */
+.banner-container {
+    position: relative;
+    width: 100%;
+    max-width: 1100px;
+    text-align: center;
+    z-index: 4;
+}
+
+/* Line 1 Typography Frame */
+.banner-line-one {
+    font-size: clamp(32px, 5vw, 56px);
+    font-weight: 900;
+    text-transform: uppercase;
+    color: #ffffff;
+    line-height: 1.1;
+    margin-bottom: 12px;
+    letter-spacing: -1px;
+    transition: transform 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.banner-line-one:hover {
+    transform: scale(1.02);
+}
+
+/* Line 2 Typography Frame & Glow Parameters */
+.banner-line-two {
+    font-size: clamp(16px, 2.2vw, 22px);
+    font-weight: 600;
+    color: #b3b8c3;
+    line-height: 1.4;
+    margin-bottom: 35px;
+    cursor: default;
+    transition: color 0.4s ease, transform 0.4s ease;
+}
+
+.banner-line-two span {
+    color: var(--primary);
+    position: relative;
+    display: inline-block;
+    transition: text-shadow 0.4s ease, color 0.4s ease;
+}
+
+/* High-contrast hover ignition link states */
+.banner-line-two:hover {
+    color: #ffffff;
+}
+
+.banner-line-two:hover span {
+    color: #ffffff;
+    text-shadow: 0 0 20px var(--primary), 0 0 40px var(--primary-glow);
+}
+
+/* Premium Action Button Interaction Matrix */
+.banner-action-row {
+    display: flex;
+    justify-content: center;
+}
+
+.banner-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    padding: 16px 42px;
+    background-color: var(--primary);
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    border-radius: 8px;
+    box-shadow: 0 10px 25px rgba(255, 74, 17, 0.25);
+    transition: all 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+    border: 1px solid transparent;
+}
+
+.banner-btn svg {
+    width: 18px;
+    height: 18px;
+    fill: none;
+    transition: transform 0.3s ease;
+}
+
+.banner-btn:hover {
+    background-color: transparent;
+    border-color: var(--primary);
+    color: var(--primary);
+    box-shadow: 0 0 30px var(--primary-glow);
+    transform: translateY(-4px);
+}
+
+.banner-btn:hover svg {
+    transform: rotate(360deg) scale(1.1);
+}
+
+/* --- ADAPTIVE BANNER RESPONSIVENESS OVERLAYS --- */
+@media (max-width: 768px) {
+    .action-banner {
+        padding: 60px 5%;
+    }
+    .banner-line-two {
+        margin-bottom: 25px;
+    }
+    .banner-btn {
+        padding: 14px 32px;
+        width: 100%;
+        justify-content: center;
+    }
+}
+
+</style>
+
+<!-- SYSTEM RESPONSIVE CLUB HISTORIC TIMELINE -->
+<section class="history-grid-section scroll-reveal-view" id="about-history">
+    
+    <div class="history-header">
+        <span class="history-mini-badge">Our Legacy Track</span>
+        <h2 class="history-main-heading">Milestones To <span>Championships</span></h2>
+        <p class="history-interactive-subtitle">A historical trajectory defining our transition from local grassroots compounds to an elite training dominion.</p>
+    </div>
+
+    <div class="history-timeline-container">
+        
+        <!-- Timeline Step 01 -->
+        <div class="timeline-node-row">
+            <div class="timeline-visual-cell">
+                <div class="timeline-image-hull">
+                    <div class="timeline-glow-mask"></div>
+                    <img src="./Assests/drill.webp" alt="Apex foundation facility setup 2018" class="timeline-img">
+                </div>
+                <div class="timeline-year-tag">2018</div>
+            </div>
+            <div class="timeline-content-cell">
+                <div class="timeline-vector-icon-badge">
+                    <svg viewBox="0 0 24 24" class="timeline-badge-svg"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 12 10 10-4.48 10-12S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg>
+                </div>
+                <h3>Ground Zero Operations</h3>
+                <p class="timeline-interactive-body">Inauguration of the first Apex compound layout with 2 core disciplines, initiating localized raw power telemetry scanning lines.</p>
+            </div>
+        </div>
+
+        <!-- Timeline Step 02 -->
+        <div class="timeline-node-row reverse-layout">
+            <div class="timeline-visual-cell">
+                <div class="timeline-image-hull">
+                    <div class="timeline-glow-mask"></div>
+                    <img src="./Assests/first national.webp" alt="National championship basketball victory 2021" class="timeline-img">
+                </div>
+                <div class="timeline-year-tag">2021</div>
+            </div>
+            <div class="timeline-content-cell">
+                <div class="timeline-vector-icon-badge">
+                    <!-- SVG Championship Ribbon Trophy -->
+                    <svg viewBox="0 0 24 24" class="timeline-badge-svg"><path d="M19 5h-2V3H7v2H5c-1.1 0-2 .9-2 2v3c0 2.42 1.72 4.44 4.01 4.9.44 1.15 1.25 2.12 2.29 2.72l-.3 2.38H6v2h12v-2h-3l-.3-2.38c1.04-.6 1.85-1.57 2.29-2.72C19.28 14.44 21 12.42 21 10V7c0-1.1-.9-2-2-2z"/></svg>
+                </div>
+                <h3>First National Title</h3>
+                <p class="timeline-timeline-body timeline-interactive-body">Our basketball elite combat division locks the regional championship bracket, validating our custom biometric tracking frameworks globally.</p>
+            </div>
+        </div>
+
+        <!-- Timeline Step 03 -->
+        <div class="timeline-node-row">
+            <div class="timeline-visual-cell">
+                <div class="timeline-image-hull">
+                    <div class="timeline-glow-mask"></div>
+                    <img src="./Assests/2025.webp" alt="Global scaling lab compound expansions 2025" class="timeline-img">
+                </div>
+                <div class="timeline-year-tag">2026</div>
+            </div>
+            <div class="timeline-content-cell">
+                <div class="timeline-vector-icon-badge">
+                    <!-- SVG Lightning Bolt Expansion Vector -->
+                    <svg viewBox="0 0 24 24" class="timeline-badge-svg"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+                </div>
+                <h3>Hyper-Velocity Expansion</h3>
+                <p class="timeline-interactive-body">Integrating cryotherapy recovery loop clusters and expanding facilities to house over 5,000+ active cross-discipline athletes simultaneously.</p>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<style>
+    /* --- COMPACT HISTORIC TIMELINE DESIGN SYSTEM --- */
+.history-grid-section {
+    padding: 50px 5% 30px 5%; /* Configured requested 50px Top, 30px Bottom padding bounds */
+    background-color: #ffffff; /* Clean white canvas theme alignment */
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: hidden;
+    position: relative;
+}
+
+/* Header Text Blocks Formatting */
+.history-header {
+    text-align: center;
+    margin-bottom: 50px;
+    max-width: 700px;
+}
+
+.history-mini-badge {
+    color: #ff4a11; /* System Neon Orange Primary */
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 12px;
+    display: inline-block;
+}
+
+.history-main-heading {
+    font-size: clamp(28px, 4vw, 40px);
+    font-weight: 900;
+    color: #0f1115;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+    line-height: 1.1;
+}
+
+.history-main-heading span {
+    color: #ff4a11;
+    text-shadow: 0 0 20px rgba(255, 74, 17, 0.05);
+}
+
+.history-interactive-subtitle {
+    font-size: 15px;
+    color: #667085;
+    line-height: 1.5;
+    cursor: default;
+    display: inline-block;
+    transition: color 0.4s ease, text-shadow 0.4s ease, transform 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+    will-change: transform, text-shadow;
+}
+
+.history-grid-section:hover .history-main-heading span {
+    text-shadow: 0 0 25px rgba(255, 74, 17, 0.35);
+}
+
+.history-interactive-subtitle:hover {
+    color: #0f1115;
+    transform: scale(1.02);
+    text-shadow: 0 0 15px rgba(255, 74, 17, 0.15);
+}
+
+/* Timeline Structural Grid Node Framework */
+.history-timeline-container {
+    width: 100%;
+    max-width: 1100px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    position: relative;
+}
+
+/* Central vertical alignment timeline spine link decoration track */
+.history-timeline-container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 2px;
+    height: 100%;
+    background: #e1e4eb;
+    z-index: 1;
+}
+
+.timeline-node-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Splitting graphics assets and text descriptions neatly across spine */
+    gap: 80px;
+    align-items: center;
+    position: relative;
+    z-index: 2;
+}
+
+.timeline-node-row.reverse-layout {
+    direction: rtl; /* Sweeps the placement to alternating facets */
+}
+
+/* Forces elements inside reversed layout block to maintain normal typography direction reading flows */
+.timeline-node-row.reverse-layout .timeline-content-cell {
+    direction: ltr;
+    text-align: right;
+}
+
+.timeline-node-row.reverse-layout .timeline-content-cell .timeline-vector-icon-badge {
+    margin-left: auto;
+    margin-right: 0;
+}
+
+/* Left/Right Visual Box Housing */
+.timeline-visual-cell {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.timeline-image-hull {
+    position: relative;
+    width: 100%;
+    height: 240px;
+    border-radius: 16px;
+    overflow: hidden;
+    border: 1px solid #e1e4eb;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.02);
+    transition: transform 0.5s cubic-bezier(0.25, 1, 0.5, 1), 
+                border-color 0.4s ease, 
+                box-shadow 0.4s ease;
+    will-change: transform, box-shadow;
+}
+
+.timeline-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.6s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.timeline-glow-mask {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at center, rgba(255, 74, 17, 0.2) 0%, transparent 75%);
+    opacity: 0;
+    z-index: 2;
+    transition: opacity 0.4s ease;
+    pointer-events: none;
+}
+
+.timeline-year-tag {
+    position: absolute;
+    bottom: -15px;
+    background: #0f1115;
+    color: #ffffff;
+    padding: 5px 16px;
+    font-size: 13px;
+    font-weight: 800;
+    border-radius: 20px;
+    border: 3px solid #ffffff;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+    z-index: 3;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+/* Left/Right Content Description Block Housing */
+.timeline-content-cell {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.timeline-vector-icon-badge {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background-color: rgba(15, 17, 21, 0.04);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background-color 0.3s ease, transform 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.timeline-badge-svg {
+    width: 20px;
+    height: 20px;
+    fill: #0f1115;
+    transition: fill 0.3s ease;
+}
+
+.timeline-content-cell h3 {
+    font-size: 22px;
+    color: #0f1115;
+    font-weight: 800;
+    transition: color 0.3s ease;
+}
+
+.timeline-interactive-body {
+    font-size: 14.5px;
+    color: #555e6b;
+    line-height: 1.6;
+    cursor: default;
+    display: inline-block;
+    transition: color 0.4s ease, text-shadow 0.4s ease, transform 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+    will-change: transform, text-shadow;
+}
+
+/* Collective Interactive Element Hover Loops Reactions */
+.timeline-node-row:hover .timeline-image-hull {
+    transform: scale(1.02) translateY(-4px);
+    border-color: #ff4a11;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.06), 0 0 25px rgba(255, 74, 17, 0.1);
+}
+
+.timeline-node-row:hover .timeline-img { transform: scale(1.05); }
+.timeline-node-row:hover .timeline-glow-mask { opacity: 1; }
+
+.timeline-node-row:hover .timeline-year-tag {
+    background-color: #ff4a11;
+    border-color: #ffffff;
+    box-shadow: 0 4px 15px rgba(255, 74, 17, 0.3);
+}
+
+.timeline-node-row:hover .timeline-vector-icon-badge {
+    background-color: #ff4a11;
+    transform: scale(1.08) rotate(8deg);
+    box-shadow: 0 4px 12px rgba(255, 74, 17, 0.25);
+}
+
+.timeline-node-row:hover .timeline-badge-svg { fill: #ffffff; }
+.timeline-node-row:hover .timeline-content-cell h3 { color: #ff4a11; }
+
+.timeline-node-row:hover .timeline-interactive-body {
+    color: #0f1115;
+    transform: scale(1.01);
+    text-shadow: 0 0 12px rgba(255, 74, 17, 0.12);
+}
+
+/* --- ADAPTIVE GRAPHIC RESPONSIVENESS OVERLAYS BREAKPOINTS --- */
+@media (max-width: 850px) {
+    .history-timeline-container::before {
+        left: 20px; /* Shifts timeline structural spine anchor line to the left border corner wall */
+    }
+    .timeline-node-row, .timeline-node-row.reverse-layout {
+        grid-template-columns: 1fr;
+        gap: 30px;
+        direction: ltr; /* Resets structural flow directions uniformly */
+        padding-left: 55px; /* Creates breathing track space for shifted spine */
+    }
+    .timeline-node-row.reverse-layout .timeline-content-cell {
+        text-align: left;
+    }
+    .timeline-node-row.reverse-layout .timeline-content-cell .timeline-vector-icon-badge {
+        margin-left: 0;
+    }
+    .timeline-visual-cell {
+        align-items: flex-start;
+    }
+    .timeline-year-tag {
+        left: -50px; /* Offsets year tag node back directly onto left line boundary marker */
+        bottom: auto;
+        top: 20px;
+        padding: 4px 12px;
+        font-size: 11px;
+    }
+}
+
+</style>
+
+<!-- SYSTEM RESPONSIVE GLOBAL PARTNERSHIP HUB -->
+<section class="partners-grid-section scroll-reveal-view" id="about-partners">
+    
+    <div class="partners-header">
+        <span class="partners-mini-badge">Elite Alliances</span>
+        <h2 class="partners-main-heading">Backed By <span>Industry Giants</span></h2>
+        <p class="partners-interactive-subtitle">We partner with premier global data networks and biometric sports sciences providers to accelerate performance thresholds.</p>
+    </div>
+
+    <!-- Fluid Responsive Brand Grid Deck Layout -->
+    <div class="partners-container">
+        
+        <!-- Partner Card 01 -->
+        <div class="partner-card-box">
+            <div class="partner-glow-halo"></div>
+            <div class="partner-logo-hull">
+                <!-- Direct Image Tag Mapping for Brand Logotypes -->
+                <img src="./Assests/biometric.webp" alt="Apex Performance Data Network Logo Partner" class="partner-logo-img">
+            </div>
+            <div class="partner-card-content">
+                <h3>BioMetric Systems</h3>
+                <p class="partner-interactive-body">Providing raw real-time muscular fatigue telemetry analytics and sensor array infrastructure grids.</p>
+            </div>
+        </div>
+
+        <!-- Partner Card 02 -->
+        <div class="partner-card-box">
+            <div class="partner-glow-halo"></div>
+            <div class="partner-logo-hull">
+                <img src="./Assests/soccer.webp" alt="Championship Training Gear Logo Partner" class="partner-logo-img">
+            </div>
+            <div class="partner-card-content">
+                <h3>Stackly Apparel Lab</h3>
+                <p class="partner-interactive-body">Developing wind-tunnel tested, high-velocity compression textiles customized for multi-surface athletic motion loops.</p>
+            </div>
+        </div>
+
+        <!-- Partner Card 03 -->
+        <div class="partner-card-box">
+            <div class="partner-glow-halo"></div>
+            <div class="partner-logo-hull">
+                <img src="./Assests/jump run.webp" alt="Cryotherapy Recovery Loop Logo Partner" class="partner-logo-img">
+            </div>
+            <div class="partner-card-content">
+                <h3>Vortex Recovery</h3>
+                <p class="partner-interactive-body">Supplying automated smart cryotherapy environmental channels and targeted cell regeneration modules.</p>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<style>
+    /* --- COMPACT ABOUT PARTNERS GRID SECTION --- */
+.partners-grid-section {
+    padding: 50px 5% 30px 5%; /* Configured requested 50px Top, 30px Bottom padding bounds */
+    background-color: #ffffff; /* Smooth white background layout canvas alignment */
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: hidden;
+    position: relative;
+    border-top: 1px solid #f0f2f5;
+}
+
+/* Structural Header Sections Typography */
+.partners-header {
+    text-align: center;
+    margin-bottom: 40px;
+    max-width: 700px;
+}
+
+.partners-mini-badge {
+    color: #ff4a11; /* System Neon Orange Primary */
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 12px;
+    display: inline-block;
+}
+
+.partners-main-heading {
+    font-size: clamp(28px, 4vw, 40px);
+    font-weight: 900;
+    color: #0f1115;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+    line-height: 1.1;
+}
+
+.partners-main-heading span {
+    color: #ff4a11;
+    text-shadow: 0 0 20px rgba(255, 74, 17, 0.05);
+}
+
+.partners-interactive-subtitle {
+    font-size: 15px;
+    color: #667085;
+    line-height: 1.5;
+    cursor: default;
+    display: inline-block;
+    transition: color 0.4s ease, text-shadow 0.4s ease, transform 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+    will-change: transform, text-shadow;
+}
+
+.partners-grid-section:hover .partners-main-heading span {
+    text-shadow: 0 0 25px rgba(255, 74, 17, 0.35);
+}
+
+.partners-interactive-subtitle:hover {
+    color: #0f1115;
+    transform: scale(1.02);
+    text-shadow: 0 0 15px rgba(255, 74, 17, 0.15);
+}
+
+/* Three-Column Fluid Grid Layout Deck */
+.partners-container {
+    width: 100%;
+    max-width: 1300px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+/* Individual Alliance Card Structuring Blocks */
+.partner-card-box {
+    background: #ffffff;
+    border-radius: 16px;
+    border: 1px solid #e1e4eb;
+    padding: 35px;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.01);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    transition: transform 0.5s cubic-bezier(0.25, 1, 0.5, 1), 
+                border-color 0.4s ease, 
+                box-shadow 0.4s ease;
+    will-change: transform, box-shadow;
+}
+
+/* Custom Neon Glow Overlay Mesh */
+.partner-glow-halo {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at center, rgba(255, 74, 17, 0.12) 0%, transparent 70%);
+    opacity: 0;
+    z-index: 1;
+    pointer-events: none;
+    transition: opacity 0.4s ease;
+}
+
+/* Mini Brand Logo Housing */
+.partner-logo-hull {
+    width: 75px;
+    height: 75px;
+    border-radius: 50%;
+    background-color: #f8f9fa;
+    border: 1px solid #e1e4eb;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 22px;
+    overflow: hidden;
+    position: relative;
+    z-index: 2;
+    transition: transform 0.4s cubic-bezier(0.25, 1, 0.5, 1), border-color 0.3s ease;
+}
+
+.partner-logo-img {
+    width: 70%;
+    height: auto;
+    object-fit: contain;
+    filter: grayscale(1) opacity(0.65); /* Elegant minimalist brand filter setup */
+    transition: filter 0.4s ease, transform 0.4s ease;
+}
+
+/* Card Content Details Framing */
+.partner-card-content {
+    position: relative;
+    z-index: 2;
+}
+
+.partner-card-content h3 {
+    font-size: 19px;
+    color: #0f1115;
+    margin-bottom: 10px;
+    font-weight: 800;
+    transition: color 0.3s ease;
+}
+
+.partner-interactive-body {
+    font-size: 14px;
+    color: #555e6b;
+    line-height: 1.6;
+    cursor: default;
+    display: inline-block;
+    transition: color 0.4s ease, text-shadow 0.4s ease, transform 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+    will-change: transform, text-shadow;
+}
+
+/* Collective Hover Chain Reactions Triggers */
+.partner-card-box:hover {
+    transform: translateY(-6px);
+    border-color: #ff4a11;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.05), 0 0 25px rgba(255, 74, 17, 0.08);
+}
+
+.partner-card-box:hover .partner-glow-halo {
+    opacity: 1;
+}
+
+.partner-card-box:hover .partner-logo-hull {
+    border-color: #ff4a11;
+    transform: scale(1.05) rotate(4deg);
+}
+
+.partner-card-box:hover .partner-logo-img {
+    filter: grayscale(0) opacity(1); /* Unveils native logo brand identities cleanly */
+    transform: scale(1.05);
+}
+
+.partner-card-box:hover .partner-card-content h3 {
+    color: #ff4a11;
+}
+
+.partner-card-box:hover .partner-interactive-body {
+    color: #0f1115;
+    transform: scale(1.015);
+    text-shadow: 0 0 12px rgba(255, 74, 17, 0.12);
+}
+
+</style>
+
+<!-- FRESH COMPACT FAQ SECTION -->
+<section class="faq-grid-section scroll-reveal-view" id="about-faq">
+    
+    <div class="faq-header">
+        <span class="faq-mini-badge">Support Desk</span>
+        <h2 class="faq-main-heading">Frequently Asked <span>Queries</span></h2>
+        <p class="faq-interactive-subtitle">Clear technical insights on structural registration steps, metric profiling camps, and facility gate locks.</p>
+    </div>
+
+    <div class="faq-master-container">
+        
+        <!-- Left Column: Visual Asset Component Container -->
+        <div class="faq-graphic-hull">
+            <div class="faq-mesh-halo"></div>
+            <div class="faq-img-bezel">
+                <div class="faq-neon-overlay"></div>
+                <img src="./Assests/pro infra.webp" alt="Apex Training Arena admission desk support" class="faq-asset-img">
+                <div class="faq-floating-badge">Live Support Grid</div>
+            </div>
+        </div>
+
+        <!-- Right Column: Perfectly Centered Accordion Stack -->
+        <div class="faq-accordion-stack">
+            
+            <!-- Accordion Node 01 -->
+            <div class="faq-accordion-node">
+                <button class="faq-trigger-btn" onclick="toggleFaqNode(this)">
+                    <span>How does the biomechanical telemetry tracking operate?</span>
+                    <svg viewBox="0 0 24 24" class="faq-arrow-icon"><path d="M7 10l5 5 5-5z" fill="currentColor"/></svg>
+                </button>
+                <div class="faq-response-panel">
+                    <p class="faq-interactive-body">Upon deployment, wearable sensor arrays continuously track velocity extends and structural load curves to isolate latch latency blocks inside your performance chains.</p>
+                </div>
+            </div>
+
+            <!-- Accordion Node 02 -->
+            <div class="faq-accordion-node">
+                <button class="faq-trigger-btn" onclick="toggleFaqNode(this)">
+                    <span>Can rookies integrate with elite championship tracks?</span>
+                    <svg viewBox="0 0 24 24" class="faq-arrow-icon"><path d="M7 10l5 5 5-5z" fill="currentColor"/></svg>
+                </button>
+                <div class="faq-response-panel">
+                    <p class="faq-interactive-body">Yes. Our Rookie Track contains standardized foundation drill arrays engineered to scale agility indexes smoothly before elevating profiles into champion tiers.</p>
+                </div>
+            </div>
+
+            <!-- Accordion Node 03 -->
+            <div class="faq-accordion-node">
+                <button class="faq-trigger-btn" onclick="toggleFaqNode(this)">
+                    <span>What are the tactical cryotherapy recovery loop routines?</span>
+                    <svg viewBox="0 0 24 24" class="faq-arrow-icon"><path d="M7 10l5 5 5-5z" fill="currentColor"/></svg>
+                </button>
+                <div class="faq-response-panel">
+                    <p class="faq-interactive-body">Elite tiers gain automated thermal shock exposure windows instantly post-workout to drop localized tissue micro-inflammation loops safely.</p>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+</section>
+
+
+<style>
+   /* --- COMPACT FAQ ACCORDION ENGINE SYSTEM --- */
+.faq-grid-section {
+    padding: 50px 5% 30px 5%; /* Exact 50px Top, 30px Bottom bounds */
+    background-color: #ffffff;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: hidden;
+    position: relative;
+    border-top: 1px solid #f0f2f5;
+}
+
+.faq-header {
+    text-align: center;
+    margin-bottom: 40px;
+    max-width: 700px;
+}
+
+.faq-mini-badge {
+    color: #ff4a11;
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 12px;
+    display: inline-block;
+}
+
+.faq-main-heading {
+    font-size: clamp(28px, 4vw, 40px);
+    font-weight: 900;
+    color: #0f1115;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+    line-height: 1.1;
+}
+
+.faq-main-heading span {
+    color: #ff4a11;
+    text-shadow: 0 0 20px rgba(255, 74, 17, 0.05);
+}
+
+.faq-interactive-subtitle {
+    font-size: 15px;
+    color: #667085;
+    line-height: 1.5;
+    cursor: default;
+    display: inline-block;
+    transition: color 0.4s ease, text-shadow 0.4s ease, transform 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+    will-change: transform, text-shadow;
+}
+
+.faq-grid-section:hover .faq-main-heading span {
+    text-shadow: 0 0 25px rgba(255, 74, 17, 0.35);
+}
+
+.faq-interactive-subtitle:hover {
+    color: #0f1115;
+    transform: scale(1.02);
+    text-shadow: 0 0 15px rgba(255, 74, 17, 0.15);
+}
+
+/* Master Balanced Layout Multi-Column Deck */
+.faq-master-container {
+    width: 100%;
+    max-width: 1300px;
+    display: grid;
+    grid-template-columns: 0.8fr 1.2fr;
+    gap: 50px;
+    align-items: center; /* Aligns left image column and right cards column straight along block center axis */
+}
+
+.faq-graphic-hull {
+    position: relative;
+    width: 100%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.faq-mesh-halo {
+    position: absolute;
+    width: 110%;
+    height: 110%;
+    background: radial-gradient(circle at center, rgba(255, 74, 17, 0.12) 0%, transparent 65%);
+    pointer-events: none;
+    z-index: 1;
+}
+
+.faq-img-bezel {
+    position: relative;
+    width: 100%;
+    height: 340px; /* Locked precise structural height bounds to manage grid uniformity */
+    border-radius: 16px;
+    overflow: hidden;
+    border: 1px solid #e1e4eb;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.02);
+    z-index: 2;
+    transition: transform 0.5s cubic-bezier(0.25, 1, 0.5, 1), border-color 0.4s ease;
+}
+
+.faq-asset-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.6s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.faq-neon-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at center, rgba(255, 74, 17, 0.18) 0%, transparent 75%);
+    opacity: 0;
+    z-index: 3;
+    pointer-events: none;
+    transition: opacity 0.4s ease;
+}
+
+.faq-floating-badge {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    background: #0f1115;
+    color: #ffffff;
+    padding: 6px 14px;
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    border-radius: 4px;
+    z-index: 4;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.faq-graphic-hull:hover .faq-img-bezel {
+    transform: translateY(-4px) scale(1.01);
+    border-color: #ff4a11;
+}
+
+.faq-graphic-hull:hover .faq-asset-img { transform: scale(1.04); }
+.faq-graphic-hull:hover .faq-neon-overlay { opacity: 1; }
+
+/* Right Column Panels Stack */
+.faq-accordion-stack {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 100%;
+    justify-content: center; /* Centers cards inside column container boundary tracking line */
+}
+
+.faq-accordion-node {
+    background: #ffffff;
+    border: 1px solid #e1e4eb;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.01);
+    transition: border-color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.faq-trigger-btn {
+    width: 100%;
+    padding: 22px 25px;
+    background: transparent;
+    border: none;
+    outline: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    cursor: pointer;
+    text-align: left;
+}
+
+.faq-trigger-btn span {
+    font-size: 15.5px;
+    font-weight: 700;
+    color: #0f1115;
+    transition: color 0.3s ease;
+}
+
+.faq-arrow-icon {
+    width: 18px;
+    height: 18px;
+    color: #667085;
+    transition: transform 0.4s cubic-bezier(0.25, 1, 0.5, 1), color 0.3s ease;
+    flex-shrink: 0;
+}
+
+.faq-response-panel {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+    padding: 0 25px;
+}
+
+.faq-interactive-body {
+    font-size: 14px;
+    color: #555e6b;
+    line-height: 1.6;
+    padding-bottom: 22px;
+    cursor: default;
+    display: inline-block;
+    transition: color 0.3s ease;
+}
+
+.faq-accordion-node.node-active {
+    border-color: #ff4a11;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.03), 0 0 20px rgba(255, 74, 17, 0.05);
+}
+
+.faq-accordion-node.node-active .faq-trigger-btn span {
+    color: #ff4a11;
+}
+
+.faq-accordion-node.node-active .faq-arrow-icon {
+    transform: rotate(180deg);
+    color: #ff4a11;
+}
+
+.faq-accordion-node:hover:not(.node-active) {
+    border-color: #0f1115;
+    transform: translateX(4px);
+}
+
+/* --- SYSTEM RESPONSIVENESS OVERLAYS BREAKPOINTS --- */
+@media (max-width: 992px) {
+    .faq-master-container {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+    .faq-graphic-hull {
+        height: 280px;
+        max-width: 580px;
+        margin: 0 auto;
+    }
+    .faq-img-bezel {
+        height: 100%;
+    }
+}
+
+</style>
+
+<script>
+  // --- INTERACTIVE FAQ ACCORDION ENGINE CONTROLLER ---
+function toggleFaqNode(buttonElement) {
+    const currentNode = buttonElement.parentElement;
+    const responsePanel = currentNode.querySelector('.faq-response-panel');
+    const isNodeAlreadyActive = currentNode.classList.contains('node-active');
+    
+    document.querySelectorAll('.faq-accordion-node').forEach(node => {
+        node.classList.remove('node-active');
+        node.querySelector('.faq-response-panel').style.maxHeight = null;
+    });
+
+    if (!isNodeAlreadyActive) {
+        currentNode.classList.add('node-active');
+        responsePanel.style.maxHeight = responsePanel.scrollHeight + "px";
+    }
+}
+
+</script>
+
+<!-- SYSTEM RESPONSIVE TOUR PREVIEW CARD SECTION -->
+<section class="tour-grid-section scroll-reveal-view" id="about-tour">
+    <div class="tour-master-wrapper">
+        
+        <!-- Left Column: Core Performance Metrics Content Elements -->
+        <div class="tour-text-deck">
+            <span class="tour-mini-badge">Compound Operations</span>
+            <h2 class="tour-main-heading">Advanced Facility <br><span>Data Telemetry</span></h2>
+            <p class="tour-interactive-body">
+                Our athletic compound houses world-class sensory tracking grids and custom multi-surface arenas. We synchronize physical telemetry variables in real time to provide absolute clarity across every split-second movement loop.
+            </p>
+            
+            <div class="tour-stats-row">
+                <div class="tour-stat-pill">
+                    <h3>24/7</h3>
+                    <p>Sensor Grid Active</p>
+                </div>
+                <div class="tour-stat-pill">
+                    <h3>0.02s</h3>
+                    <p>Telemetry Latency</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Right Column: Dual Layer Overlap Media Frame Container -->
+        <div class="tour-graphic-deck">
+            <div class="tour-mesh-glow"></div>
+            
+            <!-- Layer 1: Background Foundation Asset Frame -->
+            <div class="tour-img-hull tour-bg-layer">
+                <div class="tour-neon-filter"></div>
+                <img src="https://unsplash.com" alt="Apex Football Academy Turf compound grounds" class="tour-asset-img">
+            </div>
+
+            <!-- Layer 2: Foreground Focus Play Button Badge Frame -->
+            <div class="tour-img-hull tour-fg-layer">
+                <div class="tour-neon-filter"></div>
+                <img src="https://unsplash.com" alt="Inside look of basketball arena floor layout grid lines" class="tour-asset-img">
+                
+                <!-- High-Glow Vector Video Play Button Overlay -->
+                <button class="tour-play-vector-btn" aria-label="Launch Virtual Tour Video">
+                    <svg viewBox="0 0 24 24" class="play-svg"><path d="M8 5v14l11-7z" fill="currentColor"/></svg>
+                </button>
+                <div class="tour-floating-tag">Launch Video Tour</div>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<style>
+    /* --- COMPACT ABOUT TOUR GRID SECTION --- */
+.tour-grid-section {
+    padding: 50px 5% 30px 5%; /* Exact requested 50px Top, 30px Bottom compression track bounds */
+    background-color: #ffffff; /* Smooth white layout framework background alignment */
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+    position: relative;
+    border-top: 1px solid #f0f2f5;
+}
+
+.tour-master-wrapper {
+    width: 100%;
+    max-width: 1300px;
+    display: grid;
+    grid-template-columns: 1.05fr 0.95fr; /* Asymmetric grid separation balance layout */
+    gap: 60px;
+    align-items: center;
+}
+
+/* Left Grid Column Typography Deck Styling */
+.tour-text-deck {
+    display: flex;
+    flex-direction: column;
+}
+
+.tour-mini-badge {
+    color: #ff4a11; /* System Neon Orange Primary */
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 12px;
+}
+
+.tour-main-heading {
+    font-size: clamp(28px, 4vw, 40px);
+    font-weight: 900;
+    color: #0f1115; /* Sharp high-contrast dark text focus node */
+    text-transform: uppercase;
+    line-height: 1.1;
+    margin-bottom: 20px;
+}
+
+.tour-main-heading span {
+    color: #ff4a11;
+    text-shadow: 0 0 20px rgba(255, 74, 17, 0.05);
+}
+
+.tour-grid-section:hover .tour-main-heading span {
+    text-shadow: 0 0 25px rgba(255, 74, 17, 0.35);
+}
+
+.tour-interactive-body {
+    font-size: 15px;
+    color: #555e6b;
+    line-height: 1.6;
+    margin-bottom: 35px;
+    max-width: 560px;
+    cursor: default;
+    display: inline-block;
+    transition: color 0.4s ease, text-shadow 0.4s ease, transform 0.4s ease;
+    will-change: transform, text-shadow;
+}
+
+.tour-interactive-body:hover {
+    color: #0f1115;
+    transform: scale(1.015);
+    text-shadow: 0 0 15px rgba(255, 74, 17, 0.12);
+}
+
+/* Custom Mini Stats Display Panel Array Row */
+.tour-stats-row {
+    display: flex;
+    gap: 25px;
+    flex-wrap: wrap;
+}
+
+.tour-stat-pill {
+    background: #ffffff;
+    border: 1px solid #e1e4eb;
+    padding: 15px 25px;
+    border-radius: 12px;
+    min-width: 160px;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.tour-stat-pill h3 {
+    font-size: 26px;
+    font-weight: 900;
+    color: #0f1115;
+    margin-bottom: 4px;
+    transition: color 0.3s ease;
+}
+
+.tour-stat-pill p {
+    font-size: 12.5px;
+    color: #667085;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.tour-stat-pill:hover {
+    border-color: #ff4a11;
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(255, 74, 17, 0.06);
+}
+
+.tour-stat-pill:hover h3 {
+    color: #ff4a11;
+}
+
+/* Right Grid Column Graphics Stack Assembly */
+.tour-graphic-deck {
+    position: relative;
+    width: 100%;
+    height: 440px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.tour-mesh-glow {
+    position: absolute;
+    width: 110%;
+    height: 110%;
+    background: radial-gradient(circle at center, rgba(255, 74, 17, 0.1) 0%, transparent 65%);
+    z-index: 1;
+    pointer-events: none;
+}
+
+.tour-img-hull {
+    position: absolute;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.06);
+    border: 5px solid #ffffff;
+    outline: 1px solid #e1e4eb;
+    transition: transform 0.5s cubic-bezier(0.25, 1, 0.5, 1), 
+                border-color 0.4s ease, 
+                box-shadow 0.4s ease;
+    will-change: transform, box-shadow;
+}
+
+.tour-asset-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.6s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.tour-neon-filter {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at center, rgba(255, 74, 17, 0.16) 0%, transparent 80%);
+    opacity: 0;
+    z-index: 2;
+    transition: opacity 0.4s ease;
+    pointer-events: none;
+}
+
+/* Asymmetric Image Multi-Layer Overlapping Sets */
+.tour-bg-layer {
+    width: 72%;
+    height: 300px;
+    left: 0;
+    top: 20px;
+    z-index: 2;
+    transform: rotate(-2.5deg);
+}
+
+.tour-fg-layer {
+    width: 62%;
+    height: 250px;
+    right: 0;
+    bottom: 20px;
+    z-index: 3;
+    transform: rotate(2.5deg);
+}
+
+/* Premium Floating Video Overlay Button */
+.tour-play-vector-btn {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(1);
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    background-color: #ff4a11;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #ffffff;
+    z-index: 4;
+    box-shadow: 0 0 0 0 rgba(255, 74, 17, 0.5), 0 8px 20px rgba(255, 74, 17, 0.3);
+    transition: transform 0.3s cubic-bezier(0.25, 1, 0.5, 1), background-color 0.3s ease, box-shadow 0.4s ease;
+}
+
+.play-svg {
+    width: 18px;
+    height: 18px;
+    transform: translateX(1px); /* Geometrically balances text weight of icon arrow play pointer inside circle */
+}
+
+.tour-floating-tag {
+    position: absolute;
+    bottom: 15px;
+    left: 15px;
+    background: #0f1115;
+    color: #ffffff;
+    padding: 5px 14px;
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    border-radius: 4px;
+    z-index: 4;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Collective Multi-Layer Hover Grid Mechanics */
+.tour-img-hull:hover {
+    z-index: 5; /* Focuses hovered grid item directly onto top stack ceiling line */
+    border-color: #ff4a11;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1), 0 0 25px rgba(255, 74, 17, 0.18);
+}
+
+.tour-img-hull:hover .tour-asset-img { transform: scale(1.04); }
+.tour-img-hull:hover .tour-neon-filter { opacity: 1; }
+
+.tour-bg-layer:hover { transform: scale(1.02) rotate(-0.5deg) translateY(-4px); }
+.tour-fg-layer:hover { transform: scale(1.02) rotate(0.5deg) translateY(-4px); }
+
+.tour-fg-layer:hover .tour-play-vector-btn {
+    background-color: #0f1115;
+    transform: translate(-50%, -50%) scale(1.08);
+    box-shadow: 0 0 20px rgba(255, 74, 17, 0.4), 0 8px 25px rgba(0, 0, 0, 0.2);
+}
+
+/* --- ADAPTIVE GRAPHIC RESPONSIVENESS BREAKPOINTS --- */
+@media (max-width: 992px) {
+    .tour-master-wrapper {
+        grid-template-columns: 1fr;
+        gap: 45px;
+    }
+    .tour-text-deck { text-align: center; }
+    .tour-mini-badge, .tour-interactive-body { margin-left: auto; margin-right: auto; }
+    .tour-stats-row { justify-content: center; }
+    .tour-graphic-deck {
+        height: 360px;
+        max-width: 580px;
+        margin: 0 auto;
+    }
+    .tour-bg-layer { height: 250px; }
+    .tour-fg-layer { height: 200px; }
+}
+
+@media (max-width: 576px) {
+    .tour-graphic-deck { height: 280px; }
+    .tour-bg-layer { height: 180px; width: 78%; }
+    .tour-fg-layer { height: 150px; width: 65%; }
+    .tour-play-vector-btn { width: 45px; height: 45px; }
+    .play-svg { width: 14px; height: 14px; }
+}
+
+</style>
