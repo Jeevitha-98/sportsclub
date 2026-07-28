@@ -756,7 +756,199 @@ navItems.forEach(item => {
     width: 100%;
 }
 
+/* ==========================================================
+   SPORTS CLUB CONTACT SECTION - RESPONSIVE ADD-ON
+   ========================================================== */
 
+@media (max-width: 992px) {
+
+    .portal-form-section{
+        padding:60px 20px 40px;
+    }
+
+    .form-master-wrapper{
+        grid-template-columns:1fr;
+        gap:40px;
+    }
+
+    .form-intel-column{
+        order:1;
+        text-align:center;
+        align-items:center;
+    }
+
+    .intel-main-heading{
+        font-size:40px;
+    }
+
+    .intel-cards-stack{
+        width:100%;
+        max-width:650px;
+    }
+
+    .intel-info-card{
+        grid-template-columns:55px 1fr;
+        text-align:left;
+    }
+
+    .form-console-column{
+        order:2;
+        width:100%;
+    }
+
+    .console-box-hull{
+        padding:30px;
+    }
+}
+
+@media (max-width:768px){
+
+    .portal-form-section{
+        padding:50px 16px 30px;
+    }
+
+    .form-master-wrapper{
+        gap:30px;
+    }
+
+    .intel-mini-badge{
+        font-size:11px;
+    }
+
+    .intel-main-heading{
+        font-size:32px;
+        line-height:1.2;
+        margin-bottom:25px;
+    }
+
+    .intel-cards-stack{
+        gap:12px;
+    }
+
+    .intel-info-card{
+        padding:15px;
+        grid-template-columns:48px 1fr;
+        gap:12px;
+        border-radius:10px;
+    }
+
+    .intel-icon-box{
+        width:42px;
+        height:42px;
+    }
+
+    .intel-svg{
+        width:18px;
+        height:18px;
+    }
+
+    .intel-content-box p,
+    .intel-interactive-mail-link{
+        font-size:13px;
+        word-break:break-word;
+    }
+
+    .console-box-hull{
+        padding:24px 18px;
+        border-radius:18px;
+    }
+
+    .console-heading{
+        font-size:20px;
+    }
+
+    .console-caption{
+        font-size:13px;
+        margin-bottom:24px;
+    }
+
+    .actual-input-form{
+        gap:18px;
+    }
+
+    .console-field-input,
+    .console-field-select,
+    .console-field-textarea{
+        padding:13px 14px;
+        font-size:14px;
+    }
+
+    .console-field-textarea{
+        height:120px;
+    }
+
+    .console-submit-btn{
+        padding:15px;
+        font-size:14px;
+    }
+}
+
+@media (max-width:576px){
+
+    .portal-form-section{
+        padding:40px 14px 25px;
+    }
+
+    .intel-main-heading{
+        font-size:28px;
+    }
+
+    .intel-info-card{
+        grid-template-columns:1fr;
+        text-align:center;
+        justify-items:center;
+        padding:18px;
+    }
+
+    .intel-content-box{
+        align-items:center;
+    }
+
+    .intel-card-label{
+        font-size:10px;
+    }
+
+    .intel-content-box p,
+    .intel-interactive-mail-link{
+        font-size:12px;
+        text-align:center;
+    }
+
+    .console-box-hull{
+        padding:18px 15px;
+    }
+
+    .console-heading{
+        font-size:18px;
+        text-align:center;
+    }
+
+    .console-caption{
+        text-align:center;
+    }
+
+    .console-input-label{
+        font-size:10px;
+    }
+
+    .console-field-input,
+    .console-field-select,
+    .console-field-textarea{
+        font-size:13px;
+    }
+
+    .console-submit-btn{
+        font-size:13px;
+        padding:14px;
+    }
+
+    .console-validation-toast{
+        left:0;
+        right:0;
+        text-align:center;
+        bottom:-28px;
+    }
+}
 </style>
 
 <script>

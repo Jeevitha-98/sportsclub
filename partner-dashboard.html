@@ -2687,9 +2687,63 @@
     }
 }
 
+
+
   </style>
 
   <script>
+    // ------------------------------------------
+// Restore active section after page reload
+// ------------------------------------------
+const savedSection = sessionStorage.getItem("activeDashboardSection");
+
+if (savedSection) {
+
+    // Hide all sections
+    document.querySelectorAll(".workspace-sheet-panel-node").forEach(section => {
+        section.classList.remove("visible-sheet-state");
+    });
+
+    // Show saved section
+    const activeSection = document.getElementById(savedSection);
+
+    if (activeSection) {
+        activeSection.classList.add("visible-sheet-state");
+    }
+
+    // Highlight sidebar menu
+    document.querySelectorAll(".sidebar-menu-item-node").forEach(btn => {
+        btn.classList.remove("active-menu-node");
+
+        const onclickValue = btn.getAttribute("onclick");
+
+        if (onclickValue && onclickValue.includes(savedSection)) {
+            btn.classList.add("active-menu-node");
+        }
+    });
+}
+
+const refreshDashboardBtn = document.getElementById("refreshDashboardBtn");
+
+if (refreshDashboardBtn) {
+
+    refreshDashboardBtn.addEventListener("click", function (e) {
+
+        e.preventDefault();
+
+        // Find currently visible section
+        const activeSection = document.querySelector(".workspace-sheet-panel-node.visible-sheet-state");
+
+        if (activeSection) {
+            sessionStorage.setItem("activeDashboardSection", activeSection.id);
+        }
+
+        // Reload page
+        location.reload();
+
+    });
+
+}
     // --- SPORTS WORKSPACE TERMINAL ENGINE CONTROLLER SYSTEM ---
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -2752,6 +2806,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 // 4. INTERACTIVE TAB TRANSITION MODULE SWITCH ENGINE FOR WORKSPACE SHEETS
 function switchDashboardSectionView(buttonNodeElement, targetSectionSheetId) {
+    sessionStorage.setItem("activeDashboardSection", targetSectionSheetId);
     // Re-index sidebars link buttons highlight parameters classes loops
     const activeSidebarButtonsList = buttonNodeElement.parentElement.querySelectorAll('.sidebar-menu-item-node');
     activeSidebarButtonsList.forEach(btn => btn.classList.remove('active-menu-node'));
@@ -2778,7 +2833,6 @@ function switchDashboardSectionView(buttonNodeElement, targetSectionSheetId) {
         if (mobileNavDimmerShield) mobileNavDimmerShield.classList.remove('shield-visible');
     }
 }
-
 
   </script>
 </body>
