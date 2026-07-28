@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stackly Sports Club - Athlete Registration</title>
+    <!-- Linking external style sheet component asset -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="auth-portal-body">
+
+    <!-- MASTER COMPACT REGISTRATION INTERFACE HEADER PANEL CARD -->
+    <main class="auth-card-hull spec-signup-hull">
+        
+        <div class="auth-card-header">
+            <div class="auth-brand-logo">
+                <span class="auth-logo-dot"></span>
+                <span class="auth-logo-text">Stackly<span>CLUB</span></span>
+            </div>
+            <a href="login.html" class="auth-home-btn-link">Back To Log In</a>
+        </div>
+
+        <h1 class="auth-portal-title">Create <span>Account</span></h1>
+        <p class="auth-portal-caption">Register your profile to open your customized athletic telemetry dashboard and track training milestones.</p>
+
+        <!-- Credentials Submission Validation Track Form -->
+        <form class="auth-credentials-form" id="portalSignUpForm" novalidate>
+            
+            <!-- Field 1: Name -->
+            <div class="auth-input-cell">
+                <label class="auth-input-label">Your Full Name</label>
+                <input type="text" id="regNameField" class="auth-field-input" placeholder="Enter your full name..." required autocomplete="off">
+            </div>
+
+            <!-- Field 2: Email -->
+            <div class="auth-input-cell">
+                <label class="auth-input-label">Email Address</label>
+                <input type="email" id="regEmailField" class="auth-field-input" placeholder="you@example.com" required autocomplete="off">
+            </div>
+
+            <!-- Field 3: Phone -->
+            <div class="auth-input-cell">
+                <label class="auth-input-label">10-Digit Mobile Number</label>
+                <input type="text" id="regPhoneField" class="auth-field-input" placeholder="10-digit mobile number" maxlength="10" required autocomplete="off">
+            </div>
+
+            <!-- Field 4: Password -->
+            <div class="auth-input-cell">
+                <label class="auth-input-label">Password Key</label>
+                <div class="password-field-wrapper">
+                    <input type="password" id="regPasswordField" class="auth-field-input" placeholder="••••••••" required>
+                    <button type="button" class="password-toggle-trigger" data-target="regPasswordField" aria-label="Toggle Password">
+                        <svg viewBox="0 0 24 24" class="toggle-eye-svg"><path d="M12 4.5C7 4.5 2.73 7.61 1 12c1.73 4.39 6 7.5 11 7.5s9.27-3.11 11-7.5c-1.73-4.39-6-7.5-11-7.5zM12 17c-2.76 0-5-2.24-5-5s2.24-5 5-5 5 2.24 5 5-2.24 5-5 5zm0-8c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z"/></svg>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Field 5: Confirm Password -->
+            <div class="auth-input-cell">
+                <label class="auth-input-label">Confirm Password Key</label>
+                <div class="password-field-wrapper">
+                    <input type="password" id="regConfirmPasswordField" class="auth-field-input" placeholder="••••••••" required>
+                    <button type="button" class="password-toggle-trigger" data-target="regConfirmPasswordField" aria-label="Toggle Password">
+                        <svg viewBox="0 0 24 24" class="toggle-eye-svg"><path d="M12 4.5C7 4.5 2.73 7.61 1 12c1.73 4.39 6 7.5 11 7.5s9.27-3.11 11-7.5c-1.73-4.39-6-7.5-11-7.5zM12 17c-2.76 0-5-2.24-5-5s2.24-5 5-5 5 2.24 5 5-2.24 5-5 5zm0-8c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z"/></svg>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Action Button trigger line -->
+            <div class="auth-submit-bezel">
+                <button type="submit" class="auth-primary-submit-btn">
+                    <span>Sign Up &rarr;</span>
+                </button>
+            </div>
+
+            <!-- Validation Error Alert Banner -->
+            <div class="auth-validation-toast" id="regValidationToast">Please fill out all fields.</div>
+
+        </form>
+
+        <p class="auth-footer-prompt-text">Already have an account? <a href="login.html" class="auth-signup-redirect-link">Log In</a></p>
+
+    </main>
+
+    <!-- SUCCESS REGISTRATION MODAL ACTION DIALOGUE OVERLAY WINDOW -->
+    <div class="success-alert-dimmer" id="successModalContainer">
+        <div class="success-alert-card">
+            <div class="success-check-icon">
+                <svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </div>
+            <h2>Account Created!</h2>
+            <p>You have successfully logged in. Please use your newly registered credentials to authenticate at the login portal gateway.</p>
+            <button class="success-route-btn" id="proceedLoginModalBtn">Proceed To Login</button>
+        </div>
+    </div>
+
+    <!-- Linking external framework engine scripting -->
+  <style>
+    /* --- COMPACT AUTHENTICATION PORTAL CORE DESIGN SYSTEM --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+}
+
+.auth-portal-body {
+    min-height: 100vh;
+    width: 100%;
+    background-color: #f8f9fa; /* Maintains light canvas backdrop uniformity */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 20px;
+}
+
+.auth-card-hull {
+    background: #ffffff;
+    border: 1px solid #e1e4eb;
+    border-radius: 24px;
+    width: 100%;
+    max-width: 520px;
+    padding: 40px;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.03);
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Header Component Details Row */
+.auth-card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.auth-brand-logo {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.auth-logo-dot {
+    width: 6px;
+    height: 6px;
+    background-color: #ff4a11; /* System Neon Orange Primary */
+    border-radius: 50%;
+}
+
+.auth-logo-text {
+    font-size: 16px;
+    font-weight: 900;
+    color: #0f1115;
+    letter-spacing: 0.5px;
+}
+
+.auth-logo-text span { color: #ff4a11; }
+
+.auth-home-btn-link {
+    font-size: 12px;
+    font-weight: 700;
+    color: #667085;
+    text-decoration: none;
+    background: rgba(15, 17, 21, 0.04);
+    padding: 6px 14px;
+    border-radius: 20px;
+    transition: all 0.3s ease;
+}
+
+.auth-home-btn-link:hover {
+    background-color: #0f1115;
+    color: #ffffff;
+}
+
+/* Typography Headings Framing */
+.auth-portal-title {
+    font-size: clamp(26px, 4vw, 34px);
+    font-weight: 900;
+    color: #0f1115;
+    margin-bottom: 12px;
+    letter-spacing: -0.5px;
+}
+
+.auth-portal-title span { color: #ff4a11; }
+
+.auth-portal-caption {
+    font-size: 13.5px;
+    color: #555e6b;
+    line-height: 1.5;
+    margin-bottom: 30px;
+}
+
+/* Input Forms Panel Cells Configurations */
+.auth-credentials-form {
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+    position: relative;
+}
+
+.auth-input-cell {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.auth-input-label {
+    font-size: 11px;
+    font-weight: 800;
+    color: #0f1115;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.auth-field-input {
+    width: 100%;
+    padding: 14px 18px;
+    background: #ffffff;
+    border: 1px solid #e1e4eb;
+    outline: none;
+    border-radius: 8px;
+    color: #0f1115;
+    font-size: 14px;
+    font-weight: 600;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.auth-field-input::placeholder {
+    color: #b3b8c3;
+    font-weight: 500;
+}
+
+.auth-field-input:focus {
+    border-color: #ff4a11;
+    box-shadow: 0 0 12px rgba(255, 74, 17, 0.12);
+}
+
+/* Password Trailing Eye Vector Hooks */
+.password-field-wrapper {
+    position: relative;
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.password-field-wrapper .auth-field-input {
+    padding-right: 50px;
+}
+
+.password-toggle-trigger {
+    position: absolute;
+    right: 15px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    color: #667085;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 4px;
+    transition: color 0.2s ease;
+}
+
+.password-toggle-trigger:hover { color: #ff4a11; }
+
+.toggle-eye-svg {
+    width: 18px;
+    height: 18px;
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 2;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
+/* Action Controls Buttons Hub */
+.auth-submit-bezel {
+    width: 100%;
+    margin-top: 5px;
+}
+
+.auth-primary-submit-btn {
+    width: 100%;
+    padding: 16px;
+    background-color: #0f1115;
+    border: none;
+    border-radius: 30px;
+    color: #ffffff;
+    font-weight: 800;
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    cursor: pointer;
+    box-shadow: 0 8px 22px rgba(15, 17, 21, 0.12);
+    transition: all 0.3s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.auth-primary-submit-btn:hover {
+    background-color: #ff4a11;
+    box-shadow: 0 10px 25px rgba(255, 74, 17, 0.35);
+    transform: translateY(-2px);
+}
+
+/* Dynamic Notification Alert Warning Toast Overlay Banner */
+.auth-validation-toast {
+    position: absolute;
+    bottom: -32px;
+    left: 10px;
+    color: #f75c5c;
+    font-size: 12px;
+    font-weight: 700;
+    opacity: 0;
+    transform: translateY(-4px);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    pointer-events: none;
+}
+
+.auth-validation-toast.toast-active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.auth-footer-prompt-text {
+    text-align: center;
+    font-size: 13.5px;
+    font-weight: 600;
+    color: #555e6b;
+    margin-top: 25px;
+}
+
+.auth-signup-redirect-link {
+    color: #ff4a11;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    font-weight: 700;
+    transition: text-shadow 0.2s ease;
+}
+
+.auth-signup-redirect-link:hover { text-shadow: 0 0 10px rgba(255, 74, 17, 0.25); }
+
+/* Absolute Modal Backdrop Dialogue Cover Window */
+.success-alert-dimmer {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(9, 10, 15, 0.6);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.4s ease, visibility 0.4s;
+}
+
+.success-alert-dimmer.modal-open {
+    opacity: 1;
+    visibility: visible;
+}
+
+.success-alert-card {
+    background: #ffffff;
+    border-radius: 20px;
+    padding: 40px 30px;
+    width: 95%;
+    max-width: 440px;
+    text-align: center;
+    box-shadow: 0 25px 60px rgba(0, 0, 0, 0.15);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transform: translateY(20px) scale(0.95);
+    transition: transform 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.success-alert-dimmer.modal-open .success-alert-card {
+    transform: translateY(0) scale(1);
+}
+
+.success-check-icon {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: rgba(52, 168, 83, 0.1);
+    color: #34a853; /* System Emerald Green Success Token Accent */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.success-check-icon svg { width: 26px; height: 26px; fill: none; }
+
+.success-alert-card h2 {
+    font-size: 24px;
+    font-weight: 900;
+    color: #0f1115;
+    margin-bottom: 12px;
+}
+
+.success-alert-card p {
+    font-size: 14px;
+    color: #555e6b;
+    line-height: 1.6;
+    margin-bottom: 25px;
+}
+
+.success-route-btn {
+    width: 100%;
+    padding: 14px;
+    background-color: #ff4a11;
+    color: #ffffff;
+    border: none;
+    border-radius: 30px;
+    font-weight: 800;
+    font-size: 13.5px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    cursor: pointer;
+    box-shadow: 0 6px 18px rgba(255, 74, 17, 0.3);
+    transition: all 0.3s ease;
+}
+
+.success-route-btn:hover {
+    background-color: #0f1115;
+    box-shadow: 0 6px 18px rgba(15, 17, 21, 0.2);
+}
+
+/* --- ADAPTIVE PORTAL RESPONSIVENESS OVERLAYS BREAKPOINTS --- */
+@media (max-width: 480px) {
+    .auth-card-hull { padding: 30px 20px; border-radius: 16px; }
+    .auth-card-header { margin-bottom: 20px; }
+}
+
+  </style>
+
+  <script>
+    // --- SPORTS REGISTRATION VALIDATION ENGINE RUNTIME CONTROLLER ---
+document.addEventListener('DOMContentLoaded', () => {
+    
+    const regNameField = document.getElementById('regNameField');
+    const regPhoneField = document.getElementById('regPhoneField');
+    const portalSignUpForm = document.getElementById('portalSignUpForm');
+    const toastNotificationAlert = document.getElementById('regValidationToast');
+    const successModalContainer = document.getElementById('successModalContainer');
+    const proceedLoginModalBtn = document.getElementById('proceedLoginModalBtn');
+
+    // 1. STRICTOR INPUT FILTERS: REMOVE DIGITS FROM FULL NAME IN REAL TIME
+    if (regNameField) {
+        regNameField.addEventListener('input', () => {
+            regNameField.value = regNameField.value.replace(/[0-9]/g, '');
+        });
+    }
+
+    // 2. STRICTOR INPUT FILTERS: REMOVE ALPHABET CHARACTERS FROM PHONE NUMBER IN REAL TIME
+    if (regPhoneField) {
+        regPhoneField.addEventListener('input', () => {
+            regPhoneField.value = regPhoneField.value.replace(/[^0-9]/g, '');
+        });
+    }
+
+    // 3. PASSWORD FIELD CLASSIFICATION TOGGLE CONTROLLERS LINK TRIGGER
+    document.querySelectorAll('.password-toggle-trigger').forEach(triggerBtn => {
+        triggerBtn.addEventListener('click', () => {
+            const targetFieldId = triggerBtn.getAttribute('data-target');
+            const targetInput = document.getElementById(targetFieldId);
+            
+            if (targetInput) {
+                targetInput.type = (targetInput.type === 'password') ? 'text' : 'password';
+            }
+        });
+    });
+
+    // 4. CONDITIONAL REGISTRATION SIGN UP SUBMISSION DISPATCH LOOP
+    if (portalSignUpForm) {
+        portalSignUpForm.addEventListener('submit', (event) => {
+            event.preventDefault(); // Intercept browser context reload cycles
+
+            const nameVal = document.getElementById('regNameField').value.trim();
+            const emailVal = document.getElementById('regEmailField').value.trim();
+            const phoneVal = document.getElementById('regPhoneField').value.trim();
+            const passwordVal = document.getElementById('regPasswordField').value.trim();
+            const confirmPasswordVal = document.getElementById('regConfirmPasswordField').value.trim();
+
+            // Guard rails step 01: Verify all operational field items have entries inserted
+            if (nameVal === '' || emailVal === '' || phoneVal === '' || passwordVal === '' || confirmPasswordVal === '') {
+                showToastNotification("Please fill out all fields.");
+            
+            // Guard rails step 02: Check matching string lengths variables values parameters
+            } else if (passwordVal !== confirmPasswordVal) {
+                showToastNotification("Passwords do not match.");
+            
+            } else {
+                // Form verified: slide open successful modal dialogue overlay canvas window
+                if (toastNotificationAlert) toastNotificationAlert.classList.remove('toast-active');
+                if (successModalContainer) successModalContainer.classList.add('modal-open');
+            }
+        });
+    }
+
+    // 5. HELPER ACTION: DISPATCH ALERTS BANNER VISIBILITY TRANSITIONS
+    function showToastNotification(messageText) {
+        if (toastNotificationAlert) {
+            toastNotificationAlert.innerText = messageText;
+            toastNotificationAlert.classList.add('toast-active');
+            
+            setTimeout(() => {
+                toastNotificationAlert.classList.remove('toast-active');
+            }, 3000);
+        }
+    }
+
+    // 6. ROUTE APPLICATION TARGET DEVIATION DIRECTION BACK TO PORTAL LOG IN
+    if (proceedLoginModalBtn) {
+        proceedLoginModalBtn.addEventListener('click', () => {
+            window.location.href = 'login.html';
+        });
+    }
+});
+
+  </script>
+</body>
+</html>

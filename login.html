@@ -1,0 +1,575 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stackly Sports Club - Secure Auth Portal</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="auth-portal-body">
+
+    <!-- MASTER GLASSMORPHIC AUTH CARD DECK -->
+    <main class="auth-card-hull">
+        
+        <!-- Header Controls Row -->
+        <div class="auth-card-header">
+            <div class="auth-brand-logo">
+                <span class="auth-logo-dot"></span>
+                <span class="auth-logo-text">STACKLY<span>CLUB</span></span>
+            </div>
+            <!-- Back to Home Action Route -->
+            <a href="index.html" class="auth-home-btn-link">&larr; Home</a>
+        </div>
+
+        <!-- Portal Core Titles Section -->
+        <h1 class="auth-portal-title">Welcome <span>Back.</span></h1>
+        <p class="auth-portal-caption">Select your operational profile access keys to unlock your custom physical performance analytics metrics database.</p>
+
+        <!-- Dynamic Role Selector Segment Switches -->
+        <div class="auth-role-tabs-row">
+            <!-- Role Option 01: Coach -->
+            <button type="button" class="role-pill-btn active-role" onclick="toggleAuthRole(this, 'coach')">
+                <svg viewBox="0 0 24 24" class="role-tab-svg"><path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/></svg>
+                <div class="role-btn-labels">
+                    <strong>Coach Director</strong>
+                    <span>Studio Dashboard</span>
+                </div>
+            </button>
+
+            <!-- Role Option 02: Athlete Student -->
+            <button type="button" class="role-pill-btn" onclick="toggleAuthRole(this, 'student')">
+                <svg viewBox="0 0 24 24" class="role-tab-svg"><path d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5c-1.66 0-3 1.34-3 3s1.34 3 3 3zm-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5C6.34 5 5 6.34 5 8s1.34 3 3 3zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5z"/></svg>
+                <div class="role-btn-labels">
+                    <strong>Athlete Student</strong>
+                    <span>Registry Deck</span>
+                </div>
+            </button>
+        </div>
+
+        <!-- Core Credentials Authentication Form Grid -->
+        <form class="auth-credentials-form" id="portalAuthForm" onsubmit="executePortalLogin(event)" novalidate>
+            
+            <!-- Email Input Field Block -->
+            <div class="auth-input-cell">
+                <label class="auth-input-label">Email Address</label>
+                <input type="email" id="authEmailField" class="auth-field-input" placeholder="name@example.com" required autocomplete="off">
+            </div>
+
+            <!-- Password Input Field Block -->
+            <div class="auth-input-cell">
+                <label class="auth-input-label">Security Password Key</label>
+                <div class="password-field-wrapper">
+                    <input type="password" id="authPasswordField" class="auth-field-input" placeholder="••••••••" required>
+                    <button type="button" class="password-toggle-trigger" onclick="togglePasswordVisibilityField()" aria-label="Toggle Password Visibility">
+                        <svg viewBox="0 0 24 24" class="toggle-eye-svg"><path d="M12 4.5C7 4.5 2.73 7.61 1 12c1.73 4.39 6 7.5 11 7.5s9.27-3.11 11-7.5c-1.73-4.39-6-7.5-11-7.5zM12 17c-2.76 0-5-2.24-5-5s2.24-5 5-5 5 2.24 5 5-2.24 5-5 5zm0-8c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z"/></svg>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Contextual Toggles Row Links -->
+            <div class="auth-utilities-row">
+                <label class="auth-checkbox-label">
+                    <input type="checkbox" class="auth-native-checkbox">
+                    <span>Remember me</span>
+                </label>
+                <!-- Redirects missing/forgotten codes directly to 404 target template layout -->
+                <a href="404.html" class="auth-utility-link">Forgot Password?</a>
+            </div>
+
+            <!-- Form Validation Submission Trigger Action Bezel -->
+            <div class="auth-submit-bezel">
+                <button type="submit" class="auth-primary-submit-btn">
+                    <span>Log In Securely &rarr;</span>
+                </button>
+            </div>
+
+            <!-- Absolute Warning Dynamic Toast Overlay -->
+            <div class="auth-validation-toast" id="authValidationToast">Please fill out all fields.</div>
+
+        </form>
+
+        <!-- Divider Line Separator Ribbon Segment -->
+        <div class="auth-divider-ribbon">
+            <span>Or Sign In With</span>
+        </div>
+
+        <!-- Social OAuth OMNI Sign-in Cluster Buttons -->
+        <div class="auth-social-oauth-row">
+            <a href="404.html" class="oauth-provider-btn">
+                <!-- SVG Google Icon Asset -->
+                <svg viewBox="0 0 24 24" class="oauth-svg-g"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.18 1-.78 1.85-1.63 2.42v2.81h2.64c1.55-1.42 2.43-3.51 2.43-6.07z" fill="#EA4335"/><path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-2.64-2.81c-.73.49-1.66.78-2.64.78-2.03 0-3.74-1.37-4.35-3.22H1.94v2.91C3.76 21.04 7.6 23 12 23z" fill="#34A853"/><path d="M7.65 15.09c-.15-.49-.24-1-.24-1.54s.09-1.05.24-1.54V9.1H1.94C1.3 10.4 1 11.83 1 13.31c0 1.48.3 2.91.94 4.21l4.75-2.43z" fill="#FBBC05"/><path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.6 1 3.76 2.96 1.94 6.13l4.75 2.43c.61-1.85 2.32-3.22 4.35-3.22z" fill="#4285F4"/></svg>
+                <span>Google</span>
+            </a>
+            <a href="404.html" class="oauth-provider-btn">
+                <!-- SVG Facebook Icon Asset -->
+                <svg viewBox="0 0 24 24" class="oauth-svg-fb" fill="#1877F2"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.373-4.669 1.235 0 2.528.22 2.528.22v2.78H15.61c-1.49 0-1.956.925-1.956 1.874v2.25h3.128l-.5 3.47h-2.628v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+                <span>Facebook</span>
+            </a>
+        </div>
+
+        <!-- Footer Sign-up Call Link Anchor Row -->
+        <p class="auth-footer-prompt-text">Don't have an account? <a href="signup.html" class="auth-signup-redirect-link">Create Account</a></p>
+
+    </main>
+
+    <style>
+        /* --- COMPACT HIGH-PERFORMANCE AUTH PORTAL FRAMEWORK --- */
+.auth-portal-body {
+    min-height: 100vh;
+    width: 100%;
+    background-color: #f8f9fa; /* Maintains clear white canvas layout consistency */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 20px;
+}
+
+.auth-card-hull {
+    background: #ffffff;
+    border: 1px solid #e1e4eb;
+    border-radius: 24px;
+    width: 100%;
+    max-width: 520px; /* Aligned with standard structural widths */
+    padding: 35px;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.03);
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Header Context Configurations Layout Row */
+.auth-card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.auth-brand-logo {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.auth-logo-dot {
+    width: 6px;
+    height: 6px;
+    background-color: #ff4a11; /* System Neon Orange Primary */
+    border-radius: 50%;
+}
+
+.auth-logo-text {
+    font-size: 16px;
+    font-weight: 900;
+    color: #0f1115;
+    letter-spacing: 0.5px;
+}
+
+.auth-logo-text span { color: #ff4a11; }
+
+.auth-home-btn-link {
+    font-size: 13px;
+    font-weight: 700;
+    color: #667085;
+    text-decoration: none;
+    background: rgba(15, 17, 21, 0.04);
+    padding: 6px 14px;
+    border-radius: 20px;
+    transition: all 0.3s ease;
+}
+
+.auth-home-btn-link:hover {
+    background-color: #0f1115;
+    color: #ffffff;
+}
+
+/* Core Title Deck Layouts Typography */
+.auth-portal-title {
+    font-size: clamp(28px, 4vw, 36px);
+    font-weight: 900;
+    color: #0f1115;
+    margin-bottom: 12px;
+}
+
+.auth-portal-title span { color: #ff4a11; }
+
+.auth-portal-caption {
+    font-size: 13.5px;
+    color: #555e6b;
+    line-height: 1.5;
+    margin-bottom: 25px;
+}
+
+/* Dynamic Segmented Control Selector Tabs Grid */
+.auth-role-tabs-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+    margin-bottom: 25px;
+    width: 100%;
+}
+
+.role-pill-btn {
+    background: #ffffff;
+    border: 1px solid #e1e4eb;
+    border-radius: 12px;
+    padding: 14px 18px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    text-align: left;
+    transition: all 0.3s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.role-tab-svg {
+    width: 18px;
+    height: 18px;
+    color: #667085;
+    transition: color 0.3s ease;
+}
+
+.role-btn-labels {
+    display: flex;
+    flex-direction: column;
+}
+
+.role-btn-labels strong {
+    font-size: 13px;
+    font-weight: 800;
+    color: #0f1115;
+}
+
+.role-btn-labels span {
+    font-size: 11px;
+    font-weight: 600;
+    color: #8c93a0;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+/* Active Highlight Role Toggle States Configurations */
+.role-pill-btn.active-role {
+    border-color: #ff4a11;
+    background-color: rgba(255, 74, 17, 0.01);
+    box-shadow: 0 4px 15px rgba(255, 74, 17, 0.05);
+}
+
+.role-pill-btn.active-role .role-tab-svg { color: #ff4a11; }
+
+.role-pill-btn:hover:not(.active-role) {
+    border-color: #0f1115;
+    transform: translateY(-2px);
+}
+
+/* Forms Credential Inputs Frame Layouts */
+.auth-credentials-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    position: relative;
+}
+
+.auth-input-cell {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.auth-input-label {
+    font-size: 11px;
+    font-weight: 800;
+    color: #0f1115;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.auth-field-input {
+    width: 100%;
+    padding: 14px 18px;
+    background: #ffffff;
+    border: 1px solid #e1e4eb;
+    outline: none;
+    border-radius: 8px;
+    color: #0f1115;
+    font-size: 14px;
+    font-weight: 600;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.auth-field-input:focus {
+    border-color: #ff4a11;
+    box-shadow: 0 0 12px rgba(255, 74, 17, 0.12);
+}
+
+.password-field-wrapper {
+    position: relative;
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.password-field-wrapper .auth-field-input {
+    padding-right: 50px;
+}
+
+.password-toggle-trigger {
+    position: absolute;
+    right: 15px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    color: #667085;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 4px;
+    transition: color 0.2s ease;
+}
+
+.password-toggle-trigger:hover { color: #ff4a11; }
+
+.toggle-eye-svg {
+    width: 18px;
+    height: 18px;
+    fill: currentColor;
+}
+
+/* Utilities Row Alignment Matrix */
+.auth-utilities-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.auth-checkbox-label {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+    color: #555e6b;
+}
+
+.auth-native-checkbox {
+    accent-color: #ff4a11;
+    cursor: pointer;
+    width: 14px;
+    height: 14px;
+}
+
+.auth-utility-link {
+    color: #667085;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.auth-utility-link:hover { color: #ff4a11; }
+
+/* Submission Execution Button Block */
+.auth-submit-bezel {
+    width: 100%;
+    margin-top: 5px;
+}
+
+.auth-primary-submit-btn {
+    width: 100%;
+    padding: 16px;
+    background-color: #0f1115;
+    border: none;
+    border-radius: 30px;
+    color: #ffffff;
+    font-weight: 800;
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    cursor: pointer;
+    box-shadow: 0 8px 22px rgba(15, 17, 21, 0.15);
+    transition: all 0.3s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.auth-primary-submit-btn:hover {
+    background-color: #ff4a11;
+    box-shadow: 0 10px 25px rgba(255, 74, 17, 0.35);
+    transform: translateY(-2px);
+}
+
+/* Dynamic Absolute Toast Alerts Notification Layer Overlay */
+.auth-validation-toast {
+    position: absolute;
+    bottom: -28px;
+    left: 10px;
+    color: #f75c5c;
+    font-size: 11.5px;
+    font-weight: 700;
+    opacity: 0;
+    transform: translateY(-4px);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    pointer-events: none;
+}
+
+.auth-validation-toast.toast-active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Ribbon Divider Line Structural Layout Blocks */
+.auth-divider-ribbon {
+    text-align: center;
+    position: relative;
+    margin: 25px 0;
+}
+
+.auth-divider-ribbon::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background-color: #e1e4eb;
+    z-index: 1;
+}
+
+.auth-divider-ribbon span {
+    position: relative;
+    background-color: #ffffff;
+    padding: 0 15px;
+    color: #8c93a0;
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    z-index: 2;
+}
+
+/* Social Media OAuth Buttons Alignment Matrix */
+.auth-social-oauth-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+    width: 100%;
+    margin-bottom: 25px;
+}
+
+.oauth-provider-btn {
+    border: 1px solid #e1e4eb;
+    background-color: #ffffff;
+    border-radius: 12px;
+    padding: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.oauth-provider-btn span {
+    font-size: 13.5px;
+    font-weight: 700;
+    color: #0f1115;
+}
+
+.oauth-svg-g, .oauth-svg-fb {
+    width: 16px;
+    height: 16px;
+}
+
+.oauth-provider-btn:hover {
+    border-color: #0f1115;
+    background-color: rgba(15, 17, 21, 0.01);
+    transform: translateY(-2px);
+}
+
+.auth-footer-prompt-text {
+    text-align: center;
+    font-size: 13.5px;
+    font-weight: 600;
+    color: #555e6b;
+}
+
+.auth-signup-redirect-link {
+    color: #ff4a11;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    font-weight: 700;
+    transition: text-shadow 0.2s ease;
+}
+
+.auth-signup-redirect-link:hover { text-shadow: 0 0 10px rgba(255, 74, 17, 0.25); }
+
+/* --- SYSTEM ADAPTIVE BREAKPOINTS RESPONSIVENESS OVERLAYS --- */
+@media (max-width: 480px) {
+    .auth-card-hull { padding: 25px 20px; }
+    .auth-role-tabs-row, .auth-social-oauth-row { grid-template-columns: 1fr; gap: 12px; }
+    .role-pill-btn { padding: 12px; }
+}
+
+    </style>
+
+<script>
+    // --- SPORTS AUTH SEGMETATION VARIABLE CONTROLLER ENGINE ---
+let selectedUserRoleType = 'coach'; // Default active configuration mapping flag state
+
+// 1. SELECT ROLE SWITCH SEGMENTS MATRIX FUNCTION
+function toggleAuthRole(buttonElement, targetRoleString) {
+    // Re-index parent block active button classes loop
+    const tabButtons = buttonElement.parentElement.querySelectorAll('.role-pill-btn');
+    tabButtons.forEach(btn => btn.classList.remove('active-role'));
+    
+    // Assign structural variable triggers
+    buttonElement.classList.add('active-role');
+    selectedUserRoleType = targetRoleString;
+}
+
+// 2. PASSWORD INPUT EYE TOGGLE FIELD FUNCTION
+function togglePasswordVisibilityField() {
+    const pwdInput = document.getElementById('authPasswordField');
+    if (pwdInput) {
+        pwdInput.type = (pwdInput.type === 'password') ? 'text' : 'password';
+    }
+}
+
+// 3. MASTER LOGIN REDIRECTION & CONDITIONAL DESK DATA PIPELINE ENGINE
+function executePortalLogin(event) {
+    event.preventDefault(); // Intercept automated background frame sweeps
+
+    const emailField = document.getElementById('authEmailField');
+    const passwordField = document.getElementById('authPasswordField');
+    const errorToast = document.getElementById('authValidationToast');
+
+    if (!emailField || !passwordField || !errorToast) return;
+
+    const emailStringValue = emailField.value.trim();
+    const passwordStringValue = passwordField.value.trim();
+
+    // Safety Gate Check: Confirm both entries have valid inputs filled
+    if (emailStringValue === '' || passwordStringValue === '') {
+        errorToast.classList.add('toast-active');
+        
+        // Clear warning toast automatically after 3 seconds
+        setTimeout(() => {
+            errorToast.classList.remove('toast-active');
+        }, 3000);
+    } else {
+        errorToast.classList.remove('toast-active');
+
+        // STATE TRANSFER ARRAY MAPPING: Save email parameter to local engine cache
+        localStorage.setItem('apexSessionUserEmail', emailStringValue);
+
+        // CONDITIONAL DASHBOARD DIVERT LINK DIRECTION STRATAGEMS
+        if (selectedUserRoleType === 'coach') {
+            window.location.href = 'partner-dashboard.html'; // Target redirection loop to Coach Workspace Panel
+        } else if (selectedUserRoleType === 'student') {
+            window.location.href = 'student-dashboard.html'; // Target redirection loop to Student Registry Deck
+        }
+    }
+}
+
+</script>
+</body>
+</html>
+

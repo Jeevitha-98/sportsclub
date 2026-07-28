@@ -1,0 +1,1905 @@
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stackly Sports Club | Elite Training</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div id ="preloader">
+        <div class="loader-container">
+            <div class="loader-ring"></div>
+    <svg class="loader-icon" viewBox="0 0 24 24">
+    <path d="M18 2H6v2H2v3c0 3.2 2.1 5.8 5 6.7V17H4v2h16v-2h-3v-3.3c2.9-.9 5-3.5 5-6.7V4h-4V2zM4 7V6h2v3.4C4.8 8.8 4 8 4 7zm16 0c0 1-.8 1.8-2 2.4V6h2v1z"/>
+</svg>
+
+        </div>
+    <div class="loader-text">Stackly<span>Club</span></div>
+    </div>
+
+<script>
+    window.addEventListener ('load',()=>{
+        const preloader = document.getElementById('preloader');
+        setTimeout(() =>{
+
+             preloader.classList.add('preloader-hidden');
+
+        },2500);
+
+    }
+    )
+
+</script>
+
+<!-- FLOATING GLASSMORPHIC NAVIGATION ARCHITECTURE -->
+<nav class="floating-navbar">
+    <div class="nav-container">
+        
+        <!-- Interactive Brand Logo Wrap -->
+        <a href="javascript:void(0)" class="nav-logo" id="logoRefreshBtn" title="Refresh Page">
+            <img src="./Assests/sports club logo.webp" alt="Apex Logo" class="logo-img">
+       
+        </a>
+
+        <!-- Responsive Hamburger Trigger -->
+        <button class="menu-toggle" id="mobileMenuBtn" aria-label="Toggle Navigation Menu">
+            <span class="hamburger-bar"></span>
+            <span class="hamburger-bar"></span>
+            <span class="hamburger-bar"></span>
+        </button>
+
+        <!-- Navigation Menus & Action Deck -->
+        <div class="nav-menu-wrapper" id="navMenuWrapper">
+            <ul class="nav-links">
+                <li><a href="index.html" class="nav-item ">Home</a></li>
+                <li><a href="about.html" class="nav-item ">About Us</a></li>
+                <li><a href="programs.html" class="nav-item ">Programs</a></li>
+                <li><a href="blogs.html" class="nav-item ">Blogs</a></li>
+                <li><a href="contact.html" class="nav-item active">Contact Us</a></li>
+            </ul>
+            
+            <div class="nav-auth-deck">
+                <a href="login.html" class="btn-login">
+                    <span>Login</span>
+                    <svg viewBox="0 0 24 24" class="auth-icon">
+                        <path d="M11 16l-4-4m0 0l4-4m-4 4h14m-5 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h7a3 3 0 013 3v1" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+                    </svg>
+                </a>
+            </div>
+        </div>
+
+    </div>
+</nav>
+
+
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const logoRefreshBtn = document.getElementById('logoRefreshBtn');
+        const mobileMenuBtn = document. getElementById ('mobileMenuBtn');
+        const navMenusWrapper = document. getElementById ('navMenuWrapper');
+        const navItems = document. querySelectorAll('.nav-item');
+    
+     logoRefreshBtn.addEventListener('click', (e) => {
+        e.preventDefault();
+        window.location.reload();
+         });
+    
+     mobileMenuBtn.addEventListener('click', () => {
+        mobileMenuBtn.classList.toggle('open');
+        navMenuWrapper.classList.toggle('mobile-open');
+    
+     if (navMenuWrapper.classList.contains('mobile-open')) {
+            document.body.style.overflow = 'hidden';
+        } else {
+            document.body.style.overflow = '';
+        }
+    });
+navItems.forEach(item => {
+        item.addEventListener('click', () => {
+          
+            navItems.forEach(el => el.classList.remove('active'));
+            
+    
+            item.classList.add('active');
+
+            if (navMenuWrapper.classList.contains('mobile-open')) {
+                mobileMenuBtn.classList.remove('open');
+                navMenuWrapper.classList.remove('mobile-open');
+                document.body.style.overflow = '';
+            }
+        });
+    });
+});
+</script>
+
+
+<section class="simple-contact-hero scroll-reveal-view" id="contact-top">
+    <!-- Clean Widescreen Background Image Tag -->
+    <img src="./Assests/jump run.webp" alt="Apex Stadium Track Background" class="simple-hero-bg-asset">
+    
+    <!-- Symmetrical Dark Mask Overlay to ensure clean text contrast -->
+    <div class="simple-hero-dark-overlay"></div>
+
+    <div class="simple-hero-container">
+        <div class="simple-badge-row">
+            <span class="pulse-beacon"></span>
+            <span>Roster Portals Online</span>
+        </div>
+        
+        <h1 class="simple-hero-title">Establish Your <br><span>Arena Connection</span></h1>
+        
+        <p class="simple-hero-desc">
+            Ready to optimize your performance threshold variables? Bridge your athletic matrix with our coaching directors to lock your priority training track slot.
+        </p>
+        
+        <div class="simple-action-row">
+            <a href="404.html" class="simple-prime-btn">Initialize Roster Form</a>
+        </div>
+    </div>
+</section>
+
+
+<style>
+/* --- SIMPLE CENTRED HERO WITH BACKGROUND IMAGE System --- */
+.simple-contact-hero {
+    position: relative;
+    padding: 150px 5% 80px 5%; /* Expanded vertical space to reveal background image canvas */
+    background-color: #090a0f; /* High contrast dark fallback backdrop color */
+    width: 100%;
+    min-height: 70vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+/* Background Image Asset Positioning Matrix */
+.simple-hero-bg-asset {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 1;
+    transform: scale(1.04);
+    transition: transform 0.8s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+/* Symmetrical Dark Shield Layer Overlay */
+.simple-hero-dark-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* Creates safe readability boundaries for light text across high-exposure images */
+    background: radial-gradient(circle at center, rgba(9, 10, 15, 0.75) 0%, rgba(9, 10, 15, 0.9) 100%);
+    z-index: 2;
+}
+
+.simple-hero-container {
+    position: relative;
+    width: 100%;
+    max-width: 750px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    z-index: 3; /* Lifts content layer safely over background image tracking fields */
+}
+
+/* Mini Pulse Badge System */
+.simple-badge-row {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 6px 16px;
+    border-radius: 20px;
+    margin-bottom: 25px;
+}
+
+.pulse-beacon {
+    width: 6px;
+    height: 6px;
+    background-color: #ff4a11; /* System Neon Orange Primary */
+    border-radius: 50%;
+    position: relative;
+}
+
+.pulse-beacon::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background-color: #ff4a11;
+    animation: simplePing 1.8s infinite ease-out;
+}
+
+@keyframes simplePing {
+    0% { transform: scale(1); opacity: 1; }
+    100% { transform: scale(3.5); opacity: 0; }
+}
+
+.simple-badge-row span {
+    color: #ffffff;
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+}
+
+/* Typography Modifications for Dark Canvas Readability */
+.simple-hero-title {
+    font-size: clamp(34px, 5.2vw, 56px);
+    font-weight: 900;
+    color: #ffffff; /* Changed to pure white to contrast background graphics */
+    text-transform: uppercase;
+    line-height: 1.1;
+    margin-bottom: 20px;
+    letter-spacing: -0.5px;
+}
+
+.simple-hero-title span {
+    color: #ff4a11;
+    display: inline-block;
+    transition: text-shadow 0.4s ease, transform 0.4s ease;
+}
+
+.simple-contact-hero:hover .simple-hero-title span {
+    text-shadow: 0 0 25px rgba(255, 74, 17, 0.5), 0 0 50px rgba(255, 74, 17, 0.2);
+    transform: scale(1.01);
+}
+
+.simple-hero-desc {
+    font-size: clamp(14.5px, 1.8vw, 17px);
+    color: #b3b8c3; /* Light steel gray for soft readability layout loops */
+    line-height: 1.6;
+    margin-bottom: 35px;
+    max-width: 620px;
+    transition: color 0.3s ease;
+}
+
+.simple-contact-hero:hover .simple-hero-desc {
+    color: #ffffff;
+}
+
+/* Clean High-Contrast Action Button */
+.simple-action-row {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.simple-prime-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 16px 42px;
+    background-color: #ffffff; /* Pure white action button block */
+    color: #0f1115;
+    font-weight: 800;
+    font-size: 13.5px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    text-decoration: none;
+    border-radius: 30px;
+    box-shadow: 0 8px 22px rgba(0, 0, 0, 0.2);
+    transition: all 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+/* Kinetic Hover Triggers to execute background shifts smoothly */
+.simple-contact-hero:hover .simple-hero-bg-asset {
+    transform: scale(1.01); /* Smooth subtle background pull on hover states */
+}
+
+.simple-prime-btn:hover {
+    background-color: #ff4a11;
+    color: #ffffff;
+    box-shadow: 0 10px 25px rgba(255, 74, 17, 0.35);
+    transform: translateY(-3px);
+}
+
+/* --- ADAPTIVE GRAPHIC RESPONSIVENESS OVERLAYS --- */
+@media (max-width: 480px) {
+    .simple-contact-hero {
+        padding-top: 120px; /* Secure extra clearance space for navigation elements on mobile viewports */
+    }
+    .simple-prime-btn {
+        width: 100%;
+    }
+}
+
+</style>
+
+
+<!-- DYNAMIC RESPONSIVE CONTACT US FORM ENGINE -->
+<section class="portal-form-section scroll-reveal-view" id="contact-form-section">
+    <div class="form-master-wrapper">
+        
+        <!-- Left Column: Tactical Hub Connectivity Data Panel -->
+        <div class="form-intel-column">
+            <span class="intel-mini-badge">Flagship Sports Club</span>
+            <h2 class="intel-main-heading">Reach Our <br><span>Tactical Directors</span></h2>
+            
+            <div class="intel-cards-stack">
+                <!-- Node 01: Address -->
+                <div class="intel-info-card">
+                    <div class="intel-icon-box">
+                        <svg viewBox="0 0 24 24" class="intel-svg"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+                    </div>
+                    <div class="intel-content-box">
+                        <span class="intel-card-label">Visit Our Compound</span>
+                        <p>MMR Complex, Periyakollappatty, Chinna Thirupathi, Salem, Tamil Nadu 636008</p>
+                    </div>
+                </div>
+
+                <!-- Node 02: Hotline -->
+                <div class="intel-info-card">
+                    <div class="intel-icon-box">
+                        <svg viewBox="0 0 24 24" class="intel-svg"><path d="M6.62 10.79a15.15 15.15 0 0 0 6.59 6.59l2.2-2.2a1 1 0 0 1 1.11-.27c1.12.44 2.33.68 3.58.68a1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.24 2.46.68 3.58a1 1 0 0 1-.27 1.1l-2.2 2.2z"/></svg>
+                    </div>
+                    <div class="intel-content-box">
+                        <span class="intel-card-label">Direct Hotlines</span>
+                        <p class="accent-orange-text">+91 7010792745</p>
+                    </div>
+                </div>
+
+                <!-- Node 03: Interactive Outlook Direct Mail Link -->
+                <div class="intel-info-card">
+                    <div class="intel-icon-box">
+                        <svg viewBox="0 0 24 24" class="intel-svg"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+                    </div>
+                    <div class="intel-content-box">
+                        <span class="intel-card-label">Electronic Mail</span>
+                        <!-- Hyper-linked mailto logic automatically fires outlook desktop/web clients instantly -->
+                        <a href="mailto:admissions@://stacklyclub.com" class="intel-interactive-mail-link">admissions@stacklyclub.com</a>
+                    </div>
+                </div>
+
+                <!-- Node 04: Availability -->
+                <div class="intel-info-card">
+                    <div class="intel-icon-box">
+                        <svg viewBox="0 0 24 24" class="intel-svg"><path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zm3.3 14.3c-.4.4-.9.6-1.5.6c-.6 0-1.1-.2-1.5-.6l-3.3-3.3c-.4-.4-.6-.9-.6-1.5V7h2v4.1l2.9 2.9c.4.4.4 1 0 1.3z"/></svg>
+                    </div>
+                    <div class="intel-content-box">
+                        <span class="intel-card-label">Arena Availability</span>
+                        <p>Mon - Sun: 9:00 AM - 7:00 PM</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Right Column: High-Contrast Glowing Input Validation Console -->
+        <div class="form-console-column">
+            <div class="console-box-hull">
+                <h3 class="console-heading">Send Us a Message 🏃‍♂️</h3>
+                <p class="console-caption">Submit your custom training parameters. Form boundaries illuminate on active focus loops.</p>
+                
+                <form class="actual-input-form" id="apexRosterForm" onsubmit="handleFormSubmissionEngine(event)" novalidate>
+                    
+                    <!-- Field 1: Athlete Name -->
+                    <div class="input-container-cell">
+                        <label class="console-input-label">Your Full Name</label>
+                        <input type="text" id="athleteNameField" class="console-field-input" placeholder="Your elegant name..." required autocomplete="off">
+                    </div>
+
+                    <!-- Field 2: Email -->
+                    <div class="input-container-cell">
+                        <label class="console-input-label">Email Address</label>
+                        <input type="email" id="athleteEmailField" class="console-field-input" placeholder="name@example.com" required autocomplete="off">
+                    </div>
+
+                    <!-- Field 3: Mobile Contact -->
+                    <div class="input-container-cell">
+                        <label class="console-input-label">10-Digit Mobile Number</label>
+                        <input type="text" id="athletePhoneField" class="console-field-input" placeholder="10-digit mobile number" maxlength="10" required autocomplete="off">
+                    </div>
+
+                    <!-- Field 4: Discipline Dropdown Select Option -->
+                    <div class="input-container-cell">
+                        <label class="console-input-label">Athletic Discipline Category</label>
+                        <select id="athleteDisciplineSelect" class="console-field-select" required>
+                            <option value="" disabled selected hidden>Select a training category...</option>
+                            <option value="basketball">Basketball Combat Elite</option>
+                            <option value="soccer">Tactical Soccer Operations</option>
+                            <option value="tennis">Stackly Tennis Grand Prix</option>
+                        </select>
+                    </div>
+
+                    <!-- Field 5: Textarea Narrative -->
+                    <div class="input-container-cell">
+                        <label class="console-input-label">Your Custom Athletic Narrative</label>
+                        <textarea id="athleteNarrativeArea" class="console-field-textarea" placeholder="Tell us about your project footprint size, timeline metrics, and training finish preferences..." required></textarea>
+                    </div>
+
+                    <!-- Form Execution Trigger Row -->
+                    <div class="submit-action-bezel">
+                        <button type="submit" class="console-submit-btn" title="Submit Placement Profile">
+                            <span>Reserve for an Consultation &rarr;</span>
+                        </button>
+                    </div>
+
+                    <!-- Absolute Dynamic Validation Alert Toast Overlay Banner -->
+                    <div class="console-validation-toast" id="consoleValidationToast">Please fill out all fields.</div>
+
+                </form>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<style>
+    /* --- COMPACT HIGH-CONTRAST FORM SYSTEM THEME --- */
+.portal-form-section {
+    padding: 50px 5% 30px 5%; /* Enforces requested 50px Top, 30px Bottom bounds exactly */
+    background-color: #ffffff; /* Smooth clear integration across your light white background canvas */
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+    position: relative;
+}
+
+.form-master-wrapper {
+    width: 100%;
+    max-width: 1300px;
+    display: grid;
+    grid-template-columns: 0.95fr 1.05fr; /* Precise asymmetric layout ratio mapping from your image sample */
+    gap: 50px;
+    align-items: flex-start;
+}
+
+/* Left Grid Column Intel Deck Architecture */
+.form-intel-column {
+    display: flex;
+    flex-direction: column;
+}
+
+.intel-mini-badge {
+    color: #ff4a11; /* System Neon Orange Primary */
+    font-size: 11.5px;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 12px;
+}
+
+.intel-main-heading {
+    font-size: clamp(34px, 5.2vw, 54px);
+    font-weight: 900;
+    color: #0f1115;
+    text-transform: uppercase;
+    line-height: 1.1;
+    margin-bottom: 35px;
+    letter-spacing: -1px;
+}
+
+.intel-main-heading span {
+    color: #ff4a11;
+}
+
+.intel-cards-stack {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.intel-info-card {
+    background: #ffffff;
+    border: 1px solid #0f1115; /* High-contrast clean dark structural borders */
+    border-radius: 12px;
+    padding: 16px 20px;
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 15px;
+    align-items: center;
+    transition: transform 0.3s cubic-bezier(0.25, 1, 0.5, 1), border-color 0.3s ease;
+}
+
+.intel-icon-box {
+    width: 38px;
+    height: 38px;
+    border-radius: 6px;
+    background-color: rgba(15, 17, 21, 0.04);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #0f1115;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.intel-svg {
+    width: 18px;
+    height: 18px;
+    fill: currentColor;
+}
+
+.intel-content-box {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.intel-card-label {
+    font-size: 10.5px;
+    font-weight: 800;
+    color: #667085;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.intel-content-box p {
+    font-size: 13.5px;
+    color: #0f1115;
+    font-weight: 700;
+    line-height: 1.4;
+}
+
+.accent-orange-text {
+    color: #ff4a11 !important;
+}
+
+/* Outlook direct integration link architecture */
+.intel-interactive-mail-link {
+    font-size: 13.5px;
+    color: #0f1115;
+    font-weight: 900;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    width: max-content;
+    transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+
+.intel-interactive-mail-link:hover {
+    color: #ff4a11;
+    text-shadow: 0 0 10px rgba(255, 74, 17, 0.25);
+}
+
+/* Card Hover Input Dynamics Link Paths */
+.intel-info-card:hover {
+    border-color: #ff4a11;
+    transform: translateX(4px);
+    box-shadow: 0 5px 15px rgba(255, 74, 17, 0.05);
+}
+
+.intel-info-card:hover .intel-icon-box {
+    background-color: #ff4a11;
+    color: #ffffff;
+}
+
+/* Right Grid Column Inputs Panel console block */
+.form-console-column {
+    width: 100%;
+}
+
+.console-box-hull {
+    background: #ffffff;
+    border: 1px solid #e1e4eb;
+    border-radius: 24px;
+    padding: 40px;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.03);
+    position: relative;
+}
+
+.console-heading {
+    font-size: 22px;
+    font-weight: 800;
+    color: #0f1115;
+    margin-bottom: 8px;
+}
+
+.console-caption {
+    font-size: 13.5px;
+    color: #555e6b;
+    line-height: 1.5;
+    margin-bottom: 35px;
+}
+
+.actual-input-form {
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+    position: relative;
+}
+
+.input-container-cell {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.console-input-label {
+    font-size: 11px;
+    font-weight: 800;
+    color: #0f1115;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+/* Precise high-contrast field parameters copied from your mockup design data */
+.console-field-input, .console-field-select, .console-field-textarea {
+    width: 100%;
+    padding: 14px 18px;
+    background: #ffffff;
+    border: 1px solid #e1e4eb;
+    outline: none;
+    border-radius: 8px;
+    color: #0f1115;
+    font-size: 14px;
+    font-weight: 600;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.console-field-input::placeholder, .console-field-textarea::placeholder {
+    color: #b3b8c3;
+    font-weight: 500;
+}
+
+.console-field-textarea {
+    height: 110px;
+    resize: none;
+    line-height: 1.5;
+}
+
+.console-field-select {
+    cursor: pointer;
+    color: #b3b8c3;
+    appearance: none;
+    background-image: url("data:image/svg+xml;utf8,<svg fill='%230F1115' height='24' viewBox='0 0 24 24' width='24' xmlns='http://w3.org'><path d='M7 10l5 5 5-5z'/></svg>");
+    background-repeat: no-repeat;
+    background-position: right 15px center;
+}
+
+/* Value insertion state track rule managed cleanly by script elements */
+.console-field-select.has-value {
+    color: #0f1115 !important;
+}
+
+/* Active Focus Illuminating Bounds Rule Sets */
+.console-field-input:focus, .console-field-select:focus, .console-field-textarea:focus {
+    border-color: #ff4a11;
+    box-shadow: 0 0 15px rgba(255, 74, 17, 0.12);
+}
+
+/* Submission Button Architecture */
+.submit-action-bezel {
+    width: 100%;
+    margin-top: 10px;
+}
+
+.console-submit-btn {
+    width: 100%;
+    padding: 16px;
+    background-color: #ffffff;
+    border: 1.5px solid #0f1115; /* Clean image-replicated line pill design button boundary */
+    border-radius: 30px;
+    color: #0f1115;
+    font-weight: 800;
+    font-size: 13.5px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.3s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.console-submit-btn:hover {
+    background-color: #ff4a11;
+    border-color: #ff4a11;
+    color: #ffffff;
+    box-shadow: 0 8px 25px rgba(255, 74, 17, 0.35);
+    transform: translateY(-2px);
+}
+
+/* Custom Validation Toast banner specification layers */
+.console-validation-toast {
+    position: absolute;
+    bottom: -32px;
+    left: 10px;
+    color: #f75c5c;
+    font-size: 12px;
+    font-weight: 700;
+    opacity: 0;
+    transform: translateY(-4px);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    pointer-events: none;
+}
+
+.console-validation-toast.display-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* --- SYSTEM ADAPTIVE RESPONSIVENESS OVERLAYS BREAKPOINTS --- */
+@media (max-width: 992px) {
+    .form-master-wrapper {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+    .console-box-hull {
+        padding: 30px;
+    }
+}
+
+/* --- FIXED SYMMETRICAL ALIGNMENT MATRIX --- */
+.form-master-wrapper {
+    width: 100%;
+    max-width: 1300px;
+    display: grid;
+    grid-template-columns: 0.95fr 1.05fr;
+    gap: 50px;
+    align-items: center; /* Centers the left columns deck with the right form card along the center axis */
+}
+
+.form-intel-column {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+    justify-content: center; /* Keeps interior headline blocks tracking the geometric center line */
+}
+
+/* Tighten the vertical space between the left side items */
+.intel-cards-stack {
+    display: flex;
+    flex-direction: column;
+    gap: 12px; /* Pulls cards slightly closer together for a cleaner look */
+    width: 100%;
+}
+
+
+</style>
+
+<script>
+    // --- SPORTS PORTAL ROSTER ENTRY VALIDATION CONTROLLER SYSTEM ---
+document.addEventListener('DOMContentLoaded', () => {
+    
+    const athleteNameField = document.getElementById('athleteNameField');
+    const athletePhoneField = document.getElementById('athletePhoneField');
+    const athleteEmailField = document.getElementById('athleteEmailField');
+    const athleteDisciplineSelect = document.getElementById('athleteDisciplineSelect');
+    const athleteNarrativeArea = document.getElementById('athleteNarrativeArea');
+    
+    const apexRosterForm = document.getElementById('apexRosterForm');
+    const consoleValidationToast = document.getElementById('consoleValidationToast');
+
+    // 1. STRICT ALPHABET FILTER FOR THE ATHLETE NAME INPUT
+    if (athleteNameField) {
+        athleteNameField.addEventListener('input', () => {
+            // Instantly matches and replaces numbers/special characters with void spaces
+            athleteNameField.value = athleteNameField.value.replace(/[0-9]/g, '');
+        });
+    }
+
+    // 2. STRICT NUMERIC FILTER FOR THE MOBILE PHONE INPUT
+    if (athletePhoneField) {
+        athletePhoneField.addEventListener('input', () => {
+            // Instantly strips out all alphabetic/special tracking characters on the fly
+            athletePhoneField.value = athletePhoneField.value.replace(/[^0-9]/g, '');
+        });
+    }
+
+    // 3. SELECT OPTION PLACEHOLDER COLOR TOGGLE CONTROLLER
+    if (athleteDisciplineSelect) {
+        athleteDisciplineSelect.addEventListener('change', () => {
+            athleteDisciplineSelect.classList.add('has-value');
+        });
+    }
+
+    // 4. MASTER INTERCEPT REDIRECTION & CONDITIONAL VALIDATION RUNTIME
+    if (apexRosterForm) {
+        apexRosterForm.addEventListener('submit', (event) => {
+            event.preventDefault(); // Hold background execution pools
+
+            // Extract trimmed string parameter weights
+            const nameVal = athleteNameField.value.trim();
+            const emailVal = athleteEmailField.value.trim();
+            const phoneVal = athletePhoneField.value.trim();
+            const selectVal = athleteDisciplineSelect.value;
+            const narrativeVal = athleteNarrativeArea.value.trim();
+
+            // Perform safety gate check for complete content insertion entries
+            if (nameVal === '' || emailVal === '' || phoneVal === '' || selectVal === '' || narrativeVal === '') {
+                
+                // Fields incomplete: reveal absolute warning toast component layer
+                consoleValidationToast.classList.add('display-visible');
+                
+                // Clear warning toast block automatically after 3 seconds
+                setTimeout(() => {
+                    consoleValidationToast.classList.remove('display-visible');
+                }, 3000);
+
+            } else {
+                // All validation gates clear: drop alerts and force redirect to 404 page target
+                consoleValidationToast.classList.remove('display-visible');
+                window.location.href = '404.html';
+            }
+        });
+    }
+});
+
+</script>
+
+<!-- SYSTEM COMPACT WIDESCREEN RADAR MAP MODULE -->
+<section class="radar-map-section scroll-reveal-view" id="campus-radar-map">
+    <div class="map-section-header">
+        <span class="map-mini-badge">Geographical Coordinates</span>
+        <h2 class="map-main-heading">HQ Performance <span>Compound Hub</span></h2>
+        <p class="map-interactive-subtitle">Hover over the layout grid matrix to synchronize satellite navigation paths straight to our sports compound perimeter.</p>
+    </div>
+
+    <!-- Immersive Interactive Map Frame Block -->
+    <div class="map-widescreen-frame">
+        <div class="map-radial-halo-shroud"></div>
+        
+        <!-- Main Map Asset Image Tag -->
+        <img src="./Assests/map.webp" alt="Apex Sports Club geographical satellite navigation compound layout chart" class="map-core-asset">
+        
+        <!-- Floating Glassmorphic Telemetry HUD Card -->
+        <div class="map-glass-telemetry-panel">
+            <div class="telemetry-beacon-node">
+                <span class="beacon-pulse-wave"></span>
+            </div>
+            <div class="telemetry-text-block">
+                <h4>CAMPUS ALPHA LOCK</h4>
+                <p>GPS: 11.6643&deg; N, 78.1462&deg; E</p>
+            </div>
+        </div>
+
+        <!-- Centered Creative Action Overlay Link -->
+        <a href="https://maps.app.goo.gl/1iUAJLxSuFhmkqeE8" target="_blank" class="map-radar-trigger-link" rel="noopener">
+            <span>Launch Navigation Radar</span>
+            <svg viewBox="0 0 24 24" class="radar-link-svg">
+                <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z" fill="currentColor"/>
+            </svg>
+        </a>
+    </div>
+</section>
+
+<style>
+    /* --- COMPACT ADVANCED WIDESCREEN MAP COMPONENT --- */
+.radar-map-section {
+    padding: 50px 5% 30px 5%; /* Enforces requested 50px Top, 30px Bottom boundaries exactly */
+    background-color: #ffffff; /* Smooth alignment over clean white background layout paths */
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: hidden;
+    position: relative;
+    border-top: 1px solid #f0f2f5;
+}
+
+/* Header Elements Typography Layout */
+.map-section-header {
+    text-align: center;
+    margin-bottom: 40px;
+    max-width: 700px;
+}
+
+.map-mini-badge {
+    color: #ff4a11; /* System Neon Orange Primary */
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 12px;
+    display: inline-block;
+}
+
+.map-main-heading {
+    font-size: clamp(28px, 4vw, 40px);
+    font-weight: 900;
+    color: #0f1115;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+    line-height: 1.1;
+}
+
+.map-main-heading span {
+    color: #ff4a11;
+    text-shadow: 0 0 20px rgba(255, 74, 17, 0.05);
+}
+
+.map-interactive-subtitle {
+    font-size: 15px;
+    color: #667085;
+    line-height: 1.5;
+    cursor: default;
+    display: inline-block;
+    transition: color 0.4s ease, text-shadow 0.4s ease, transform 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+    will-change: transform, text-shadow;
+}
+
+.radar-map-section:hover .map-main-heading span {
+    text-shadow: 0 0 25px rgba(255, 74, 17, 0.35);
+}
+
+.map-interactive-subtitle:hover {
+    color: #0f1115;
+    transform: scale(1.02);
+    text-shadow: 0 0 15px rgba(255, 74, 17, 0.15);
+}
+
+/* Widescreen Frame Structure Architecture */
+.map-widescreen-frame {
+    position: relative;
+    width: 100%;
+    max-width: 1300px;
+    height: 440px; /* Fluid high-end desktop display card height constraint */
+    border-radius: 20px;
+    overflow: hidden;
+    border: 1px solid #e1e4eb;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.02);
+    transition: border-color 0.5s cubic-bezier(0.25, 1, 0.5, 1), box-shadow 0.5s ease;
+}
+
+.map-core-asset {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    filter: grayscale(1) contrast(1.15) brightness(0.95); /* Premium clean architecture filter mapping */
+    transition: transform 0.7s cubic-bezier(0.25, 1, 0.5, 1), filter 0.5s ease;
+}
+
+.map-radial-halo-shroud {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at center, rgba(255, 74, 17, 0.15) 0%, transparent 75%);
+    opacity: 0;
+    z-index: 2;
+    transition: opacity 0.5s ease;
+    pointer-events: none;
+}
+
+/* Glassmorphic Satellite Telemetry Panel */
+.map-glass-telemetry-panel {
+    position: absolute;
+    top: 25px;
+    left: 25px;
+    background: rgba(15, 17, 21, 0.8);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 12px 20px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    z-index: 3;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    transition: transform 0.4s ease, border-color 0.3s ease;
+}
+
+.telemetry-beacon-node {
+    width: 8px;
+    height: 8px;
+    background-color: #ff4a11;
+    border-radius: 50%;
+    position: relative;
+}
+
+.telemetry-beacon-node::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background-color: #ff4a11;
+    animation: mapPulse Wave 1.6s infinite ease-out;
+}
+
+@keyframes mapPulseWave {
+    0% { transform: scale(1); opacity: 1; }
+    100% { transform: scale(4); opacity: 0; }
+}
+
+.telemetry-text-block h4 {
+    color: #ffffff;
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 1px;
+    margin-bottom: 2px;
+}
+
+.telemetry-text-block p {
+    color: #8c93a0;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+/* Interactive Navigation Overlay Trigger Button Link */
+.map-radar-trigger-link {
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%) translateY(10px);
+    background: #0f1115;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    padding: 16px 36px;
+    border-radius: 30px; /* Fluid creative rounded capsule loop asset tracking */
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    z-index: 3;
+    opacity: 0;
+    visibility: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+    transition: transform 0.4s cubic-bezier(0.25, 1, 0.5, 1), 
+                background-color 0.3s ease, 
+                border-color 0.3s ease, 
+                opacity 0.4s ease, 
+                visibility 0.4s;
+}
+
+.radar-link-svg {
+    width: 15px;
+    height: 15px;
+    transition: transform 0.3s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+/* Master Widescreen Element Hover Activation Chain Reactions */
+.map-widescreen-frame:hover {
+    border-color: #ff4a11;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.06), 0 0 30px rgba(255, 74, 17, 0.08);
+}
+
+.map-widescreen-frame:hover .map-core-asset {
+    transform: scale(1.025);
+    filter: grayscale(0) contrast(1.05) brightness(0.95); /* Restores clean color values cleanly on active hover */
+}
+
+.map-widescreen-frame:hover .map-radial-halo-shroud {
+    opacity: 1;
+}
+
+.map-widescreen-frame:hover .map-glass-telemetry-panel {
+    border-color: #ff4a11;
+    transform: scale(1.02);
+}
+
+.map-widescreen-frame:hover .map-radar-trigger-link {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(-50%) translateY(0);
+}
+
+.map-radar-trigger-link:hover {
+    background-color: #ff4a11;
+    border-color: #ff4a11;
+    box-shadow: 0 8px 25px rgba(255, 74, 17, 0.4);
+}
+
+.map-radar-trigger-link:hover .radar-link-svg {
+    transform: translateY(-2px) scale(1.05);
+}
+
+/* --- SYSTEM ADAPTIVE VIEWPORT BREAKPOINTS --- */
+@media (max-width: 992px) {
+    .map-widescreen-frame {
+        height: 340px;
+    }
+    .map-radar-trigger-link {
+        /* Locks trigger buttons continuously visible on touchscreen viewports */
+        opacity: 1;
+        visibility: visible;
+        transform: translateX(-50%) translateY(0);
+    }
+}
+
+@media (max-width: 576px) {
+    .map-widescreen-frame {
+        height: 260px;
+    }
+    .map-glass-telemetry-panel {
+        display: none; /* Strip overlapping UI noise on tight layouts */
+    }
+    .map-radar-trigger-link {
+        padding: 12px 24px;
+        font-size: 11.5px;
+        width: 90%;
+        justify-content: center;
+    }
+}
+
+/* --- FIXED FULL VIBRANT COLOR MAP SYSTEM --- */
+.map-widescreen-frame {
+    position: relative;
+    width: 100%;
+    max-width: 1300px;
+    height: 440px; 
+    border-radius: 20px;
+    overflow: hidden;
+    /* Clean baseline border before hover ignition drops in */
+    border: 1px solid #e1e4eb; 
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.02);
+    transition: border-color 0.5s cubic-bezier(0.25, 1, 0.5, 1), box-shadow 0.5s ease;
+}
+
+.map-core-asset {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    /* REMOVED GRAYSCALE FILTER: Map now renders in full vibrant colors instantly */
+    filter: none !important; 
+    transition: transform 0.7s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+/* Master Widescreen Element Hover Activation Chain Reactions */
+.map-widescreen-frame:hover {
+    border-color: #ff4a11; /* Sharp system neon orange frame boundary glow */
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.06), 0 0 30px rgba(255, 74, 17, 0.15);
+}
+
+.map-widescreen-frame:hover .map-core-asset {
+    transform: scale(1.025); /* Keeps the creative smooth zoom animation intact */
+}
+
+.map-widescreen-frame:hover .map-radial-halo-shroud {
+    opacity: 1; /* Projects a soft warm ambient orange backlight mask onto the frame canvas */
+}
+
+</style>
+
+
+<!-- SYSTEM COMPACT SINGLE-LINE ACTION STRIP -->
+<section class="strip-cta-section scroll-reveal-view" id="action-strip">
+    <div class="strip-wrapper">
+        
+        <!-- Left Wing: Split Visual Composition -->
+        <div class="strip-image-deck">
+            <div class="strip-glow-halo"></div>
+            <!-- Dynamic Foreground Imagery Stack -->
+            <img src="./Assests/athletic running.webp" alt="Athletic biometric training array asset" class="strip-inline-img">
+            <img src="./Assests/drill.webp" alt="Coaching playbook data analytics asset" class="strip-inline-img edge-stacked">
+        </div>
+
+        <!-- Right Wing: Linear Action Channel Content -->
+        <div class="strip-content-deck">
+            <h3 class="strip-title-text">Ready to optimize your absolute performance? <span>Claim your grid rank.</span></h3>
+            
+            <a href="404.html" class="strip-action-btn">
+                <span>Deploy Registration</span>
+                <svg viewBox="0 0 24 24" class="strip-svg-icon"><path d="M5 12h14M12 5l7 7-7 7" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg>
+            </a>
+        </div>
+
+    </div>
+</section>
+
+<style>
+    /* --- LINEAR COMPACT ACTION STRIP --- */
+.strip-cta-section {
+    padding: 50px 5% 30px 5%; /* Enforces requested 50px Top, 30px Bottom bounds exactly */
+    background-color: #ffffff;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+    position: relative;
+    border-top: 1px solid #f0f2f5;
+}
+
+.strip-wrapper {
+    width: 100%;
+    max-width: 1300px;
+    background: #ffffff;
+    border: 1px solid #e1e4eb;
+    border-radius: 20px;
+    padding: 25px 40px; /* Highly compressed inside padding track */
+    display: grid;
+    grid-template-columns: 0.4fr 1.6fr; /* Horizontal linear separation formatting */
+    gap: 40px;
+    align-items: center;
+    box-shadow: 0 10px 35px rgba(0, 0, 0, 0.02);
+    transition: border-color 0.4s ease, box-shadow 0.4s ease;
+}
+
+/* Visual Housing & Overlap Mechanics */
+.strip-image-deck {
+    position: relative;
+    display: flex;
+    align-items: center;
+    height: 70px;
+}
+
+.strip-inline-img {
+    width: 65px;
+    height: 65px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid #ffffff;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+    transition: transform 0.4s cubic-bezier(0.25, 1, 0.5, 1), border-color 0.3s ease;
+    position: relative;
+    z-index: 2;
+}
+
+.edge-stacked {
+    margin-left: -25px; /* Creates clean modern overlay tracking */
+    z-index: 1;
+}
+
+.strip-glow-halo {
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    background: radial-gradient(circle, rgba(255, 74, 17, 0.16) 0%, transparent 70%);
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.4s ease;
+    z-index: 0;
+    left: -20px;
+}
+
+/* Linear Content Delivery Deck */
+.strip-content-deck {
+    display: flex;
+    justify-content: space-between; /* Pushes single-line statement and button to opposite horizons */
+    align-items: center;
+    gap: 30px;
+    width: 100%;
+}
+
+.strip-title-text {
+    font-size: clamp(16px, 2.2vw, 22px);
+    font-weight: 800;
+    color: #0f1115;
+    line-height: 1.3;
+    cursor: default;
+    transition: transform 0.3s ease;
+}
+
+.strip-title-text span {
+    color: var(--primary);
+    display: inline-block;
+    transition: text-shadow 0.3s ease, color 0.3s ease;
+}
+
+/* Master Grid Card Collective Hover Triggers */
+.strip-wrapper:hover {
+    border-color: var(--primary);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.05), 0 0 25px rgba(255, 74, 17, 0.08);
+}
+
+.strip-wrapper:hover .strip-inline-img {
+    transform: scale(1.05) rotate(4deg);
+    border-color: var(--primary);
+}
+
+.strip-wrapper:hover .edge-stacked {
+    transform: scale(1.05) translateX(8px) rotate(-4deg);
+}
+
+.strip-wrapper:hover .strip-glow-halo {
+    opacity: 1;
+}
+
+.strip-wrapper:hover .strip-title-text span {
+    text-shadow: 0 0 15px rgba(255, 74, 17, 0.22);
+}
+
+/* Action Trigger Elements */
+.strip-action-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 14px 32px;
+    background-color: var(--dark);
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    border-radius: 8px;
+    white-space: nowrap; /* Prevents button word break loops on small layouts */
+    box-shadow: 0 6px 20px rgba(9, 10, 15, 0.1);
+    transition: all 0.3s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.strip-svg-icon {
+    width: 15px;
+    height: 15px;
+    transition: transform 0.3s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.strip-action-btn:hover {
+    background-color: var(--primary);
+    box-shadow: 0 8px 22px var(--primary-glow);
+    transform: translateY(-2px);
+}
+
+.strip-action-btn:hover .strip-svg-icon {
+    transform: translateX(4px);
+}
+
+/* --- ADAPTIVE COMPACT LAYOUT VIEWPORT BREAKPOINTS --- */
+@media (max-width: 992px) {
+    .strip-wrapper {
+        grid-template-columns: 1fr;
+        gap: 20px;
+        padding: 30px;
+        text-align: center;
+    }
+    .strip-image-deck {
+        justify-content: center;
+    }
+    .strip-content-deck {
+        flex-direction: column;
+        gap: 25px;
+    }
+    .strip-action-btn {
+        width: 100%;
+        justify-content: center;
+    }
+}
+
+</style>
+
+<!-- High-Contrast Creative Immersive Footer Deck -->
+<footer class="stackly-footer">
+    <div class="footer-max-container">
+        
+        <!-- Primary Structural Column Array Block Grid -->
+        <div class="footer-columns-grid">
+            
+            <!-- Column 1: Brand Profile Terminal Hub with Integrated Social Vectors -->
+            <div class="footer-col brand-pillar">
+                <a href="#" class="footer-logo-link" onclick="executeScrollToTop(event)" title="Back to Top">
+                    <!-- Brand logo tag configured for your source path assets -->
+                    <img src="./Assests/sports club logo.webp" alt="Apex Sports Club Logo" class="footer-brand-logo">
+                </a>
+                <p class="footer-brand-bio">
+                    Engineering luxury tactical performance frameworks designed to bridge athletic biomechanics with competitive dominance.
+                </p>
+                <div class="company-address-box">
+                    <svg xmlns="http://w3.org" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="addr-vector"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                    <span>MMR Complex, Periyakollappatty, Chinna Thirupathi, Salem, Tamil Nadu 636008</span>
+                </div>
+
+                <!-- High-Visibility Vector Social Media Icon Row -->
+                <div class="footer-social-row">
+                    <!-- Facebook -->
+                    <button class="social-circle-btn" onclick="handleNavigation404(event, '404.html')" title="Follow on Facebook">
+                        <svg xmlns="http://w3.org" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-4h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
+                        </svg>
+                    </button>
+                    <!-- Instagram -->
+                    <button class="social-circle-btn" onclick="handleNavigation404(event, '404.html')" title="Follow on Instagram">
+                        <svg xmlns="http://w3.org" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                            <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                            <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                        </svg>
+                    </button>
+                    <!-- Telegram / Pinterest Replacement -->
+                    <button class="social-circle-btn" onclick="handleNavigation404(event, '404.html')" title="Follow on Telegram">
+                        <svg xmlns="http://w3.org" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <line x1="22" y1="2" x2="11" y2="13"></line>
+                            <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+                        </svg>
+                    </button>
+                    <!-- YouTube -->
+                    <button class="social-circle-btn" onclick="handleNavigation404(event, '404.html')" title="Follow on YouTube">
+                        <svg xmlns="http://w3.org" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 28 0 0 0 1 11.75a29 28 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 28 0 0 0 .46-5.25 29 28 0 0 0-.46-5.33z"></path>
+                            <polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"></polygon>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Column 2: Quick Menus Collection -->
+            <div class="footer-col links-pillar">
+                <h4 class="footer-heading">Quick Links</h4>
+                <div class="footer-links-list">
+                    <a href="about.html" class="footer-link">About Us</a>
+                    <a href="programs.html" class="footer-link">Programs</a>
+                    <a href="blogs.html" class="footer-link">Blogs</a>
+                    <a href="contact.html" class="footer-link">Contact Us</a>
+                </div>
+            </div>
+
+            <!-- Column 3: Corporate Profile Menus -->
+            <div class="footer-col links-pillar">
+                <h4 class="footer-heading">Support Hub</h4>
+                <div class="footer-links-list">
+    <a href="404.html" class="footer-link" onclick="handleNavigation404(event)">Roster Placement Help</a>
+        <a href="404.html" class="footer-link" onclick="handleNavigation404(event)">Court Booking Exchange</a>
+        <a href="404.html" class="footer-link" onclick="handleNavigation404(event)">Athletic FAQ Center</a>
+        <a href="404.html" class="footer-link" onclick="handleNavigation404(event)">Medical Clearance Logs</a>
+                </div>
+            </div>
+
+            <!-- Column 4: Newsletter Subscriber Actions Console -->
+            <div class="footer-col subscribe-pillar">
+                <h4 class="footer-heading">The Playground Dispatch</h4>
+                <p class="subscribe-caption">Subscribe to unlock premium custom blueprint designs and private product launches.</p>
+                
+                <form class="footer-newsletter-form" onsubmit="handleNewsletterRouting(event)">
+                    <div class="input-bezel-hull">
+                        <input type="email" placeholder="Enter your email..." class="newsletter-input" id="newsletterEmailField">
+                        <button type="submit" class="newsletter-submit-btn" title="Subscribe Now">
+                            <svg xmlns="http://w3.org" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                                <line x1="22" y1="2" x2="11" y2="13"></line>
+                                <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+                            </svg>
+                        </button>
+                    </div>
+                    <!-- Absolute Validation Error Toast Container -->
+                    <div class="form-validation-toast" id="validationToast">Please fill out this field.</div>
+                </form>
+            </div>
+
+        </div>
+
+        <!-- Secondary Bottom Regulatory Ledger Bar -->
+        <div class="footer-ledger-base">
+            <div class="ledger-left-copyright">
+                &copy; <span id="currentYear">2026</span> Stackly Club Performance Compounds. All rights reserved.
+            </div>
+            
+            <!-- Privacy Legal Links Stacks -->
+            <div class="ledger-center-legal">
+                <a href="404.html" class="legal-link" onclick="handleNavigation404(event)">Privacy Policy</a>
+                <a href="404.html" class="legal-link" onclick="handleNavigation404(event)">Terms of Service</a>
+                <a href="404.html" class="legal-link" onclick="handleNavigation404(event)">Cookie Management</a>
+            </div>
+
+            <!-- Right-Side Floating Back to Top Control Anchor Button -->
+            <button class="footer-top-arrow-btn" onclick="executeScrollToTop(event)" title="Back to Top">
+                <svg xmlns="http://w3.org" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" class="up-arrow-vector"><line x1="12" y1="19" x2="12" y2="5"></line><polyline points="5 12 12 5 19 12"></polyline></svg>
+            </button>
+        </div>
+
+    </div>
+</footer>
+
+<style>
+    /* --- COMPACT HIGH-CONTRAST SPORTS FOOTER THEME --- */
+.stackly-footer {
+    position: relative;
+    width: 100%;
+    padding: 50px 5% 30px 5%;
+    background-color: #0b0c10; /* Precise dark charcoal-obsidian backdrop */
+    color: #ffffff;
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+    border-top: 1px solid rgba(255, 74, 17, 0.15);
+}
+
+.footer-max-container {
+    width: 100%;
+    max-width: 1300px;
+}
+
+/* Master Grid Alignments Matrix */
+.footer-columns-grid {
+    display: grid;
+    grid-template-columns: 1.3fr 0.7fr 0.7fr 1.3fr; /* Keeps identical original layout structures */
+    gap: 35px;
+    margin-bottom: 50px;
+    align-items: flex-start;
+}
+
+.footer-col {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    text-align: left;
+}
+
+/* Column 1: Brand Profiles details */
+.footer-brand-logo {
+    height: 38px;
+    width: auto;
+    object-fit: contain;
+    filter: drop-shadow(0 0 8px rgba(255, 74, 17, 0.4));
+    transition: transform 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.footer-logo-link:hover .footer-brand-logo {
+    transform: scale(1.05);
+}
+
+.footer-brand-bio {
+    font-size: 13.5px;
+    color: #8c93a0;
+    line-height: 1.6;
+    margin: 18px 0;
+    max-width: 320px;
+}
+
+.company-address-box {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    font-size: 13px;
+    color: #ffffff;
+    line-height: 1.4;
+    max-width: 320px;
+}
+
+.addr-vector {
+    width: 16px;
+    height: 16px;
+    color: #ff4a11; /* System Neon Orange Primary */
+    flex-shrink: 0;
+    margin-top: 2px;
+}
+
+/* Vector Media Grid Deck */
+.footer-social-row {
+    display: flex;
+    gap: 12px;
+    margin-top: 20px;
+}
+
+.social-circle-btn {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    color: #8c93a0;
+    transition: all 0.3s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.social-circle-btn svg {
+    width: 15px;
+    height: 15px;
+}
+
+.social-circle-btn:hover {
+    background: rgba(255, 74, 17, 0.08);
+    border-color: #ff4a11;
+    color: #ff4a11;
+    box-shadow: 0 0 15px rgba(255, 74, 17, 0.4);
+    transform: translateY(-2px);
+}
+
+/* Headings with Coral Indicator Traces */
+.footer-heading {
+    font-size: 15px;
+    font-weight: 700;
+    color: #ffffff;
+    margin-bottom: 22px;
+    position: relative;
+    text-transform: none;
+}
+
+.footer-heading::after {
+    content: '';
+    position: absolute;
+    bottom: -6px;
+    left: 0;
+    width: 25px;
+    height: 2px;
+    background-color: #ff4a11; /* Coral bar indicator line accent */
+}
+
+/* Link Arrays Directory Lists */
+.footer-links-list {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.footer-link {
+    color: #8c93a0;
+    text-decoration: none;
+    font-size: 13.5px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    width: max-content;
+}
+
+.footer-link:hover {
+    color: #ff4a11;
+    transform: translateX(4px);
+    text-shadow: 0 0 10px rgba(255, 74, 17, 0.3);
+}
+
+/* Newsletter Input Components */
+.subscribe-pillar {
+    position: relative;
+}
+
+.subscribe-caption {
+    font-size: 13.5px;
+    color: #8c93a0;
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+
+.footer-newsletter-form {
+    position: relative;
+    width: 100%;
+}
+
+.input-bezel-hull {
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+.newsletter-input {
+    width: 100%;
+    padding: 13px 55px 13px 18px;
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 30px;
+    outline: none;
+    color: #ffffff;
+    font-size: 13.5px;
+    transition: all 0.3s ease;
+}
+
+.newsletter-input:focus {
+    border-color: #ff4a11;
+    background: rgba(255, 74, 17, 0.01);
+    box-shadow: 0 0 15px rgba(255, 74, 17, 0.15);
+}
+
+.newsletter-submit-btn {
+    position: absolute;
+    right: 5px;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background-color: #f75c5c; /* Soft coral action indicator fill */
+    border: none;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #ffffff;
+    transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.newsletter-submit-btn svg {
+    width: 13px;
+    height: 13px;
+    transform: rotate(0deg) translateX(-1px);
+}
+
+.newsletter-submit-btn:hover {
+    background-color: #ff4a11;
+    box-shadow: 0 0 15px rgba(255, 74, 17, 0.4);
+    transform: scale(1.05);
+}
+
+/* Validation Alert Positioning Layer */
+.form-validation-toast {
+    position: absolute;
+    bottom: -25px;
+    left: 15px;
+    color: #f75c5c;
+    font-size: 11.5px;
+    font-weight: 700;
+    opacity: 0;
+    transform: translateY(-4px);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    pointer-events: none;
+}
+
+.form-validation-toast.show-toast {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Secondary Bottom Regulatory Ledger Bar */
+.footer-ledger-base {
+    position: relative;
+    width: 100%;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+    padding-top: 25px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+.ledger-left-copyright {
+    font-size: 13px;
+    color: #555e6b;
+    font-weight: 600;
+}
+
+.ledger-center-legal {
+    display: flex;
+    gap: 25px;
+}
+
+.legal-link {
+    color: #555e6b;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+.legal-link:hover {
+    color: #ffffff;
+    text-shadow: 0 0 8px rgba(255, 255, 255, 0.3);
+}
+
+/* Back to Top Floating Arrow */
+.footer-top-arrow-btn {
+    position: absolute;
+    right: 0;
+    top: 18px;
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #8c93a0;
+    transition: all 0.3s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.up-arrow-vector {
+    width: 14px;
+    height: 14px;
+    transition: transform 0.3s ease;
+}
+
+.footer-top-arrow-btn:hover {
+    background: rgba(255, 74, 17, 0.06);
+    border-color: #ff4a11;
+    color: #ff4a11;
+    box-shadow: 0 0 15px rgba(255, 74, 17, 0.3);
+    transform: translateY(-3px);
+}
+
+.footer-top-arrow-btn:hover .up-arrow-vector {
+    transform: translateY(-2px);
+}
+
+/* --- RIGID ADAPTIVE MEDIA BREAKPOINTS SYSTEM --- */
+@media (max-width: 1024px) {
+    .footer-columns-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 40px;
+    }
+}
+
+@media (max-width: 680px) {
+    .stackly-footer {
+        padding: 50px 6% 80px 6%;
+    }
+    .footer-columns-grid {
+        grid-template-columns: 1fr;
+        gap: 35px;
+        text-align: center;
+    }
+    .footer-col {
+        text-align: center;
+        align-items: center;
+    }
+    .footer-brand-bio, .company-address-box {
+        margin: 15px auto;
+    }
+    .footer-heading::after {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    .footer-ledger-base {
+        flex-direction: column-reverse;
+        text-align: center;
+        padding-top: 30px;
+    }
+    .ledger-center-legal {
+        flex-direction: column;
+        gap: 15px;
+    }
+    .footer-top-arrow-btn {
+        position: fixed;
+        bottom: 25px;
+        right: 25px;
+        top: auto;
+        z-index: 5000;
+        background: #0b0c10;
+        box-shadow: 0 5px 20px rgba(0, 0, 0, 0.6);
+        border-color: rgba(255, 255, 255, 0.1);
+    }
+}
+
+</style>
+
+<script>
+    // --- SPORTS HUB PORTAL ROUTING ENGINE ---
+
+// 1. DYNAMIC NAVIGATION ROUTE SWITCHING TO 404.HTML
+function handleNavigation404(event) {
+    event.preventDefault(); // Intercept default anchor jump processes
+    window.location.href = '404.html';
+}
+
+// 2. BACK TO TOP SMOOTH SCROLL ACTION
+function executeScrollToTop(event) {
+    event.preventDefault();
+    window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+    });
+}
+
+// 3. NEWSLETTER FORMS INPUT FIELD VALIDATORS & ROUTERS
+function handleNewsletterRouting(event) {
+    event.preventDefault(); // Block background page resets
+    
+    const inputField = document.getElementById('newsletterEmailField');
+    const errorToast = document.getElementById('validationToast');
+    
+    if (!inputField || !errorToast) return;
+
+    const emailValueString = inputField.value.trim();
+
+    if (emailValueString === '') {
+        // Void address sequence found: fire notification overlay visibility path
+        errorToast.classList.add('show-toast');
+        inputField.focus();
+        
+        // Hide structural warning notification block after 3 seconds
+        setTimeout(() => {
+            errorToast.classList.remove('show-toast');
+        }, 3000);
+    } else {
+        // Valid structural inputs confirmed: divert target frame directly into 404 template layout
+        errorToast.classList.remove('show-toast');
+        window.location.href = '404.html';
+    }
+}
+
+// Clear error indicator banner instantly upon first alphanumeric key input event
+document.addEventListener('DOMContentLoaded', () => {
+    const inputField = document.getElementById('newsletterEmailField');
+    const errorToast = document.getElementById('validationToast');
+    
+    if (inputField && errorToast) {
+        inputField.addEventListener('input', () => {
+            if (inputField.value.trim() !== '') {
+                errorToast.classList.remove('show-toast');
+            }
+        });
+    }
+});
+
+</script>
+</body>
+</html>

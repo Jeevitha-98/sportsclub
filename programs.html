@@ -1,0 +1,3231 @@
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stackly Sports Club | Elite Training</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div id ="preloader">
+        <div class="loader-container">
+            <div class="loader-ring"></div>
+    <svg class="loader-icon" viewBox="0 0 24 24">
+    <path d="M18 2H6v2H2v3c0 3.2 2.1 5.8 5 6.7V17H4v2h16v-2h-3v-3.3c2.9-.9 5-3.5 5-6.7V4h-4V2zM4 7V6h2v3.4C4.8 8.8 4 8 4 7zm16 0c0 1-.8 1.8-2 2.4V6h2v1z"/>
+</svg>
+
+        </div>
+    <div class="loader-text">Stackly<span>Club</span></div>
+    </div>
+
+<script>
+    window.addEventListener ('load',()=>{
+        const preloader = document.getElementById('preloader');
+        setTimeout(() =>{
+
+             preloader.classList.add('preloader-hidden');
+
+        },2500);
+
+    }
+    )
+
+</script>
+
+<!-- FLOATING GLASSMORPHIC NAVIGATION ARCHITECTURE -->
+<nav class="floating-navbar">
+    <div class="nav-container">
+        
+        <!-- Interactive Brand Logo Wrap -->
+        <a href="javascript:void(0)" class="nav-logo" id="logoRefreshBtn" title="Refresh Page">
+            <img src="./Assests/sports club logo.webp" alt="Apex Logo" class="logo-img">
+       
+        </a>
+
+        <!-- Responsive Hamburger Trigger -->
+        <button class="menu-toggle" id="mobileMenuBtn" aria-label="Toggle Navigation Menu">
+            <span class="hamburger-bar"></span>
+            <span class="hamburger-bar"></span>
+            <span class="hamburger-bar"></span>
+        </button>
+
+        <!-- Navigation Menus & Action Deck -->
+        <div class="nav-menu-wrapper" id="navMenuWrapper">
+            <ul class="nav-links">
+                <li><a href="index.html" class="nav-item ">Home</a></li>
+                <li><a href="about.html" class="nav-item ">About Us</a></li>
+                <li><a href="programs.html" class="nav-item active">Programs</a></li>
+                <li><a href="blogs.html" class="nav-item">Blogs</a></li>
+                <li><a href="contact.html" class="nav-item">Contact Us</a></li>
+            </ul>
+            
+            <div class="nav-auth-deck">
+                <a href="login.html" class="btn-login">
+                    <span>Login</span>
+                    <svg viewBox="0 0 24 24" class="auth-icon">
+                        <path d="M11 16l-4-4m0 0l4-4m-4 4h14m-5 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h7a3 3 0 013 3v1" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+                    </svg>
+                </a>
+            </div>
+        </div>
+
+    </div>
+</nav>
+
+
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const logoRefreshBtn = document.getElementById('logoRefreshBtn');
+        const mobileMenuBtn = document. getElementById ('mobileMenuBtn');
+        const navMenusWrapper = document. getElementById ('navMenuWrapper');
+        const navItems = document. querySelectorAll('.nav-item');
+    
+     logoRefreshBtn.addEventListener('click', (e) => {
+        e.preventDefault();
+        window.location.reload();
+         });
+    
+     mobileMenuBtn.addEventListener('click', () => {
+        mobileMenuBtn.classList.toggle('open');
+        navMenuWrapper.classList.toggle('mobile-open');
+    
+     if (navMenuWrapper.classList.contains('mobile-open')) {
+            document.body.style.overflow = 'hidden';
+        } else {
+            document.body.style.overflow = '';
+        }
+    });
+navItems.forEach(item => {
+        item.addEventListener('click', () => {
+          
+            navItems.forEach(el => el.classList.remove('active'));
+            
+    
+            item.classList.add('active');
+
+            if (navMenuWrapper.classList.contains('mobile-open')) {
+                mobileMenuBtn.classList.remove('open');
+                navMenuWrapper.classList.remove('mobile-open');
+                document.body.style.overflow = '';
+            }
+        });
+    });
+});
+</script>
+
+<!-- ULTRA-MODERN KINETIC COGNITIVE HERO CANVAS -->
+<section class="kinetic-hero-engine scroll-reveal-view" id="programs-hero">
+    
+    <!-- Vector Plasma Core Background Mesh Shaders -->
+    <div class="glow-plasma-field"></div>
+    <div class="glow-plasma-trail"></div>
+
+    <div class="fluid-canvas-wrapper">
+        
+        <!-- Left Wing: Typography Combustion Array -->
+        <div class="combustion-text-deck">
+            <div class="cyber-ticker-pill">
+                <span class="pulse-radar-dot"></span>
+                <span class="ticker-text-span">SYSTEM METRICS: PHASE ALPHA STACK ACTIVE</span>
+            </div>
+            
+            <h1 class="sculpted-kinetic-title">
+                FORGE THE <br>
+                <span class="plasma-stroke-text">ABSOLUTE</span> <br>
+                <span class="neon-ignited-text">LIMIT.</span>
+            </h1>
+            
+            <p class="fluid-interactive-summary">
+                We reject static training constraints. Our infrastructure intersects algorithmic telemetry with human biomechanical thresholds to weaponize raw athletic acceleration profiles.
+            </p>
+            
+            <div class="kinetic-action-cluster">
+                <a href="404.html" class="magnetic-trigger-btn">
+                    <span>DEPLOY PROFILE</span>
+                    <div class="magnetic-glow-bubble"></div>
+                </a>
+                <a href="404.html" class="ghost-trigger-btn">VIEW BLUEPRINTS</a>
+            </div>
+        </div>
+
+        <!-- Right Wing: Orbital Liquid Geometric Mask Portfolio Deck -->
+        <div class="orbital-graphics-deck" id="parallaxGraphicsDeck">
+            
+            <!-- Orbit Ring Asset 01: The Outer Target Core Grid -->
+            <div class="geometry-orbit-ring ring-outer"></div>
+            
+            <!-- Orbit Ring Asset 02: The Inner Telemetry Path -->
+            <div class="geometry-orbit-ring ring-inner"></div>
+
+            <!-- Kinetic Clipping Image Mask Layer 01 (Deep Field) -->
+            <div class="kinetic-liquid-hull hull-alpha layer-depth-low">
+                <div class="hull-neon-shroud"></div>
+                <img src="./Assests/basketball.webp" alt="Apex Court Combat Academy Drill Tracking" class="kinetic-source-asset">
+                <div class="cyber-hud-coordinate">TRK.01 // BASKETBALL</div>
+            </div>
+
+            <!-- Kinetic Clipping Image Mask Layer 02 (Foreground Pop Focus) -->
+            <div class="kinetic-liquid-hull hull-beta layer-depth-high">
+                <div class="hull-neon-shroud"></div>
+                <img src="./Assests/soccer.webp" alt="Apex Soccer Telemetry Capacity Field" class="kinetic-source-asset">
+                <div class="cyber-hud-coordinate hud-primary">TRK.02 // SOCCER</div>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<style>
+    /* --- HYPER-CREATIVE KINETIC HERO ARCHITECTURE --- */
+.kinetic-hero-engine {
+    padding: 130px 5% 30px 5%; /* Configured requested 50px Top, 30px Bottom padding track restrictions */
+    background-color: #ffffff;
+    width: 100%;
+    min-height: 95vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    position: relative;
+}
+
+/* Vector Plasma Core Background Field Grids */
+.glow-plasma-field {
+    position: absolute;
+    top: -20%;
+    right: -10%;
+    width: 650px;
+    height: 650px;
+    background: radial-gradient(circle, rgba(255, 74, 17, 0.08) 0%, transparent 70%);
+    filter: blur(40px);
+    z-index: 1;
+    pointer-events: none;
+}
+
+.glow-plasma-trail {
+    position: absolute;
+    bottom: -30%;
+    left: -10%;
+    width: 500px;
+    height: 500px;
+    background: radial-gradient(circle, rgba(15, 17, 21, 0.03) 0%, transparent 65%);
+    filter: blur(30px);
+    z-index: 1;
+    pointer-events: none;
+}
+
+.fluid-canvas-wrapper {
+    width: 100%;
+    max-width: 1300px;
+    display: grid;
+    grid-template-columns: 1.15fr 0.85fr; /* Creative asymmetric split weighting */
+    gap: 40px;
+    align-items: center;
+    position: relative;
+    z-index: 2;
+}
+
+/* Left Column Styling: Typography Combustion Core */
+.combustion-text-deck {
+    display: flex;
+    flex-direction: column;
+}
+
+.cyber-ticker-pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background: #0f1115;
+    padding: 6px 16px;
+    border-radius: 4px;
+    width: max-content;
+    margin-bottom: 25px;
+    box-shadow: 0 4px 15px rgba(15, 17, 21, 0.15);
+}
+
+.pulse-radar-dot {
+    width: 6px;
+    height: 6px;
+    background-color: #ff4a11; /* Neon Orange system accent */
+    border-radius: 50%;
+    position: relative;
+}
+
+.pulse-radar-dot::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background-color: #ff4a11;
+    animation: radarPing 1.8s infinite ease-out;
+}
+
+@keyframes radarPing {
+    0% { transform: scale(1); opacity: 1; }
+    100% { transform: scale(3.5); opacity: 0; }
+}
+
+.ticker-text-span {
+    color: #ffffff;
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 1px;
+}
+
+.sculpted-kinetic-title {
+    font-size: clamp(40px, 6vw, 76px);
+    font-weight: 950;
+    color: #0f1115;
+    line-height: 0.95;
+    letter-spacing: -2px;
+    margin-bottom: 25px;
+    text-transform: uppercase;
+}
+
+/* Modern Outline Text Layer Mask */
+.plasma-stroke-text {
+    color: transparent;
+    -webkit-text-stroke: 2px #0f1115;
+    transition: all 0.4s ease;
+}
+
+.neon-ignited-text {
+    color: #ff4a11;
+    transition: text-shadow 0.4s ease, transform 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+    display: inline-block;
+}
+
+/* Micro-hover ignition across title states */
+.kinetic-hero-engine:hover .plasma-stroke-text {
+    color: #0f1115;
+    -webkit-text-stroke: 2px transparent;
+}
+
+.kinetic-hero-engine:hover .neon-ignited-text {
+    text-shadow: 0 0 30px rgba(255, 74, 17, 0.5), 0 0 60px rgba(255, 74, 17, 0.2);
+    transform: translateY(-2px) scale(1.02);
+}
+
+.fluid-interactive-summary {
+    font-size: clamp(15px, 1.8vw, 18px);
+    color: #555e6b;
+    line-height: 1.6;
+    margin-bottom: 40px;
+    max-width: 580px;
+    cursor: default;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.fluid-interactive-summary:hover {
+    color: #0f1115;
+    transform: translateX(4px);
+}
+
+/* Magnetic Trigger Action Control Deck */
+.kinetic-action-cluster {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.magnetic-trigger-btn {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 18px 42px;
+    background-color: #0f1115;
+    border-radius: 30px; /* Fluid rounded track element geometry */
+    color: #ffffff;
+    font-weight: 800;
+    font-size: 13px;
+    letter-spacing: 1px;
+    text-decoration: none;
+    overflow: hidden;
+    z-index: 2;
+    box-shadow: 0 10px 30px rgba(15, 17, 21, 0.15);
+    transition: transform 0.3s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.magnetic-glow-bubble {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    width: 150%;
+    height: 150%;
+    background: radial-gradient(circle, #ff4a11 0%, transparent 70%);
+    opacity: 0;
+    z-index: -1;
+    transition: transform 0.6s cubic-bezier(0.25, 1, 0.5, 1), opacity 0.4s ease;
+}
+
+.magnetic-trigger-btn:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 30px rgba(255, 74, 17, 0.3);
+}
+
+.magnetic-trigger-btn:hover .magnetic-glow-bubble {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 1;
+}
+
+.ghost-trigger-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 18px 36px;
+    background: transparent;
+    border: 2px solid #e1e4eb;
+    border-radius: 30px;
+    color: #0f1115;
+    font-weight: 800;
+    font-size: 13px;
+    letter-spacing: 1px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.ghost-trigger-btn:hover {
+    border-color: #0f1115;
+    background-color: rgba(15, 17, 21, 0.02);
+    transform: translateY(-2px);
+}
+
+/* Right Column Styling: Orbital Liquid Geometry Mask Panels Grid */
+.orbital-graphics-deck {
+    position: relative;
+    width: 100%;
+    height: 520px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Abstract HUD Telemetry Measurement Rings Vector Layers */
+.geometry-orbit-ring {
+    position: absolute;
+    border-radius: 50%;
+    border: 1px dashed rgba(15, 17, 21, 0.1);
+    pointer-events: none;
+    transition: transform 0.7s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.ring-outer {
+    width: 480px;
+    height: 480px;
+    animation: rotativeClockwise 40s linear infinite;
+}
+
+.ring-inner {
+    width: 320px;
+    height: 320px;
+    border: 1px solid rgba(255, 74, 17, 0.15);
+    animation: rotativeCounterClockwise 25s linear infinite;
+}
+
+@keyframes rotativeClockwise { 100% { transform: rotate(360deg); } }
+@keyframes rotativeCounterClockwise { 100% { transform: rotate(-360deg); } }
+
+/* Premium Organic Liquid Blob Morphing Clipping Frames */
+.kinetic-liquid-hull {
+    position: absolute;
+    overflow: hidden;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.12);
+    transition: transform 0.2s ease-out, border-color 0.4s ease, box-shadow 0.4s ease;
+    will-change: transform;
+}
+
+.kinetic-source-asset {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    scale: 1.1;
+    transition: transform 0.6s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.hull-neon-shroud {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at center, rgba(255, 74, 17, 0.25) 0%, transparent 75%);
+    opacity: 0;
+    z-index: 2;
+    pointer-events: none;
+    transition: opacity 0.4s ease;
+}
+
+/* Layer Shape Assignments */
+.hull-alpha {
+    width: 340px;
+    height: 340px;
+    left: 10px;
+    top: 30px;
+    z-index: 2;
+    /* Custom creative asymmetric blob clipping track */
+    border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+    border: 4px solid #ffffff;
+}
+
+.hull-beta {
+    width: 260px;
+    height: 260px;
+    right: -10px;
+    bottom: 20px;
+    z-index: 3;
+    border-radius: 42% 58% 70% 30% / 45% 45% 55% 55%;
+    border: 4px solid #ffffff;
+    box-shadow: 0 25px 60px rgba(255, 74, 17, 0.15);
+}
+
+.cyber-hud-coordinate {
+    position: absolute;
+    bottom: 25px;
+    left: 70px;
+    background: #0f1115;
+    color: #ffffff;
+    padding: 5px 12px;
+    font-size: 9.5px;
+    font-weight: 800;
+    letter-spacing: 1px;
+    border-radius: 2px;
+    z-index: 4;
+}
+
+.cyber-hud-coordinate.hud-primary {
+    background-color: #ff4a11;
+}
+
+/* Hover Reactions for Liquid Blob Components */
+.kinetic-liquid-hull:hover {
+    z-index: 5;
+    border-color: #ff4a11;
+    box-shadow: 0 30px 65px rgba(0, 0, 0, 0.18), 0 0 30px rgba(255, 74, 17, 0.3);
+}
+
+.kinetic-liquid-hull:hover .kinetic-source-asset {
+    transform: scale(1.08) rotate(2deg);
+}
+
+.kinetic-liquid-hull:hover .hull-neon-shroud {
+    opacity: 1;
+}
+
+/* Parallax Dynamic Translation Anchors */
+.layer-depth-low {
+    transform: translate(calc(var(--mx, 0) * -15px), calc(var(--my, 0) * -15px));
+}
+
+.layer-depth-high {
+    transform: translate(calc(var(--mx, 0) * 25px), calc(var(--my, 0) * 25px));
+}
+
+/* Master Interactive Graphics Activation Chain Hook during Page Hover states */
+.orbital-graphics-deck:hover .ring-outer { transform: scale(1.03); }
+.orbital-graphics-deck:hover .ring-inner { transform: scale(0.97); border-style: solid; }
+
+/* --- ADAPTIVE PORTAL RESPONSIVENESS OVERLAYS --- */
+@media (max-width: 992px) {
+    .kinetic-hero-engine { padding-top: 100px; }
+    .fluid-canvas-wrapper { grid-template-columns: 1fr; gap: 50px; text-align: center; }
+    .cyber-ticker-pill, .fluid-interactive-summary { margin-left: auto; margin-right: auto; }
+    .kinetic-action-cluster { justify-content: center; }
+    .orbital-graphics-deck { height: 420px; max-width: 520px; margin: 0 auto; }
+    .hull-alpha { width: 280px; height: 280px; top: 10px; }
+    .hull-beta { width: 210px; height: 210px; bottom: 10px; }
+    .ring-outer { width: 380px; height: 380px; }
+    .ring-inner { width: 260px; height: 260px; }
+}
+
+@media (max-width: 480px) {
+    .orbital-graphics-deck { height: 320px; }
+    .hull-alpha { width: 220px; height: 220px; }
+    .hull-beta { width: 170px; height: 170px; }
+    .ring-outer, .ring-inner { display: none; } /* Clear asset noise loop on micro layouts */
+}
+
+</style>
+
+<script>
+    // --- COGNITIVE PARALLAX FLOW ROTATION RUNTIME ---
+document.addEventListener('DOMContentLoaded', () => {
+    const parallaxContainer = document.getElementById('parallaxGraphicsDeck');
+    
+    if (parallaxContainer && window.innerWidth > 992) {
+        window.addEventListener('mousemove', (event) => {
+            // Compute coordinate metrics relative to screen canvas center thresholds
+            const viewportWidth = window.innerWidth;
+            const viewportHeight = window.innerHeight;
+            
+            const cursorX = (event.clientX - viewportWidth / 2) / (viewportWidth / 2);
+            const cursorY = (event.clientY - viewportHeight / 2) / (viewportHeight / 2);
+            
+            // Map raw values straight onto hardware accelerated CSS custom variables
+            parallaxContainer.style.setProperty('--mx', cursorX.toFixed(3));
+            parallaxContainer.style.setProperty('--my', cursorY.toFixed(3));
+        });
+    }
+});
+
+</script>
+
+<!-- INTUITIONAL DYNAMIC PROGRAMS TRACK FILTER BLOCK -->
+<section class="programs-deck-section scroll-reveal-view" id="disciplines-catalog">
+    
+    <!-- Filter Interaction Selector Strip Bar -->
+    <div class="filter-controls-strip">
+        <button class="filter-pill-btn active" onclick="executeProgramFilter(this, 'all')">All Disciplines</button>
+        <button class="filter-pill-btn" onclick="executeProgramFilter(this, 'court')">Court Combat</button>
+        <button class="filter-pill-btn" onclick="executeProgramFilter(this, 'turf')">Turf Operations</button>
+        <button class="filter-pill-btn" onclick="executeProgramFilter(this, 'clay')">Clay Courts</button>
+    </div>
+
+    <!-- Programs Grid Dashboard Container -->
+    <div class="programs-fluid-grid" id="programsGridContainer">
+        
+        <!-- Program 01: Basketball -->
+        <div class="program-showcase-card filter-target-node" data-category="court">
+            <div class="program-media-wrapper">
+                <div class="program-neon-halo"></div>
+                <img src="./Assests/basketball league.webp" alt="Advanced basketball jump biomechanics optimization tracking" class="program-card-img">
+                <div class="program-floating-badge">Elite Court</div>
+            </div>
+            <div class="program-body-deck">
+                <h3>Basketball Combat Track</h3>
+                <p class="program-interactive-caption">High-intensity velocity physics, jump-chain extensions tracking, and localized neuro-response metrics mapping loops.</p>
+                <div class="program-meta-footer">
+                    <span class="meta-metric-span">
+                        <svg viewBox="0 0 24 24" class="meta-svg-vector"><path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zm3.3 14.3c-.4.4-.9.6-1.5.6c-.6 0-1.1-.2-1.5-.6l-3.3-3.3c-.4-.4-.6-.9-.6-1.5V7h2v4.1l2.9 2.9c.4.4.4 1 0 1.3z"/></svg>
+                        12 Wks Duration
+                    </span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Program 02: Soccer -->
+        <div class="program-showcase-card filter-target-node" data-category="turf">
+            <div class="program-media-wrapper">
+                <div class="program-neon-halo"></div>
+                <img src="./Assests/soccer league.webp" alt="Pro soccer passing geometry endurance telemetry grid" class="program-card-img">
+                <div class="program-floating-badge">Pro Turf</div>
+            </div>
+            <div class="program-body-deck">
+                <h3>Tactical Soccer Operations</h3>
+                <p class="program-interactive-caption">VO2 max endurance scaling modules, spatial positioning geometry mapping, and acceleration load analytics arrays.</p>
+                <div class="program-meta-footer">
+                    <span class="meta-metric-span">
+                        <svg viewBox="0 0 24 24" class="meta-svg-vector"><path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zm3.3 14.3c-.4.4-.9.6-1.5.6c-.6 0-1.1-.2-1.5-.6l-3.3-3.3c-.4-.4-.6-.9-.6-1.5V7h2v4.1l2.9 2.9c.4.4.4 1 0 1.3z"/></svg>
+                        16 Wks Duration
+                    </span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Program 03: Tennis -->
+        <div class="program-showcase-card filter-target-node" data-category="clay">
+            <div class="program-media-wrapper">
+                <div class="program-neon-halo"></div>
+                <img src="./Assests/tennis match.webp" alt="High speed clay court tennis velocity serve analysis tracking" class="program-card-img">
+                <div class="program-floating-badge">Clay Court</div>
+            </div>
+            <div class="program-body-deck">
+                <h3>Stackly Tennis Grand Prix</h3>
+                <p class="program-interactive-caption">High-velocity baseline serve tracking tracking systems, reactivity boundaries refinement, and surface weight shift analysis.</p>
+                <div class="program-meta-footer">
+                    <span class="meta-metric-span">
+                        <svg viewBox="0 0 24 24" class="meta-svg-vector"><path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zm3.3 14.3c-.4.4-.9.6-1.5.6c-.6 0-1.1-.2-1.5-.6l-3.3-3.3c-.4-.4-.6-.9-.6-1.5V7h2v4.1l2.9 2.9c.4.4.4 1 0 1.3z"/></svg>
+                        10 Wks Duration
+                    </span>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<style>
+    /* --- COMPACT PROGRAMS DECK SYSTEM --- */
+.programs-deck-section {
+    padding: 50px 5% 30px 5%; /* Configured requested 50px Top, 30px Bottom padding tracking limits */
+    background-color: #ffffff;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: hidden;
+}
+
+/* Category Filter Control Bar Layout */
+.filter-controls-strip {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-bottom: 45px;
+    width: 100%;
+    max-width: 800px;
+}
+
+.filter-pill-btn {
+    padding: 12px 28px;
+    background: transparent;
+    border: 2px solid #e1e4eb;
+    color: #0f1115;
+    border-radius: 30px; /* Fluid rounded custom aesthetic button tracking */
+    font-size: 13.5px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.3s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.filter-pill-btn:hover, .filter-pill-btn.active {
+    background-color: #0f1115;
+    color: #ffffff;
+    border-color: #0f1115;
+    box-shadow: 0 8px 20px rgba(15, 17, 21, 0.12);
+}
+
+.filter-pill-btn.active {
+    background-color: #ff4a11; /* Highlight active system variable button with primary color */
+    border-color: #ff4a11;
+    box-shadow: 0 8px 20px rgba(255, 74, 17, 0.25);
+}
+
+/* Fluid Responsive Catalog Grid */
+.programs-fluid-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(310px, 1fr));
+    gap: 30px;
+    width: 100%;
+    max-width: 1300px;
+}
+
+/* Showcase Program Card Structures */
+.program-showcase-card {
+    background: #ffffff;
+    border-radius: 16px;
+    overflow: hidden;
+    border: 1px solid #e1e4eb;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.02);
+    display: flex;
+    flex-direction: column;
+    opacity: 1;
+    transform: scale(1);
+    transition: transform 0.4s cubic-bezier(0.25, 1, 0.5, 1), 
+                opacity 0.4s ease, 
+                border-color 0.4s ease, 
+                box-shadow 0.4s ease;
+    will-change: transform, opacity, box-shadow;
+}
+
+/* Structural hide rule set applied directly via JavaScript filter engine hooks */
+.program-showcase-card.hide-node {
+    opacity: 0;
+    transform: scale(0.92);
+    pointer-events: none;
+    position: absolute; /* Pulls from document flow so layout adapts seamlessly */
+    visibility: hidden;
+}
+
+.program-media-wrapper {
+    position: relative;
+    height: 230px;
+    overflow: hidden;
+    background-color: #f8f9fa;
+}
+
+.program-card-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.6s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+/* Vector Halo Glow Shaders Overlay */
+.program-neon-halo {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at center, rgba(255, 74, 17, 0.22) 0%, transparent 75%);
+    opacity: 0;
+    z-index: 2;
+    pointer-events: none;
+    transition: opacity 0.4s ease;
+}
+
+.program-floating-badge {
+    position: absolute;
+    bottom: 15px;
+    left: 15px;
+    background: #0f1115;
+    color: #ffffff;
+    padding: 5px 14px;
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    border-radius: 4px;
+    z-index: 3;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Hover Dynamics for Showcase Cards */
+.program-showcase-card:hover {
+    transform: translateY(-6px);
+    border-color: #ff4a11;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.06), 0 0 25px rgba(255, 74, 17, 0.1);
+}
+
+.program-showcase-card:hover .program-card-img {
+    transform: scale(1.05);
+}
+
+.program-showcase-card:hover .program-neon-halo {
+    opacity: 1;
+}
+
+/* Inside Card Content Details Typography Block */
+.program-body-deck {
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.program-body-deck h3 {
+    font-size: 20px;
+    color: #0f1115;
+    margin-bottom: 12px;
+    font-weight: 800;
+    transition: color 0.3s ease;
+}
+
+.program-showcase-card:hover .program-body-deck h3 {
+    color: #ff4a11;
+}
+
+.program-interactive-caption {
+    font-size: 14px;
+    color: #555e6b;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    cursor: default;
+    display: inline-block;
+    transition: color 0.4s ease, text-shadow 0.4s ease, transform 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+    will-change: transform, text-shadow;
+}
+
+.program-showcase-card:hover .program-interactive-caption {
+    color: #0f1115;
+    transform: scale(1.015);
+    text-shadow: 0 0 12px rgba(255, 74, 17, 0.12);
+}
+
+/* Card Metadata Alignment Footer */
+.program-meta-footer {
+    border-top: 1px solid #e1e4eb;
+    padding-top: 15px;
+    margin-top: auto;
+    display: flex;
+    align-items: center;
+}
+
+.meta-metric-span {
+    font-size: 13px;
+    color: #667085;
+    font-weight: 600;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.meta-svg-vector {
+    width: 15px;
+    height: 15px;
+    fill: #667085;
+    transition: fill 0.3s ease;
+}
+
+.program-showcase-card:hover .meta-svg-vector {
+    fill: #ff4a11;
+}
+
+</style>
+
+<script>
+    // --- COMPACT SPORTS CLASSIFICATION ROUTINE ENGINE ---
+function executeProgramFilter(buttonElement, targetCategoryKey) {
+    // 1. Re-index active layout highlight styling structures on button row anchors
+    const siblingButtonsList = buttonElement.parentElement.querySelectorAll('.filter-pill-btn');
+    siblingButtonsList.forEach(btn => btn.classList.remove('active'));
+    buttonElement.classList.add('active');
+
+    // 2. Scan catalog target card components for categorization match sequences
+    const catalogCardsArray = document.querySelectorAll('.filter-target-node');
+    
+    catalogCardsArray.forEach(cardNode => {
+        const cardCategoryVal = cardNode.getAttribute('data-category');
+
+        if (targetCategoryKey === 'all' || cardCategoryVal === targetCategoryKey) {
+            // Unmask structural visibility mapping classes cleanly
+            cardNode.classList.remove('hide-node');
+        } else {
+            // Mask item container layout nodes matching alternative key traces
+            cardNode.classList.add('hide-node');
+        }
+    });
+}
+
+</script>
+
+<!-- SYSTEM RESPONSIVE GEAR & DRILL COMPOUND INSIGHTS -->
+<section class="camp-insights-section scroll-reveal-view" id="gear-insights">
+    <div class="insights-master-container">
+        
+        <!-- Row Block 01: Biometric Performance Apparel (Image Left, Content Right) -->
+        <div class="insight-asymmetric-row">
+            
+            <div class="insight-graphic-deck">
+                <div class="insight-mesh-glow"></div>
+                <div class="insight-img-hull border-glow-orange">
+                    <div class="insight-neon-shroud"></div>
+                    <img src="./Assests/jersey.webp" alt="Apex premium specialized compression athletic armor textiles" class="insight-source-asset">
+                    
+                    <!-- Glassmorphic HUD overlay tracker cell -->
+                    <div class="glass-hud-overlay-card position-top-right">
+                        <span class="hud-pulse-node"></span>
+                        <p>Textile Compression Sync: Active</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="insight-text-deck">
+                <span class="insight-mini-badge">Advanced Equipment Compound</span>
+                <h3 class="insight-row-title">Kinetic Compression <br><span>Aerodynamic Armor</span></h3>
+                <p class="insight-interactive-body">
+                    We outfit our advanced placement squads with wind-tunnel tested compression gear. These smart fabrics minimize fluid dragging turbulence while embedding surface micro-sensor tracks to calculate skin thermal shock data lines during peak acceleration loops.
+                </p>
+                <div class="insight-vector-tag">
+                    <svg viewBox="0 0 24 24" class="tag-vector-svg"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 12 10 10-4.48 10-12S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg>
+                    <span>Approved for Regional Competitive Brackets</span>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Row Block 02: High-Velocity Training Labs (Content Left, Image Right) -->
+        <div class="insight-asymmetric-row layout-flipped">
+            
+            <div class="insight-graphic-deck">
+                <div class="insight-mesh-glow"></div>
+                <div class="insight-img-hull border-glow-dark">
+                    <div class="insight-neon-shroud"></div>
+                    <img src="./Assests/weight structure.webp" alt="Inside view of high velocity weight training telemetry array platforms" class="insight-source-asset">
+                    
+                    <div class="glass-hud-overlay-card position-bottom-left">
+                        <span class="hud-pulse-node radar-glow-orange"></span>
+                        <p>Force Plate Matrix: 100% Balanced</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="insight-text-deck text-align-right">
+                <span class="insight-mini-badge">Neuro-Conditioning Hub</span>
+                <h3 class="insight-row-title">High-Velocity <br><span>Force-Plate Testing Ground</span></h3>
+                <p class="insight-interactive-body">
+                    Maximize absolute structural weight transformations safely. Our diagnostic platforms run continuous load vector balance monitoring to isolate joint deceleration stress zones and protect complex muscle extension chains from fatigue failure.
+                </p>
+                <div class="insight-vector-tag align-right-row">
+                    <svg viewBox="0 0 24 24" class="tag-vector-svg"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-5 14H7v-2h7v2zm3-4H7v-2h10v2zm0-4H7V7h10v2z"/></svg>
+                    <span>Real-Time Biomechanical Analytics Synced</span>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+</section>
+
+<style>
+    /* --- COMPACT CAMPAIGN INSIGHTS LAYOUT DECK --- */
+.camp-insights-section {
+    padding: 50px 5% 30px 5%; /* Exact requested 50px Top, 30px Bottom compression track bounds */
+    background-color: #ffffff; /* Smooth alignment with pure clean white canvas background */
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.insights-master-container {
+    width: 100%;
+    max-width: 1300px;
+    display: flex;
+    flex-direction: column;
+    gap: 60px; /* Controlled vertical row item gap architecture */
+}
+
+/* Asymmetric Dual Column Row Configurations */
+/* --- FIXED ASYMMETRIC MULTI-COLUMN FLOW --- */
+.insight-asymmetric-row {
+    display: grid;
+    /* Explicitly dictates 2 balanced horizontal columns side-by-side */
+    grid-template-columns: 1fr 1fr; 
+    gap: 60px;
+    align-items: center; /* Centers text and image vertically relative to each other */
+    width: 100%;
+}
+
+/* Forces layout arrays to maintain strict item order variables */
+.insight-graphic-deck, 
+.insight-text-deck {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Clear all column displacement overrides that may break normal layouts */
+.insight-asymmetric-row.layout-flipped {
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+}
+
+.insight-asymmetric-row.layout-flipped .insight-graphic-deck {
+    grid-column: 2; /* Locks the image box cleanly on the right horizon */
+}
+
+.insight-asymmetric-row.layout-flipped .insight-text-deck {
+    grid-column: 1; /* Locks the description block cleanly on the left horizon */
+    grid-row: 1;    /* Keeps the row synchronized on the same baseline plane */
+}
+
+/* --- ADAPTIVE TRANSITION VIEWPORT BREAKPOINTS --- */
+@media (max-width: 992px) {
+    .insight-asymmetric-row, 
+    .insight-asymmetric-row.layout-flipped {
+        /* Stacks elements smoothly ONLY on mobile and tablet screen widths */
+        grid-template-columns: 1fr !important;
+        gap: 35px;
+        text-align: center;
+    }
+
+    .insight-asymmetric-row.layout-flipped .insight-graphic-deck,
+    .insight-asymmetric-row.layout-flipped .insight-text-deck {
+        grid-column: auto !important;
+        grid-row: auto !important;
+    }
+}
+
+
+/* Flips text reading sequences natively on desktop screens */
+.insight-asymmetric-row.layout-flipped {
+    grid-template-columns: 1.05fr 0.95fr;
+}
+
+.insight-asymmetric-row.layout-flipped .insight-graphic-deck {
+    grid-column: 2; /* Displaces graphic module box to the right horizon */
+}
+
+.insight-asymmetric-row.layout-flipped .insight-text-deck {
+    grid-column: 1; /* Displaces text deck module box to the left horizon */
+}
+
+/* Graphics Core Frame Assembly */
+.insight-graphic-deck {
+    position: relative;
+    width: 100%;
+    height: 340px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.insight-mesh-glow {
+    position: absolute;
+    width: 120%;
+    height: 120%;
+    background: radial-gradient(circle at center, rgba(255, 74, 17, 0.08) 0%, transparent 65%);
+    pointer-events: none;
+    z-index: 1;
+}
+
+.insight-img-hull {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    border-radius: 16px;
+    overflow: hidden;
+    border: 5px solid #ffffff;
+    outline: 1px solid #e1e4eb;
+    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.05);
+    z-index: 2;
+    transition: transform 0.5s cubic-bezier(0.25, 1, 0.5, 1), 
+                border-color 0.4s ease, 
+                box-shadow 0.4s ease;
+    will-change: transform, box-shadow;
+}
+
+.border-glow-orange { transform: rotate(-1.5deg); }
+.border-glow-dark { transform: rotate(1.5deg); }
+
+.insight-source-asset {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.6s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.insight-neon-shroud {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at center, rgba(255, 74, 17, 0.18) 0%, transparent 85%);
+    opacity: 0;
+    z-index: 3;
+    pointer-events: none;
+    transition: opacity 0.4s ease;
+}
+
+/* Glassmorphic Live HUD Tracker Badge Modules */
+.glass-hud-overlay-card {
+    position: absolute;
+    background: rgba(15, 17, 21, 0.75);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    padding: 10px 18px;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    z-index: 4;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+    transition: transform 0.4s ease, border-color 0.3s ease;
+}
+
+.position-top-right { top: 20px; right: 20px; }
+.position-bottom-left { bottom: 20px; left: 20px; }
+
+.hud-pulse-node {
+    width: 6px;
+    height: 6px;
+    background-color: #ffffff;
+    border-radius: 50%;
+    position: relative;
+}
+
+.hud-pulse-node::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background-color: inherit;
+    animation: pulseMarker 1.6s infinite ease-out;
+}
+
+.radar-glow-orange { background-color: #ff4a11; }
+
+@keyframes pulseMarker {
+    0% { transform: scale(1); opacity: 1; }
+    100% { transform: scale(3.5); opacity: 0; }
+}
+
+.glass-hud-overlay-card p {
+    color: #ffffff;
+    font-size: 11.5px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+}
+
+/* Graphic Container Level Interactive Hover Activations */
+.insight-img-hull:hover {
+    border-color: #ff4a11;
+    box-shadow: 0 18px 45px rgba(0, 0, 0, 0.1), 0 0 25px rgba(255, 74, 17, 0.18);
+}
+
+.insight-img-hull:hover .insight-source-asset { transform: scale(1.04); }
+.insight-img-hull:hover .insight-neon-shroud { opacity: 1; }
+
+.insight-img-hull:hover .glass-hud-overlay-card {
+    border-color: #ff4a11;
+    transform: scale(1.02);
+}
+
+.border-glow-orange:hover { transform: scale(1.01) rotate(0deg) translateY(-3px); }
+.border-glow-dark:hover { transform: scale(1.01) rotate(0deg) translateY(-3px); }
+
+/* Right Grid Column Content Typography Styling */
+.insight-text-deck {
+    display: flex;
+    flex-direction: column;
+}
+
+.text-align-right {
+    text-align: right;
+}
+
+.insight-mini-badge {
+    color: #ff4a11;
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 12px;
+}
+
+.insight-row-title {
+    font-size: clamp(26px, 3.8vw, 38px);
+    font-weight: 900;
+    color: #0f1115;
+    text-transform: uppercase;
+    line-height: 1.1;
+    margin-bottom: 20px;
+}
+
+.insight-row-title span {
+    color: #ff4a11;
+    transition: text-shadow 0.4s ease;
+}
+
+.camp-insights-section:hover .insight-row-title span {
+    text-shadow: 0 0 20px rgba(255, 74, 17, 0.3);
+}
+
+.insight-interactive-body {
+    font-size: 14.5px;
+    color: #555e6b;
+    line-height: 1.6;
+    margin-bottom: 30px;
+    max-width: 580px;
+    cursor: default;
+    display: inline-block;
+    transition: color 0.4s ease, text-shadow 0.4s ease, transform 0.4s ease;
+    will-change: transform, text-shadow;
+}
+
+.text-align-right .insight-interactive-body {
+    margin-left: auto; /* Aligns left margin constraint bounding lines correctly */
+}
+
+.insight-interactive-body:hover {
+    color: #0f1115;
+    transform: scale(1.01);
+    text-shadow: 0 0 12px rgba(255, 74, 17, 0.12);
+}
+
+/* Bottom Metadata Link Rows */
+.insight-vector-tag {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 13.5px;
+    color: #667085;
+    font-weight: 700;
+}
+
+.align-right-row {
+    justify-content: flex-end;
+}
+
+.tag-vector-svg {
+    width: 16px;
+    height: 16px;
+    fill: #0f1115;
+    transition: fill 0.3s ease, transform 0.3s ease;
+}
+
+.insight-asymmetric-row:hover .tag-vector-svg {
+    fill: #ff4a11;
+    transform: scale(1.1) rotate(5deg);
+}
+
+.insight-asymmetric-row:hover .insight-vector-tag span {
+    color: #0f1115;
+}
+
+/* --- ADAPTIVE GRAPHIC RESPONSIVENESS OVERLAYS BREAKPOINTS --- */
+@media (max-width: 992px) {
+    .insights-master-container { gap: 50px; }
+    
+    .insight-asymmetric-row, 
+    .insight-asymmetric-row.layout-flipped {
+        grid-template-columns: 1fr; /* Stacks column profiles straight down into single block tracks */
+        gap: 35px;
+        text-align: center;
+    }
+
+    .insight-asymmetric-row.layout-flipped .insight-graphic-deck,
+    .insight-asymmetric-row.layout-flipped .insight-text-deck {
+        grid-column: auto; /* Resets structural column placement overrides safely */
+    }
+
+    .text-align-right { text-align: center; }
+    .insight-interactive-body, .text-align-right .insight-interactive-body { margin-left: auto; margin-right: auto; }
+    .align-right-row { justify-content: center; }
+    
+    .insight-graphic-deck {
+        height: 300px;
+        max-width: 560px;
+        margin: 0 auto;
+    }
+    
+    .border-glow-orange, .border-glow-dark { transform: rotate(0deg); }
+}
+
+@media (max-width: 480px) {
+    .insight-graphic-deck { height: 240px; }
+    .glass-hud-overlay-card { display: none; } /* Clear overlay noise on micro viewports */
+}
+
+</style>
+
+<!-- SYSTEM TWO-LINE SCROLL KINETIC BANNER -->
+<section class="action-banner scroll-reveal-view" id="cta-banner">
+    <!-- Clean Background Image Layer -->
+    <img src="./Assests/drill.webp" alt="Apex Stadium Background" class="banner-bg-asset">
+    <div class="banner-dark-overlay"></div>
+    <div class="banner-glow-halo"></div>
+
+    <div class="banner-container">
+        <!-- Line 1: Primed Heading -->
+        <h2 class="banner-line-one">Break Your Boundaries.</h2>
+        
+        <!-- Line 2: Glow-Accentuated Sub-Heading -->
+        <p class="banner-line-two">Join the elite athletic movement and claim your <span>Stackly Rank Today</span></p>
+        
+        <!-- Interactive Action Button -->
+        <div class="banner-action-row">
+            <a href="404.html" class="banner-btn">
+                <span>Access Registration</span>
+                <svg viewBox="0 0 24 24">
+                    <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10zM9 11l2 2 4-4" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+                </svg>
+            </a>
+        </div>
+    </div>
+</section>
+
+<style>
+    /* --- TWO-LINE HIGH-ENERGY ACTION BANNER --- */
+.action-banner {
+    position: relative;
+    width: 100%;
+    padding: 80px 5%; /* Tight, balanced vertical spacing architecture */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    background-color: #090a0f; /* Fallback baseline dark canvas */
+}
+
+/* Background Image Layer Logic */
+.banner-bg-asset {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 1;
+    transform: scale(1.05);
+    transition: transform 0.8s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.action-banner:hover .banner-bg-asset {
+    transform: scale(1.01); /* Subtle kinetic pull on background during hover states */
+}
+
+/* Overlay Layer Shields */
+.banner-dark-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, rgba(9, 10, 15, 0.9) 0%, rgba(9, 10, 15, 0.7) 100%);
+    z-index: 2;
+}
+
+.banner-glow-halo {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at center, rgba(255, 74, 17, 0.15) 0%, transparent 70%);
+    opacity: 0;
+    z-index: 3;
+    pointer-events: none;
+    transition: opacity 0.5s ease;
+}
+
+.action-banner:hover .banner-glow-halo {
+    opacity: 1;
+}
+
+/* Content Container Architecture */
+.banner-container {
+    position: relative;
+    width: 100%;
+    max-width: 1100px;
+    text-align: center;
+    z-index: 4;
+}
+
+/* Line 1 Typography Frame */
+.banner-line-one {
+    font-size: clamp(32px, 5vw, 56px);
+    font-weight: 900;
+    text-transform: uppercase;
+    color: #ffffff;
+    line-height: 1.1;
+    margin-bottom: 12px;
+    letter-spacing: -1px;
+    transition: transform 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.banner-line-one:hover {
+    transform: scale(1.02);
+}
+
+/* Line 2 Typography Frame & Glow Parameters */
+.banner-line-two {
+    font-size: clamp(16px, 2.2vw, 22px);
+    font-weight: 600;
+    color: #b3b8c3;
+    line-height: 1.4;
+    margin-bottom: 35px;
+    cursor: default;
+    transition: color 0.4s ease, transform 0.4s ease;
+}
+
+.banner-line-two span {
+    color: var(--primary);
+    position: relative;
+    display: inline-block;
+    transition: text-shadow 0.4s ease, color 0.4s ease;
+}
+
+/* High-contrast hover ignition link states */
+.banner-line-two:hover {
+    color: #ffffff;
+}
+
+.banner-line-two:hover span {
+    color: #ffffff;
+    text-shadow: 0 0 20px var(--primary), 0 0 40px var(--primary-glow);
+}
+
+/* Premium Action Button Interaction Matrix */
+.banner-action-row {
+    display: flex;
+    justify-content: center;
+}
+
+.banner-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    padding: 16px 42px;
+    background-color: var(--primary);
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    border-radius: 8px;
+    box-shadow: 0 10px 25px rgba(255, 74, 17, 0.25);
+    transition: all 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+    border: 1px solid transparent;
+}
+
+.banner-btn svg {
+    width: 18px;
+    height: 18px;
+    fill: none;
+    transition: transform 0.3s ease;
+}
+
+.banner-btn:hover {
+    background-color: transparent;
+    border-color: var(--primary);
+    color: var(--primary);
+    box-shadow: 0 0 30px var(--primary-glow);
+    transform: translateY(-4px);
+}
+
+.banner-btn:hover svg {
+    transform: rotate(360deg) scale(1.1);
+}
+
+/* --- ADAPTIVE BANNER RESPONSIVENESS OVERLAYS --- */
+@media (max-width: 768px) {
+    .action-banner {
+        padding: 60px 5%;
+    }
+    .banner-line-two {
+        margin-bottom: 25px;
+    }
+    .banner-btn {
+        padding: 14px 32px;
+        width: 100%;
+        justify-content: center;
+    }
+}
+
+</style>
+
+<!-- DYNAMIC PROGRAMS AMENITIES & INCLUSIONS SYSTEM -->
+<section class="perks-grid-section scroll-reveal-view" id="membership-perks">
+    
+    <div class="perks-header">
+        <span class="perks-mini-badge">Elite Inclusions</span>
+        <h2 class="perks-main-heading">All-Inclusive <span>Amenities Deck</span></h2>
+        <p class="perks-interactive-subtitle">Every premium discipline track unlocks full automated perimeter access to our specialized auxiliary facilities.</p>
+    </div>
+
+    <!-- Fluid Responsive Perks Grid Layout -->
+    <div class="perks-container">
+        
+        <!-- Perk 01 -->
+        <div class="perk-card-box">
+            <div class="perk-glow-mask"></div>
+            <div class="perk-media-frame">
+                <img src="./Assests/postworkout.webp" alt="Cryotherapy recovery chamber compound infrastructure" class="perk-card-img">
+                <div class="perk-vector-badge">
+                    <svg viewBox="0 0 24 24" class="perk-svg-icon"><path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zm-1 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+                </div>
+            </div>
+            <div class="perk-body-deck">
+                <h3>Cryo-Recovery Pools</h3>
+                <p class="perk-interactive-caption">Targeted cellular thermal shock exposure windows running continuously post-workout to clear localized micro-inflammation loops safely.</p>
+            </div>
+        </div>
+
+        <!-- Perk 02 -->
+        <div class="perk-card-box">
+            <div class="perk-glow-mask"></div>
+            <div class="perk-media-frame">
+                <img src="./Assests/diet.webp" alt="Custom macronutrient sports diet nutrition setup meal plan" class="perk-card-img">
+                <div class="perk-vector-badge">
+                    <svg viewBox="0 0 24 24" class="perk-svg-icon"><path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zm-1 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+                </div>
+            </div>
+            <div class="perk-body-deck">
+                <h3>Biometric Diet Matrix</h3>
+                <p class="perk-interactive-caption">Precision glycogen loading calculations and specialized mineral hydration maps calibrated directly to your tracking logs.</p>
+            </div>
+        </div>
+
+        <!-- Perk 03 -->
+        <div class="perk-card-box">
+            <div class="perk-glow-mask"></div>
+            <div class="perk-media-frame">
+                <img src="./Assests/sports court recordings.webp" alt="Private pro video study review conference room" class="perk-card-img">
+                <div class="perk-vector-badge">
+                    <svg viewBox="0 0 24 24" class="perk-svg-icon"><path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zm-1 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+                </div>
+            </div>
+            <div class="perk-body-deck">
+                <h3>Tactical Theater Access</h3>
+                <p class="perk-interactive-caption">Private digital review suites to break down multi-angle court recordings alongside regional discipline directors.</p>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<style>
+    /* --- COMPACT PERKS GRID DESIGN SYSTEM --- */
+.perks-grid-section {
+    padding: 50px 5% 30px 5%; /* Configured requested 50px Top, 30px Bottom padding bounds precisely */
+    background-color: #ffffff; /* Smooth clean white background canvas integration */
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: hidden;
+    position: relative;
+    border-top: 1px solid #f0f2f5;
+}
+
+/* Section Header Typography */
+.perks-header {
+    text-align: center;
+    margin-bottom: 40px;
+    max-width: 700px;
+}
+
+.perks-mini-badge {
+    color: #ff4a11; /* System Neon Orange Primary */
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 12px;
+    display: inline-block;
+}
+
+.perks-main-heading {
+    font-size: clamp(28px, 4vw, 40px);
+    font-weight: 900;
+    color: #0f1115;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+    line-height: 1.1;
+}
+
+.perks-main-heading span {
+    color: #ff4a11;
+    text-shadow: 0 0 20px rgba(255, 74, 17, 0.05);
+}
+
+.perks-interactive-subtitle {
+    font-size: 15px;
+    color: #667085;
+    line-height: 1.5;
+    cursor: default;
+    display: inline-block;
+    transition: color 0.4s ease, text-shadow 0.4s ease, transform 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+    will-change: transform, text-shadow;
+}
+
+.perks-grid-section:hover .perks-main-heading span {
+    text-shadow: 0 0 25px rgba(255, 74, 17, 0.35);
+}
+
+.perks-interactive-subtitle:hover {
+    color: #0f1115;
+    transform: scale(1.02);
+    text-shadow: 0 0 15px rgba(255, 74, 17, 0.15);
+}
+
+/* Three-Column Fluid Grid System Layout Deck */
+.perks-container {
+    width: 100%;
+    max-width: 1300px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+/* Amenities Card Module Structural Cells */
+.perk-card-box {
+    background: #ffffff;
+    border-radius: 16px;
+    overflow: hidden;
+    border: 1px solid #e1e4eb;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.01);
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.5s cubic-bezier(0.25, 1, 0.5, 1), 
+                border-color 0.4s ease, 
+                box-shadow 0.4s ease;
+    will-change: transform, box-shadow;
+}
+
+.perk-media-frame {
+    position: relative;
+    height: 200px;
+    overflow: hidden;
+    background-color: #f8f9fa;
+}
+
+.perk-card-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.6s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+/* Custom Neon Radial ShShroud Overlay */
+.perk-glow-mask {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at center, rgba(255, 74, 17, 0.22) 0%, transparent 75%);
+    opacity: 0;
+    z-index: 2;
+    pointer-events: none;
+    transition: opacity 0.4s ease;
+}
+
+/* Floating Check Vector Badges */
+.perk-vector-badge {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background-color: #0f1115;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #ffffff;
+    z-index: 3;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: background-color 0.3s ease, transform 0.4s ease;
+}
+
+.perk-svg-icon {
+    width: 16px;
+    height: 16px;
+}
+
+/* Card Content Details Framing */
+.perk-body-deck {
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+}
+
+.perk-body-deck h3 {
+    font-size: 20px;
+    color: #0f1115;
+    margin-bottom: 10px;
+    font-weight: 800;
+    transition: color 0.3s ease;
+}
+
+.perk-interactive-caption {
+    font-size: 14px;
+    color: #555e6b;
+    line-height: 1.6;
+    cursor: default;
+    display: inline-block;
+    transition: color 0.4s ease, text-shadow 0.4s ease, transform 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+    will-change: transform, text-shadow;
+}
+
+/* Collective Card Hover Chain Reactions Triggers */
+.perk-card-box:hover {
+    transform: translateY(-6px);
+    border-color: #ff4a11;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.05), 0 0 25px rgba(255, 74, 17, 0.1);
+}
+
+.perk-card-box:hover .perk-card-img {
+    transform: scale(1.05);
+}
+
+.perk-card-box:hover .perk-glow-mask {
+    opacity: 1;
+}
+
+.perk-card-box:hover .perk-vector-badge {
+    background-color: #ff4a11;
+    transform: scale(1.08) rotate(5deg);
+    box-shadow: 0 4px 12px rgba(255, 74, 17, 0.25);
+}
+
+.perk-card-box:hover .perk-body-deck h3 {
+    color: #ff4a11;
+}
+
+.perk-card-box:hover .perk-interactive-caption {
+    color: #0f1115;
+    transform: scale(1.015);
+    text-shadow: 0 0 12px rgba(255, 74, 17, 0.12);
+}
+
+/* --- ADAPTIVE GRAPHIC RESPONSIVENESS OVERLAYS BREAKPOINTS --- */
+@media (max-width: 768px) {
+    .perks-grid-section {
+        padding: 50px 6% 30px 6%;
+    }
+}
+
+</style>
+
+<!-- DYNAMIC PROGRAMS SCHEDULE & TRACK DATA PANEL -->
+<section class="schedule-grid-section scroll-reveal-view" id="training-schedule">
+    
+    <div class="schedule-header">
+        <span class="schedule-mini-badge">Live Operational Slots</span>
+        <h2 class="schedule-main-heading">Training Session <span>Grid Metrics</span></h2>
+        <p class="schedule-interactive-subtitle">Track open arena block times, tactical briefing segments, and real-time load telemetry evaluation camps.</p>
+    </div>
+
+    <div class="schedule-master-container">
+        
+        <!-- Left Wing: Visual Asset Dashboard Mockup -->
+        <div class="schedule-graphic-hull">
+            <div class="schedule-mesh-halo"></div>
+            <div class="schedule-img-bezel">
+                <div class="schedule-neon-overlay"></div>
+                <!-- Main Asset Background Image Tag -->
+                <img src="./Assests/drill.webp" alt="Apex Training Facility Arena Track Layout Overview" class="schedule-asset-img">
+                <div class="schedule-floating-badge">Telemetry Grid Active</div>
+            </div>
+        </div>
+
+        <!-- Right Wing: Interactive Schedule Cards Stack -->
+        <div class="schedule-cards-stack">
+            
+            <!-- Schedule Card 01 -->
+            <div class="schedule-card-node">
+                <div class="schedule-glow-mask"></div>
+                <div class="schedule-time-block">
+                    <span class="time-stamp">06:00 - 09:00</span>
+                    <span class="day-span">Mon / Wed / Fri</span>
+                </div>
+                <div class="schedule-content-block">
+                    <h3>Velocity Chain Drills</h3>
+                    <p class="schedule-interactive-body">Biomechanical acceleration mapping arrays and micro-cycle agility loops overseen by regional court directors.</p>
+                    <div class="schedule-location-meta">
+                        <svg viewBox="0 0 24 24" class="loc-svg-vector"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+                        <span>Main Arena Block Alpha</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Schedule Card 02 -->
+            <div class="schedule-card-node">
+                <div class="schedule-glow-mask"></div>
+                <div class="schedule-time-block">
+                    <span class="time-stamp">14:00 - 17:00</span>
+                    <span class="day-span">Tue / Thu</span>
+                </div>
+                <div class="schedule-content-block">
+                    <h3>Tactical Playbook Synthesis</h3>
+                    <p class="schedule-interactive-body">Spatial geometry video reviews tracking coordinate field placements, followed by localized recovery chamber loops.</p>
+                    <div class="schedule-location-meta">
+                        <svg viewBox="0 0 24 24" class="loc-svg-vector"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+                        <span>Tactical Theater Suite B</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Schedule Card 03 -->
+            <div class="schedule-card-node">
+                <div class="schedule-glow-mask"></div>
+                <div class="schedule-time-block">
+                    <span class="time-stamp">09:00 - 13:00</span>
+                    <span class="day-span">Saturday</span>
+                </div>
+                <div class="schedule-content-block">
+                    <h3>Championship Bracket Trials</h3>
+                    <p class="schedule-interactive-body">Full high-intensity league mock placements with end-to-end telemetry sync and force-plate threshold monitoring scales.</p>
+                    <div class="schedule-location-meta">
+                        <svg viewBox="0 0 24 24" class="loc-svg-vector"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+                        <span>West Stadium Pro Turf</span>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+</section>
+
+<style>
+    /* --- COMPACT SCHEDULE GRID SECTION --- */
+.schedule-grid-section {
+    padding: 50px 5% 30px 5%; /* Configured requested 50px Top, 30px Bottom padding bounds precisely */
+    background-color: #ffffff; /* Clean white canvas background flow alignment */
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: hidden;
+    position: relative;
+    border-top: 1px solid #f0f2f5;
+}
+
+/* Structural Header Sections Typography */
+.schedule-header {
+    text-align: center;
+    margin-bottom: 40px;
+    max-width: 700px;
+}
+
+.schedule-mini-badge {
+    color: #ff4a11; /* System Neon Orange Primary */
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 12px;
+    display: inline-block;
+}
+
+.schedule-main-heading {
+    font-size: clamp(28px, 4vw, 40px);
+    font-weight: 900;
+    color: #0f1115;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+    line-height: 1.1;
+}
+
+.schedule-main-heading span {
+    color: #ff4a11;
+    text-shadow: 0 0 20px rgba(255, 74, 17, 0.05);
+}
+
+.schedule-interactive-subtitle {
+    font-size: 15px;
+    color: #667085;
+    line-height: 1.5;
+    cursor: default;
+    display: inline-block;
+    transition: color 0.4s ease, text-shadow 0.4s ease, transform 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+    will-change: transform, text-shadow;
+}
+
+.schedule-grid-section:hover .schedule-main-heading span {
+    text-shadow: 0 0 25px rgba(255, 74, 17, 0.35);
+}
+
+.schedule-interactive-subtitle:hover {
+    color: #0f1115;
+    transform: scale(1.02);
+    text-shadow: 0 0 15px rgba(255, 74, 17, 0.15);
+}
+
+/* Master Asymmetric Layout Columns Grid Deck */
+.schedule-master-container {
+    width: 100%;
+    max-width: 1300px;
+    display: grid;
+    grid-template-columns: 0.8fr 1.2fr; /* Splits visual graphic cards and cards stack elegantly */
+    gap: 50px;
+    align-items: center; /* Aligns columns straight along block center axis */
+}
+
+/* Left Wing Column Assets Housing */
+.schedule-graphic-hull {
+    position: relative;
+    width: 100%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.schedule-mesh-halo {
+    position: absolute;
+    width: 110%;
+    height: 110%;
+    background: radial-gradient(circle at center, rgba(255, 74, 17, 0.12) 0%, transparent 65%);
+    pointer-events: none;
+    z-index: 1;
+}
+
+.schedule-img-bezel {
+    position: relative;
+    width: 100%;
+    height: 380px; /* Precise height framework to manage grid balance */
+    border-radius: 16px;
+    overflow: hidden;
+    border: 1px solid #e1e4eb;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.02);
+    z-index: 2;
+    transition: transform 0.5s cubic-bezier(0.25, 1, 0.5, 1), border-color 0.4s ease;
+}
+
+.schedule-asset-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.6s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.schedule-neon-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at center, rgba(255, 74, 17, 0.18) 0%, transparent 75%);
+    opacity: 0;
+    z-index: 3;
+    pointer-events: none;
+    transition: opacity 0.4s ease;
+}
+
+.schedule-floating-badge {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    background: #0f1115;
+    color: #ffffff;
+    padding: 6px 14px;
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    border-radius: 4px;
+    z-index: 4;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.schedule-graphic-hull:hover .schedule-img-bezel {
+    transform: translateY(-4px) scale(1.01);
+    border-color: #ff4a11;
+}
+
+.schedule-graphic-hull:hover .schedule-asset-img { transform: scale(1.04); }
+.schedule-graphic-hull:hover .schedule-neon-overlay { opacity: 1; }
+
+/* Right Wing Column Timetable Cards Stack */
+.schedule-cards-stack {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 100%;
+    justify-content: center;
+}
+
+.schedule-card-node {
+    background: #ffffff;
+    border: 1px solid #e1e4eb;
+    border-radius: 12px;
+    padding: 22px 25px;
+    display: grid;
+    grid-template-columns: 0.7fr 1.3fr; /* Proportional asymmetrical column grid mapping inside card */
+    gap: 25px;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.01);
+    transition: border-color 0.3s ease, box-shadow 0.3s ease, transform 0.3s cubic-bezier(0.25, 1, 0.5, 1);
+    will-change: transform, box-shadow;
+}
+
+/* Custom Neon Radial Glow Overlay Mask */
+.schedule-glow-mask {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at top left, rgba(255, 74, 17, 0.1) 0%, transparent 70%);
+    opacity: 0;
+    z-index: 1;
+    pointer-events: none;
+    transition: opacity 0.4s ease;
+}
+
+/* Left Slot: Time Blocks */
+.schedule-time-block {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    position: relative;
+    z-index: 2;
+}
+
+.time-stamp {
+    font-size: 16px;
+    font-weight: 800;
+    color: #ff4a11;
+    letter-spacing: -0.5px;
+}
+
+.day-span {
+    font-size: 12px;
+    color: #667085;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+/* Right Slot: Content Details */
+.schedule-content-block {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    position: relative;
+    z-index: 2;
+}
+
+.schedule-content-block h3 {
+    font-size: 18px;
+    color: #0f1115;
+    font-weight: 800;
+    transition: color 0.3s ease;
+}
+
+.schedule-interactive-body {
+    font-size: 14px;
+    color: #555e6b;
+    line-height: 1.5;
+    cursor: default;
+    display: inline-block;
+    transition: color 0.3s ease;
+}
+
+/* Card Vector Meta Links Alignment Footer */
+.schedule-location-meta {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 12.5px;
+    color: #667085;
+    font-weight: 600;
+    margin-top: 4px;
+}
+
+.loc-svg-vector {
+    width: 14px;
+    height: 14px;
+    fill: #667085;
+    transition: fill 0.3s ease, transform 0.3s ease;
+}
+
+/* Collective Card Hover Chain Reactions Triggers */
+.schedule-card-node:hover {
+    border-color: #ff4a11;
+    transform: translateX(6px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.03), 0 0 20px rgba(255, 74, 17, 0.05);
+}
+
+.schedule-card-node:hover .schedule-glow-mask {
+    opacity: 1;
+}
+
+.schedule-card-node:hover .schedule-content-block h3 {
+    color: #ff4a11;
+}
+
+.schedule-card-node:hover .schedule-interactive-body {
+    color: #0f1115;
+}
+
+.schedule-card-node:hover .loc-svg-vector {
+    fill: #ff4a11;
+    transform: scale(1.1) rotate(5deg);
+}
+
+.schedule-card-node:hover .schedule-location-meta span {
+    color: #0f1115;
+}
+
+/* --- SYSTEM RESPONSIVENESS OVERLAYS BREAKPOINTS --- */
+@media (max-width: 992px) {
+    .schedule-master-container {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+    .schedule-graphic-hull {
+        height: 280px;
+        max-width: 580px;
+        margin: 0 auto;
+    }
+    .schedule-img-bezel {
+        height: 100%;
+    }
+}
+
+@media (max-width: 640px) {
+    .schedule-card-node {
+        grid-template-columns: 1fr; /* Stacks time modules above details on micro smartphone layouts */
+        gap: 15px;
+    }
+    .schedule-card-node:hover {
+        transform: translateY(-4px); /* Shifts animation orientation vector to vertical lift on mobile */
+    }
+}
+
+</style>
+
+<!-- DYNAMIC PROGRAMS REGISTRATION FAQ ENGINE -->
+<section class="pro-faq-section scroll-reveal-view" id="programs-faq">
+    
+    <div class="pro-faq-header">
+        <span class="pro-faq-mini-badge">Program Diagnostics</span>
+        <h2 class="pro-faq-main-heading">Discipline Placement <span>Queries</span></h2>
+        <p class="pro-faq-interactive-subtitle">Clear technical insights on structural placement scaling, biometric loops tracking, and squad roster lock cycles.</p>
+    </div>
+
+    <div class="pro-faq-master-container">
+        
+        <!-- Left Wing Column: Interactive Accordion Mechanism Stack -->
+        <div class="pro-faq-accordion-stack">
+            
+            <!-- Accordion Node 01 -->
+            <div class="pro-faq-node">
+                <button class="pro-faq-trigger-btn" onclick="toggleProgramFaqNode(this)">
+                    <span>How do I determine if I match Court Combat or Turf Operations?</span>
+                    <svg viewBox="0 0 24 24" class="pro-faq-arrow-icon"><path d="M7 10l5 5 5-5z" fill="currentColor"/></svg>
+                </button>
+                <div class="pro-faq-response-panel">
+                    <p class="pro-faq-interactive-body">During Phase 01 onboarding, our digital telemetry arrays map your baseline explosive force output vectors. Roster placements are automatically sorted into target disciplines matching your raw speed profiles.</p>
+                </div>
+            </div>
+
+            <!-- Accordion Node 02 -->
+            <div class="pro-faq-node">
+                <button class="pro-faq-trigger-btn" onclick="toggleProgramFaqNode(this)">
+                    <span>Can I cycle between multiple specialized track disciplines?</span>
+                    <svg viewBox="0 0 24 24" class="pro-faq-arrow-icon"><path d="M7 10l5 5 5-5z" fill="currentColor"/></svg>
+                </button>
+                <div class="pro-faq-response-panel">
+                    <p class="pro-faq-interactive-body">Stackly Champions and Pro Franchise members can access multi-discipline decks simultaneously. Rookies stay locked to a single core training micro-cycle to repair fundamental movement loop latencies first.</p>
+                </div>
+            </div>
+
+            <!-- Accordion Node 03 -->
+            <div class="pro-faq-node">
+                <button class="pro-faq-trigger-btn" onclick="toggleProgramFaqNode(this)">
+                    <span>What is the system process if a neuromuscular tracking sensor faults?</span>
+                    <svg viewBox="0 0 24 24" class="pro-faq-arrow-icon"><path d="M7 10l5 5 5-5z" fill="currentColor"/></svg>
+                </button>
+                <div class="pro-faq-response-panel">
+                    <p class="pro-faq-interactive-body">Our hardware systems maintain real-time automated error flags. If an array node falls out of sync, the arena telemetry grid isolates the cell block immediately, and on-site directors hot-swap your wearable sensor module.</p>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Right Wing Column: Visual Asset Component Container -->
+        <div class="pro-faq-graphic-hull">
+            <div class="pro-faq-mesh-halo"></div>
+            <div class="pro-faq-img-bezel">
+                <div class="pro-faq-neon-overlay"></div>
+                <!-- Main Asset Background Image Tag -->
+                <img src="./Assests/athletic running.webp" alt="Apex Training Arena technical diagnostic lab support desk" class="pro-faq-asset-img">
+                <div class="pro-faq-floating-badge"> Roster Desk Online</div>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<style>
+    /* --- COMPACT PROGRAMS FAQ ENGINE SYSTEM --- */
+.pro-faq-section {
+    padding: 50px 5% 30px 5%; /* Configured requested 50px Top, 30px Bottom padding bounds precisely */
+    background-color: #ffffff; /* Clean white canvas background flow alignment */
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: hidden;
+    position: relative;
+    border-top: 1px solid #f0f2f5;
+}
+
+/* Structural Header Sections Typography */
+.pro-faq-header {
+    text-align: center;
+    margin-bottom: 40px;
+    max-width: 700px;
+}
+
+.pro-faq-mini-badge {
+    color: #ff4a11; /* System Neon Orange Primary */
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 12px;
+    display: inline-block;
+}
+
+.pro-faq-main-heading {
+    font-size: clamp(28px, 4vw, 40px);
+    font-weight: 900;
+    color: #0f1115;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+    line-height: 1.1;
+}
+
+.pro-faq-main-heading span {
+    color: #ff4a11;
+    text-shadow: 0 0 20px rgba(255, 74, 17, 0.05);
+}
+
+.pro-faq-interactive-subtitle {
+    font-size: 15px;
+    color: #667085;
+    line-height: 1.5;
+    cursor: default;
+    display: inline-block;
+    transition: color 0.4s ease, text-shadow 0.4s ease, transform 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+    will-change: transform, text-shadow;
+}
+
+.pro-faq-section:hover .pro-faq-main-heading span {
+    text-shadow: 0 0 25px rgba(255, 74, 17, 0.35);
+}
+
+.pro-faq-interactive-subtitle:hover {
+    color: #0f1115;
+    transform: scale(1.02);
+    text-shadow: 0 0 15px rgba(255, 74, 17, 0.15);
+}
+
+/* Master Balanced Layout Columns Grid Deck */
+.pro-faq-master-container {
+    width: 100%;
+    max-width: 1300px;
+    display: grid;
+    grid-template-columns: 1.2fr 0.8fr; /* Splits visual graphic cards and accordion stacks layout accurately */
+    gap: 50px;
+    align-items: center; /* Aligns columns straight along block center axis */
+}
+
+/* Left Wing Column Accordion Modules Stack */
+.pro-faq-accordion-stack {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 100%;
+    justify-content: center;
+}
+
+.pro-faq-node {
+    background: #ffffff;
+    border: 1px solid #e1e4eb;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.01);
+    transition: border-color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.pro-faq-trigger-btn {
+    width: 100%;
+    padding: 22px 25px;
+    background: transparent;
+    border: none;
+    outline: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    cursor: pointer;
+    text-align: left;
+}
+
+.pro-faq-trigger-btn span {
+    font-size: 15.5px;
+    font-weight: 700;
+    color: #0f1115;
+    transition: color 0.3s ease;
+}
+
+.pro-faq-arrow-icon {
+    width: 18px;
+    height: 18px;
+    color: #667085;
+    transition: transform 0.4s cubic-bezier(0.25, 1, 0.5, 1), color 0.3s ease;
+    flex-shrink: 0;
+}
+
+/* Response Text Panel Height Bounds */
+.pro-faq-response-panel {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+    padding: 0 25px;
+}
+
+.pro-faq-interactive-body {
+    font-size: 14px;
+    color: #555e6b;
+    line-height: 1.6;
+    padding-bottom: 22px;
+    cursor: default;
+    display: inline-block;
+    transition: color 0.3s ease;
+}
+
+/* Active Expansion Configurations classes triggered via JavaScript */
+.pro-faq-node.node-active {
+    border-color: #ff4a11;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.03), 0 0 20px rgba(255, 74, 17, 0.05);
+}
+
+.pro-faq-node.node-active .pro-faq-trigger-btn span {
+    color: #ff4a11;
+}
+
+.pro-faq-node.node-active .pro-faq-arrow-icon {
+    transform: rotate(180deg);
+    color: #ff4a11;
+}
+
+/* Node Container level interaction feed rules */
+.pro-faq-node:hover:not(.node-active) {
+    border-color: #0f1115;
+    transform: translateX(4px);
+}
+
+/* Right Wing Column Assets Housing */
+.pro-faq-graphic-hull {
+    position: relative;
+    width: 100%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.pro-faq-mesh-halo {
+    position: absolute;
+    width: 110%;
+    height: 110%;
+    background: radial-gradient(circle at center, rgba(255, 74, 17, 0.12) 0%, transparent 65%);
+    pointer-events: none;
+    z-index: 1;
+}
+
+.pro-faq-img-bezel {
+    position: relative;
+    width: 100%;
+    height: 340px; /* Precise height framework to manage grid balance */
+    border-radius: 16px;
+    overflow: hidden;
+    border: 1px solid #e1e4eb;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.02);
+    z-index: 2;
+    transition: transform 0.5s cubic-bezier(0.25, 1, 0.5, 1), border-color 0.4s ease;
+}
+
+.pro-faq-asset-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.6s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.pro-faq-neon-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at center, rgba(255, 74, 17, 0.18) 0%, transparent 75%);
+    opacity: 0;
+    z-index: 3;
+    pointer-events: none;
+    transition: opacity 0.4s ease;
+}
+
+.pro-faq-floating-badge {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    background: #0f1115;
+    color: #ffffff;
+    padding: 6px 14px;
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    border-radius: 4px;
+    z-index: 4;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.pro-faq-graphic-hull:hover .pro-faq-img-bezel {
+    transform: translateY(-4px) scale(1.01);
+    border-color: #ff4a11;
+}
+
+.pro-faq-graphic-hull:hover .pro-faq-asset-img { transform: scale(1.04); }
+.pro-faq-graphic-hull:hover .pro-faq-neon-overlay { opacity: 1; }
+
+/* --- SYSTEM RESPONSIVENESS OVERLAYS BREAKPOINTS --- */
+@media (max-width: 992px) {
+    .pro-faq-master-container {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+    .pro-faq-graphic-hull {
+        height: 280px;
+        max-width: 580px;
+        margin: 0 auto;
+        grid-row: 1; /* Pulls the media banner card upwards above collapsed mobile rows layout stacks */
+    }
+    .pro-faq-img-bezel {
+        height: 100%;
+    }
+}
+
+</style>
+
+<script>
+    // --- INTERACTIVE PROGRAMS FAQ ACCORDION ENGINE CONTROLLER ---
+function toggleProgramFaqNode(buttonElement) {
+    const currentNode = buttonElement.parentElement;
+    const responsePanel = currentNode.querySelector('.pro-faq-response-panel');
+    const isNodeAlreadyActive = currentNode.classList.contains('node-active');
+    
+    // Select and collapse any alternative active accordion blocks (Single Open Pattern)
+    document.querySelectorAll('.pro-faq-node').forEach(node => {
+        node.classList.remove('node-active');
+        node.querySelector('.pro-faq-response-panel').style.maxHeight = null;
+    });
+
+    if (!isNodeAlreadyActive) {
+        // Expand the targeted node panel smoothly based on scrollHeight calculations
+        currentNode.classList.add('node-active');
+        responsePanel.style.maxHeight = responsePanel.scrollHeight + "px";
+    }
+}
+
+</script>
+
+
+<!-- SYSTEM COMPACT SINGLE-LINE ACTION STRIP -->
+<section class="strip-cta-section scroll-reveal-view" id="action-strip">
+    <div class="strip-wrapper">
+        
+        <!-- Left Wing: Split Visual Composition -->
+        <div class="strip-image-deck">
+            <div class="strip-glow-halo"></div>
+            <!-- Dynamic Foreground Imagery Stack -->
+            <img src="./Assests/athletic running.webp" alt="Athletic biometric training array asset" class="strip-inline-img">
+            <img src="./Assests/drill.webp" alt="Coaching playbook data analytics asset" class="strip-inline-img edge-stacked">
+        </div>
+
+        <!-- Right Wing: Linear Action Channel Content -->
+        <div class="strip-content-deck">
+            <h3 class="strip-title-text">Ready to optimize your absolute performance? <span>Claim your grid rank.</span></h3>
+            
+            <a href="404.html" class="strip-action-btn">
+                <span>Deploy Registration</span>
+                <svg viewBox="0 0 24 24" class="strip-svg-icon"><path d="M5 12h14M12 5l7 7-7 7" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg>
+            </a>
+        </div>
+
+    </div>
+</section>
+
+<style>
+    /* --- LINEAR COMPACT ACTION STRIP --- */
+.strip-cta-section {
+    padding: 50px 5% 30px 5%; /* Enforces requested 50px Top, 30px Bottom bounds exactly */
+    background-color: #ffffff;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+    position: relative;
+    border-top: 1px solid #f0f2f5;
+}
+
+.strip-wrapper {
+    width: 100%;
+    max-width: 1300px;
+    background: #ffffff;
+    border: 1px solid #e1e4eb;
+    border-radius: 20px;
+    padding: 25px 40px; /* Highly compressed inside padding track */
+    display: grid;
+    grid-template-columns: 0.4fr 1.6fr; /* Horizontal linear separation formatting */
+    gap: 40px;
+    align-items: center;
+    box-shadow: 0 10px 35px rgba(0, 0, 0, 0.02);
+    transition: border-color 0.4s ease, box-shadow 0.4s ease;
+}
+
+/* Visual Housing & Overlap Mechanics */
+.strip-image-deck {
+    position: relative;
+    display: flex;
+    align-items: center;
+    height: 70px;
+}
+
+.strip-inline-img {
+    width: 65px;
+    height: 65px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid #ffffff;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+    transition: transform 0.4s cubic-bezier(0.25, 1, 0.5, 1), border-color 0.3s ease;
+    position: relative;
+    z-index: 2;
+}
+
+.edge-stacked {
+    margin-left: -25px; /* Creates clean modern overlay tracking */
+    z-index: 1;
+}
+
+.strip-glow-halo {
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    background: radial-gradient(circle, rgba(255, 74, 17, 0.16) 0%, transparent 70%);
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.4s ease;
+    z-index: 0;
+    left: -20px;
+}
+
+/* Linear Content Delivery Deck */
+.strip-content-deck {
+    display: flex;
+    justify-content: space-between; /* Pushes single-line statement and button to opposite horizons */
+    align-items: center;
+    gap: 30px;
+    width: 100%;
+}
+
+.strip-title-text {
+    font-size: clamp(16px, 2.2vw, 22px);
+    font-weight: 800;
+    color: #0f1115;
+    line-height: 1.3;
+    cursor: default;
+    transition: transform 0.3s ease;
+}
+
+.strip-title-text span {
+    color: var(--primary);
+    display: inline-block;
+    transition: text-shadow 0.3s ease, color 0.3s ease;
+}
+
+/* Master Grid Card Collective Hover Triggers */
+.strip-wrapper:hover {
+    border-color: var(--primary);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.05), 0 0 25px rgba(255, 74, 17, 0.08);
+}
+
+.strip-wrapper:hover .strip-inline-img {
+    transform: scale(1.05) rotate(4deg);
+    border-color: var(--primary);
+}
+
+.strip-wrapper:hover .edge-stacked {
+    transform: scale(1.05) translateX(8px) rotate(-4deg);
+}
+
+.strip-wrapper:hover .strip-glow-halo {
+    opacity: 1;
+}
+
+.strip-wrapper:hover .strip-title-text span {
+    text-shadow: 0 0 15px rgba(255, 74, 17, 0.22);
+}
+
+/* Action Trigger Elements */
+.strip-action-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 14px 32px;
+    background-color: var(--dark);
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    border-radius: 8px;
+    white-space: nowrap; /* Prevents button word break loops on small layouts */
+    box-shadow: 0 6px 20px rgba(9, 10, 15, 0.1);
+    transition: all 0.3s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.strip-svg-icon {
+    width: 15px;
+    height: 15px;
+    transition: transform 0.3s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.strip-action-btn:hover {
+    background-color: var(--primary);
+    box-shadow: 0 8px 22px var(--primary-glow);
+    transform: translateY(-2px);
+}
+
+.strip-action-btn:hover .strip-svg-icon {
+    transform: translateX(4px);
+}
+
+/* --- ADAPTIVE COMPACT LAYOUT VIEWPORT BREAKPOINTS --- */
+@media (max-width: 992px) {
+    .strip-wrapper {
+        grid-template-columns: 1fr;
+        gap: 20px;
+        padding: 30px;
+        text-align: center;
+    }
+    .strip-image-deck {
+        justify-content: center;
+    }
+    .strip-content-deck {
+        flex-direction: column;
+        gap: 25px;
+    }
+    .strip-action-btn {
+        width: 100%;
+        justify-content: center;
+    }
+}
+
+</style>
+
+<!-- High-Contrast Creative Immersive Footer Deck -->
+<footer class="stackly-footer">
+    <div class="footer-max-container">
+        
+        <!-- Primary Structural Column Array Block Grid -->
+        <div class="footer-columns-grid">
+            
+            <!-- Column 1: Brand Profile Terminal Hub with Integrated Social Vectors -->
+            <div class="footer-col brand-pillar">
+                <a href="#" class="footer-logo-link" onclick="executeScrollToTop(event)" title="Back to Top">
+                    <!-- Brand logo tag configured for your source path assets -->
+                    <img src="./Assests/sports club logo.webp" alt="Apex Sports Club Logo" class="footer-brand-logo">
+                </a>
+                <p class="footer-brand-bio">
+                    Engineering luxury tactical performance frameworks designed to bridge athletic biomechanics with competitive dominance.
+                </p>
+                <div class="company-address-box">
+                    <svg xmlns="http://w3.org" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="addr-vector"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                    <span>MMR Complex, Periyakollappatty, Chinna Thirupathi, Salem, Tamil Nadu 636008</span>
+                </div>
+
+                <!-- High-Visibility Vector Social Media Icon Row -->
+                <div class="footer-social-row">
+                    <!-- Facebook -->
+                    <button class="social-circle-btn" onclick="handleNavigation404(event, '404.html')" title="Follow on Facebook">
+                        <svg xmlns="http://w3.org" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-4h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
+                        </svg>
+                    </button>
+                    <!-- Instagram -->
+                    <button class="social-circle-btn" onclick="handleNavigation404(event, '404.html')" title="Follow on Instagram">
+                        <svg xmlns="http://w3.org" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                            <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                            <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                        </svg>
+                    </button>
+                    <!-- Telegram / Pinterest Replacement -->
+                    <button class="social-circle-btn" onclick="handleNavigation404(event, '404.html')" title="Follow on Telegram">
+                        <svg xmlns="http://w3.org" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <line x1="22" y1="2" x2="11" y2="13"></line>
+                            <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+                        </svg>
+                    </button>
+                    <!-- YouTube -->
+                    <button class="social-circle-btn" onclick="handleNavigation404(event, '404.html')" title="Follow on YouTube">
+                        <svg xmlns="http://w3.org" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 28 0 0 0 1 11.75a29 28 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 28 0 0 0 .46-5.25 29 28 0 0 0-.46-5.33z"></path>
+                            <polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"></polygon>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Column 2: Quick Menus Collection -->
+            <div class="footer-col links-pillar">
+                <h4 class="footer-heading">Quick Links</h4>
+                <div class="footer-links-list">
+                    <a href="about.html" class="footer-link">About Us</a>
+                    <a href="programs.html" class="footer-link">Programs</a>
+                    <a href="blogs.html" class="footer-link">Blogs</a>
+                    <a href="contact.html" class="footer-link">Contact Us</a>
+                </div>
+            </div>
+
+            <!-- Column 3: Corporate Profile Menus -->
+            <div class="footer-col links-pillar">
+                <h4 class="footer-heading">Support Hub</h4>
+                <div class="footer-links-list">
+ <a href="404.html" class="footer-link" onclick="handleNavigation404(event)">Roster Placement Help</a>
+        <a href="404.html" class="footer-link" onclick="handleNavigation404(event)">Court Booking Exchange</a>
+        <a href="404.html" class="footer-link" onclick="handleNavigation404(event)">Athletic FAQ Center</a>
+        <a href="404.html" class="footer-link" onclick="handleNavigation404(event)">Medical Clearance Logs</a>
+                </div>
+            </div>
+
+            <!-- Column 4: Newsletter Subscriber Actions Console -->
+            <div class="footer-col subscribe-pillar">
+                <h4 class="footer-heading">The Playground Dispatch</h4>
+                <p class="subscribe-caption">Subscribe to unlock premium custom blueprint designs and private product launches.</p>
+                
+                <form class="footer-newsletter-form" onsubmit="handleNewsletterRouting(event)">
+                    <div class="input-bezel-hull">
+                        <input type="email" placeholder="Enter your email..." class="newsletter-input" id="newsletterEmailField">
+                        <button type="submit" class="newsletter-submit-btn" title="Subscribe Now">
+                            <svg xmlns="http://w3.org" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                                <line x1="22" y1="2" x2="11" y2="13"></line>
+                                <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+                            </svg>
+                        </button>
+                    </div>
+                    <!-- Absolute Validation Error Toast Container -->
+                    <div class="form-validation-toast" id="validationToast">Please fill out this field.</div>
+                </form>
+            </div>
+
+        </div>
+
+        <!-- Secondary Bottom Regulatory Ledger Bar -->
+        <div class="footer-ledger-base">
+            <div class="ledger-left-copyright">
+                &copy; <span id="currentYear">2026</span> Stackly Club Performance Compounds. All rights reserved.
+            </div>
+            
+            <!-- Privacy Legal Links Stacks -->
+            <div class="ledger-center-legal">
+                <a href="404.html" class="legal-link" onclick="handleNavigation404(event)">Privacy Policy</a>
+                <a href="404.html" class="legal-link" onclick="handleNavigation404(event)">Terms of Service</a>
+                <a href="404.html" class="legal-link" onclick="handleNavigation404(event)">Cookie Management</a>
+            </div>
+
+            <!-- Right-Side Floating Back to Top Control Anchor Button -->
+            <button class="footer-top-arrow-btn" onclick="executeScrollToTop(event)" title="Back to Top">
+                <svg xmlns="http://w3.org" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" class="up-arrow-vector"><line x1="12" y1="19" x2="12" y2="5"></line><polyline points="5 12 12 5 19 12"></polyline></svg>
+            </button>
+        </div>
+
+    </div>
+</footer>
+
+<style>
+    /* --- COMPACT HIGH-CONTRAST SPORTS FOOTER THEME --- */
+.stackly-footer {
+    position: relative;
+    width: 100%;
+    padding: 50px 5% 30px 5%;
+    background-color: #0b0c10; /* Precise dark charcoal-obsidian backdrop */
+    color: #ffffff;
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+    border-top: 1px solid rgba(255, 74, 17, 0.15);
+}
+
+.footer-max-container {
+    width: 100%;
+    max-width: 1300px;
+}
+
+/* Master Grid Alignments Matrix */
+.footer-columns-grid {
+    display: grid;
+    grid-template-columns: 1.3fr 0.7fr 0.7fr 1.3fr; /* Keeps identical original layout structures */
+    gap: 35px;
+    margin-bottom: 50px;
+    align-items: flex-start;
+}
+
+.footer-col {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    text-align: left;
+}
+
+/* Column 1: Brand Profiles details */
+.footer-brand-logo {
+    height: 38px;
+    width: auto;
+    object-fit: contain;
+    filter: drop-shadow(0 0 8px rgba(255, 74, 17, 0.4));
+    transition: transform 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.footer-logo-link:hover .footer-brand-logo {
+    transform: scale(1.05);
+}
+
+.footer-brand-bio {
+    font-size: 13.5px;
+    color: #8c93a0;
+    line-height: 1.6;
+    margin: 18px 0;
+    max-width: 320px;
+}
+
+.company-address-box {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    font-size: 13px;
+    color: #ffffff;
+    line-height: 1.4;
+    max-width: 320px;
+}
+
+.addr-vector {
+    width: 16px;
+    height: 16px;
+    color: #ff4a11; /* System Neon Orange Primary */
+    flex-shrink: 0;
+    margin-top: 2px;
+}
+
+/* Vector Media Grid Deck */
+.footer-social-row {
+    display: flex;
+    gap: 12px;
+    margin-top: 20px;
+}
+
+.social-circle-btn {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    color: #8c93a0;
+    transition: all 0.3s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.social-circle-btn svg {
+    width: 15px;
+    height: 15px;
+}
+
+.social-circle-btn:hover {
+    background: rgba(255, 74, 17, 0.08);
+    border-color: #ff4a11;
+    color: #ff4a11;
+    box-shadow: 0 0 15px rgba(255, 74, 17, 0.4);
+    transform: translateY(-2px);
+}
+
+/* Headings with Coral Indicator Traces */
+.footer-heading {
+    font-size: 15px;
+    font-weight: 700;
+    color: #ffffff;
+    margin-bottom: 22px;
+    position: relative;
+    text-transform: none;
+}
+
+.footer-heading::after {
+    content: '';
+    position: absolute;
+    bottom: -6px;
+    left: 0;
+    width: 25px;
+    height: 2px;
+    background-color: #ff4a11; /* Coral bar indicator line accent */
+}
+
+/* Link Arrays Directory Lists */
+.footer-links-list {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.footer-link {
+    color: #8c93a0;
+    text-decoration: none;
+    font-size: 13.5px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    width: max-content;
+}
+
+.footer-link:hover {
+    color: #ff4a11;
+    transform: translateX(4px);
+    text-shadow: 0 0 10px rgba(255, 74, 17, 0.3);
+}
+
+/* Newsletter Input Components */
+.subscribe-pillar {
+    position: relative;
+}
+
+.subscribe-caption {
+    font-size: 13.5px;
+    color: #8c93a0;
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+
+.footer-newsletter-form {
+    position: relative;
+    width: 100%;
+}
+
+.input-bezel-hull {
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+.newsletter-input {
+    width: 100%;
+    padding: 13px 55px 13px 18px;
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 30px;
+    outline: none;
+    color: #ffffff;
+    font-size: 13.5px;
+    transition: all 0.3s ease;
+}
+
+.newsletter-input:focus {
+    border-color: #ff4a11;
+    background: rgba(255, 74, 17, 0.01);
+    box-shadow: 0 0 15px rgba(255, 74, 17, 0.15);
+}
+
+.newsletter-submit-btn {
+    position: absolute;
+    right: 5px;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background-color: #f75c5c; /* Soft coral action indicator fill */
+    border: none;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #ffffff;
+    transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.newsletter-submit-btn svg {
+    width: 13px;
+    height: 13px;
+    transform: rotate(0deg) translateX(-1px);
+}
+
+.newsletter-submit-btn:hover {
+    background-color: #ff4a11;
+    box-shadow: 0 0 15px rgba(255, 74, 17, 0.4);
+    transform: scale(1.05);
+}
+
+/* Validation Alert Positioning Layer */
+.form-validation-toast {
+    position: absolute;
+    bottom: -25px;
+    left: 15px;
+    color: #f75c5c;
+    font-size: 11.5px;
+    font-weight: 700;
+    opacity: 0;
+    transform: translateY(-4px);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    pointer-events: none;
+}
+
+.form-validation-toast.show-toast {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Secondary Bottom Regulatory Ledger Bar */
+.footer-ledger-base {
+    position: relative;
+    width: 100%;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+    padding-top: 25px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+.ledger-left-copyright {
+    font-size: 13px;
+    color: #555e6b;
+    font-weight: 600;
+}
+
+.ledger-center-legal {
+    display: flex;
+    gap: 25px;
+}
+
+.legal-link {
+    color: #555e6b;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+.legal-link:hover {
+    color: #ffffff;
+    text-shadow: 0 0 8px rgba(255, 255, 255, 0.3);
+}
+
+/* Back to Top Floating Arrow */
+.footer-top-arrow-btn {
+    position: absolute;
+    right: 0;
+    top: 18px;
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #8c93a0;
+    transition: all 0.3s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.up-arrow-vector {
+    width: 14px;
+    height: 14px;
+    transition: transform 0.3s ease;
+}
+
+.footer-top-arrow-btn:hover {
+    background: rgba(255, 74, 17, 0.06);
+    border-color: #ff4a11;
+    color: #ff4a11;
+    box-shadow: 0 0 15px rgba(255, 74, 17, 0.3);
+    transform: translateY(-3px);
+}
+
+.footer-top-arrow-btn:hover .up-arrow-vector {
+    transform: translateY(-2px);
+}
+
+/* --- RIGID ADAPTIVE MEDIA BREAKPOINTS SYSTEM --- */
+@media (max-width: 1024px) {
+    .footer-columns-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 40px;
+    }
+}
+
+@media (max-width: 680px) {
+    .stackly-footer {
+        padding: 50px 6% 80px 6%;
+    }
+    .footer-columns-grid {
+        grid-template-columns: 1fr;
+        gap: 35px;
+        text-align: center;
+    }
+    .footer-col {
+        text-align: center;
+        align-items: center;
+    }
+    .footer-brand-bio, .company-address-box {
+        margin: 15px auto;
+    }
+    .footer-heading::after {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    .footer-ledger-base {
+        flex-direction: column-reverse;
+        text-align: center;
+        padding-top: 30px;
+    }
+    .ledger-center-legal {
+        flex-direction: column;
+        gap: 15px;
+    }
+    .footer-top-arrow-btn {
+        position: fixed;
+        bottom: 25px;
+        right: 25px;
+        top: auto;
+        z-index: 5000;
+        background: #0b0c10;
+        box-shadow: 0 5px 20px rgba(0, 0, 0, 0.6);
+        border-color: rgba(255, 255, 255, 0.1);
+    }
+}
+
+</style>
+
+<script>
+    // --- SPORTS HUB PORTAL ROUTING ENGINE ---
+
+// 1. DYNAMIC NAVIGATION ROUTE SWITCHING TO 404.HTML
+function handleNavigation404(event) {
+    event.preventDefault(); // Intercept default anchor jump processes
+    window.location.href = '404.html';
+}
+
+// 2. BACK TO TOP SMOOTH SCROLL ACTION
+function executeScrollToTop(event) {
+    event.preventDefault();
+    window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+    });
+}
+
+// 3. NEWSLETTER FORMS INPUT FIELD VALIDATORS & ROUTERS
+function handleNewsletterRouting(event) {
+    event.preventDefault(); // Block background page resets
+    
+    const inputField = document.getElementById('newsletterEmailField');
+    const errorToast = document.getElementById('validationToast');
+    
+    if (!inputField || !errorToast) return;
+
+    const emailValueString = inputField.value.trim();
+
+    if (emailValueString === '') {
+        // Void address sequence found: fire notification overlay visibility path
+        errorToast.classList.add('show-toast');
+        inputField.focus();
+        
+        // Hide structural warning notification block after 3 seconds
+        setTimeout(() => {
+            errorToast.classList.remove('show-toast');
+        }, 3000);
+    } else {
+        // Valid structural inputs confirmed: divert target frame directly into 404 template layout
+        errorToast.classList.remove('show-toast');
+        window.location.href = '404.html';
+    }
+}
+
+// Clear error indicator banner instantly upon first alphanumeric key input event
+document.addEventListener('DOMContentLoaded', () => {
+    const inputField = document.getElementById('newsletterEmailField');
+    const errorToast = document.getElementById('validationToast');
+    
+    if (inputField && errorToast) {
+        inputField.addEventListener('input', () => {
+            if (inputField.value.trim() !== '') {
+                errorToast.classList.remove('show-toast');
+            }
+        });
+    }
+});
+
+</script>
+</body>
+</html>
+

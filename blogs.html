@@ -1,0 +1,3090 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stackly Sports Club | Elite Training</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div id ="preloader">
+        <div class="loader-container">
+            <div class="loader-ring"></div>
+    <svg class="loader-icon" viewBox="0 0 24 24">
+    <path d="M18 2H6v2H2v3c0 3.2 2.1 5.8 5 6.7V17H4v2h16v-2h-3v-3.3c2.9-.9 5-3.5 5-6.7V4h-4V2zM4 7V6h2v3.4C4.8 8.8 4 8 4 7zm16 0c0 1-.8 1.8-2 2.4V6h2v1z"/>
+</svg>
+
+        </div>
+    <div class="loader-text">Stackly<span>Club</span></div>
+    </div>
+
+<script>
+    window.addEventListener ('load',()=>{
+        const preloader = document.getElementById('preloader');
+        setTimeout(() =>{
+
+             preloader.classList.add('preloader-hidden');
+
+        },2500);
+
+    }
+    )
+
+</script>
+
+<!-- FLOATING GLASSMORPHIC NAVIGATION ARCHITECTURE -->
+<nav class="floating-navbar">
+    <div class="nav-container">
+        
+        <!-- Interactive Brand Logo Wrap -->
+        <a href="javascript:void(0)" class="nav-logo" id="logoRefreshBtn" title="Refresh Page">
+            <img src="./Assests/sports club logo.webp" alt="Apex Logo" class="logo-img">
+          
+        </a>
+
+        <!-- Responsive Hamburger Trigger -->
+        <button class="menu-toggle" id="mobileMenuBtn" aria-label="Toggle Navigation Menu">
+            <span class="hamburger-bar"></span>
+            <span class="hamburger-bar"></span>
+            <span class="hamburger-bar"></span>
+        </button>
+
+        <!-- Navigation Menus & Action Deck -->
+        <div class="nav-menu-wrapper" id="navMenuWrapper">
+            <ul class="nav-links">
+                <li><a href="index.html" class="nav-item ">Home</a></li>
+                <li><a href="about.html" class="nav-item ">About Us</a></li>
+                <li><a href="programs.html" class="nav-item ">Programs</a></li>
+                <li><a href="blogs.html" class="nav-item active">Blogs</a></li>
+                <li><a href="contact.html" class="nav-item">Contact Us</a></li>
+            </ul>
+            
+            <div class="nav-auth-deck">
+                <a href="login.html" class="btn-login">
+                    <span>Login</span>
+                    <svg viewBox="0 0 24 24" class="auth-icon">
+                        <path d="M11 16l-4-4m0 0l4-4m-4 4h14m-5 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h7a3 3 0 013 3v1" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+                    </svg>
+                </a>
+            </div>
+        </div>
+
+    </div>
+</nav>
+
+
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const logoRefreshBtn = document.getElementById('logoRefreshBtn');
+        const mobileMenuBtn = document. getElementById ('mobileMenuBtn');
+        const navMenusWrapper = document. getElementById ('navMenuWrapper');
+        const navItems = document. querySelectorAll('.nav-item');
+    
+     logoRefreshBtn.addEventListener('click', (e) => {
+        e.preventDefault();
+        window.location.reload();
+         });
+    
+     mobileMenuBtn.addEventListener('click', () => {
+        mobileMenuBtn.classList.toggle('open');
+        navMenuWrapper.classList.toggle('mobile-open');
+    
+     if (navMenuWrapper.classList.contains('mobile-open')) {
+            document.body.style.overflow = 'hidden';
+        } else {
+            document.body.style.overflow = '';
+        }
+    });
+navItems.forEach(item => {
+        item.addEventListener('click', () => {
+          
+            navItems.forEach(el => el.classList.remove('active'));
+            
+    
+            item.classList.add('active');
+
+            if (navMenuWrapper.classList.contains('mobile-open')) {
+                mobileMenuBtn.classList.remove('open');
+                navMenuWrapper.classList.remove('mobile-open');
+                document.body.style.overflow = '';
+            }
+        });
+    });
+});
+</script>
+
+<!-- SYSTEM RESPONSIVE COMPACT BLOGS HERO -->
+<section class="blogs-hero-section scroll-reveal-view" id="blogs-hero-arena">
+    <div class="blogs-hero-wrapper">
+        
+        <!-- Left Column: Core Typographical Messaging Deck -->
+        <div class="blogs-hero-text">
+            <div class="blogs-hero-badge">
+                <svg viewBox="0 0 24 24" class="blogs-badge-svg">
+                    <path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-5 14H7v-2h7v2zm3-4H7v-2h10v2zm0-4H7V7h10v2z" fill="currentColor"/>
+                </svg>
+                <span>Live Tactical Feed Active</span>
+            </div>
+            
+            <h1 class="blogs-hero-title">Intelligence <br><span>& Sports Tactics</span></h1>
+            <p class="blogs-hero-desc">
+                Access advanced sports science analytics, localized tissue biomechanics breakdowns, and high-intensity macronutrient blueprints calibrated for raw victory expansion loops.
+            </p>
+            
+            <div class="blogs-hero-actions">
+                <a href="404.html" class="blogs-btn-primary">Explore Articles</a>
+                <a href="404.html" class="blogs-btn-secondary">Data Methodology</a>
+            </div>
+        </div>
+
+        <!-- Right Column: Dual Layer Overlapping Asymmetric Asset Grid -->
+        <div class="blogs-hero-graphics">
+            <div class="blogs-mesh-glow"></div>
+            
+            <!-- Layer 1: Background Foundation Asset Frame -->
+            <div class="blogs-img-hull blogs-bg-layer">
+                <div class="blogs-neon-filter"></div>
+                <img src="./Assests/biometric.webp" alt="Advanced weight training sensor monitoring" class="blogs-asset-img">
+                <div class="blogs-floating-tag">Biomechanics</div>
+            </div>
+
+            <!-- Layer 2: Foreground Elevation Focus Frame -->
+            <div class="blogs-img-hull blogs-fg-layer">
+                <div class="blogs-neon-filter"></div>
+                <img src="./Assests/diet.webp" alt="Precision macro nutritional diet planning" class="blogs-asset-img">
+                <div class="blogs-floating-tag tag-primary">Diet Matrix</div>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<style>
+    /* --- COMPACT BLOGS HERO DESIGN SYSTEM --- */
+.blogs-hero-section {
+    padding: 130px 5% 30px 5%; /* Exact requested 50px Top, 30px Bottom compression track bounds */
+    background-color: #ffffff; /* Smooth clean white canvas background integration */
+    width: 100%;
+    min-height: 85vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    position: relative;
+}
+
+.blogs-hero-wrapper {
+    width: 100%;
+    max-width: 1300px;
+    display: grid;
+    grid-template-columns: 1.05fr 0.95fr; /* Asymmetric grid separation balance layout */
+    gap: 60px;
+    align-items: center;
+}
+
+/* Left Grid Column Core Typography Deck */
+.blogs-hero-text {
+    display: flex;
+    flex-direction: column;
+}
+
+.blogs-hero-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: rgba(255, 74, 17, 0.05);
+    border: 1px solid rgba(255, 74, 17, 0.15);
+    padding: 6px 14px;
+    border-radius: 20px;
+    width: max-content;
+    margin-bottom: 20px;
+}
+
+.blogs-hero-badge span {
+    color: #ff4a11; /* System Neon Orange Primary */
+    font-size: 11.5px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.blogs-badge-svg {
+    width: 13px;
+    height: 13px;
+    color: #ff4a11;
+}
+
+.blogs-hero-title {
+    font-size: clamp(36px, 5.2vw, 62px);
+    font-weight: 900;
+    color: #0f1115; /* Sharp high-contrast dark text focus node */
+    text-transform: uppercase;
+    line-height: 1.05;
+    margin-bottom: 22px;
+}
+
+.blogs-hero-title span {
+    color: #ff4a11;
+    display: inline-block;
+    transition: text-shadow 0.4s ease, transform 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+/* Master content hover chain reactions trigger glowing title outputs */
+.blogs-hero-section:hover .blogs-hero-title span {
+    text-shadow: 0 0 25px rgba(255, 74, 17, 0.45), 0 0 50px rgba(255, 74, 17, 0.15);
+    transform: scale(1.01) rotate(0.5deg);
+}
+
+.blogs-hero-desc {
+    font-size: clamp(14.5px, 1.8vw, 17.5px);
+    color: #555e6b;
+    line-height: 1.6;
+    margin-bottom: 35px;
+    max-width: 560px;
+    cursor: default;
+    display: inline-block;
+    transition: color 0.4s ease, text-shadow 0.4s ease, transform 0.4s ease;
+    will-change: transform, text-shadow;
+}
+
+.blogs-hero-desc:hover {
+    color: #0f1115;
+    transform: scale(1.015);
+    text-shadow: 0 0 15px rgba(255, 74, 17, 0.12);
+}
+
+/* Actions Buttons Architecture Matrix */
+.blogs-hero-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.blogs-btn-primary, .blogs-btn-secondary {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 15px 35px;
+    border-radius: 8px;
+    font-size: 13.5px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    text-decoration: none;
+    transition: all 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.blogs-btn-primary {
+    background-color: #0f1115;
+    color: #ffffff;
+    box-shadow: 0 8px 22px rgba(9, 10, 15, 0.12);
+}
+
+.blogs-btn-primary:hover {
+    background-color: #ff4a11;
+    box-shadow: 0 10px 25px rgba(255, 74, 17, 0.35);
+    transform: translateY(-3px);
+}
+
+.blogs-btn-secondary {
+    background: transparent;
+    color: #0f1115;
+    border: 2px solid #e1e4eb;
+}
+
+.blogs-btn-secondary:hover {
+    border-color: #0f1115;
+    background-color: rgba(9, 10, 15, 0.02);
+    transform: translateY(-2px);
+}
+
+/* Right Grid Column Graphics Assembly */
+.blogs-hero-graphics {
+    position: relative;
+    width: 100%;
+    height: 440px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.blogs-mesh-glow {
+    position: absolute;
+    width: 110%;
+    height: 110%;
+    background: radial-gradient(circle at center, rgba(255, 74, 17, 0.1) 0%, transparent 65%);
+    z-index: 1;
+    pointer-events: none;
+}
+
+.blogs-img-hull {
+    position: absolute;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.06);
+    border: 5px solid #ffffff;
+    outline: 1px solid #e1e4eb;
+    transition: transform 0.5s cubic-bezier(0.25, 1, 0.5, 1), 
+                border-color 0.4s ease, 
+                box-shadow 0.4s ease;
+    will-change: transform, box-shadow;
+}
+
+.blogs-asset-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.6s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.blogs-neon-filter {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at center, rgba(255, 74, 17, 0.16) 0%, transparent 80%);
+    opacity: 0;
+    z-index: 2;
+    transition: opacity 0.4s ease;
+    pointer-events: none;
+}
+
+/* Asymmetric Image Multi-Layer Overlapping Sets */
+.blogs-bg-layer {
+    width: 72%;
+    height: 300px;
+    left: 0;
+    top: 20px;
+    z-index: 2;
+    transform: rotate(-3deg);
+}
+
+.blogs-fg-layer {
+    width: 62%;
+    height: 250px;
+    right: 0;
+    bottom: 20px;
+    z-index: 3;
+    transform: rotate(2.5deg);
+}
+
+.blogs-floating-tag {
+    position: absolute;
+    bottom: 15px;
+    left: 15px;
+    background: #0f1115;
+    color: #ffffff;
+    padding: 5px 14px;
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    border-radius: 4px;
+    z-index: 4;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.blogs-floating-tag.tag-primary {
+    background-color: #ff4a11;
+    box-shadow: 0 4px 12px rgba(255, 74, 17, 0.25);
+}
+
+/* Collective Multi-Layer Hover Grid Mechanics */
+.blogs-img-hull:hover {
+    z-index: 5; /* Focuses hovered grid item directly onto top stack ceiling line */
+    border-color: #ff4a11;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1), 0 0 25px rgba(255, 74, 17, 0.18);
+}
+
+.blogs-img-hull:hover .blogs-asset-img { transform: scale(1.04); }
+.blogs-img-hull:hover .blogs-neon-filter { opacity: 1; }
+
+.blogs-bg-layer:hover { transform: scale(1.02) rotate(-0.5deg) translateY(-4px); }
+.blogs-fg-layer:hover { transform: scale(1.02) rotate(0.5deg) translateY(-4px); }
+
+/* --- ADAPTIVE GRAPHIC RESPONSIVENESS OVERLAYS BREAKPOINTS --- */
+@media (max-width: 992px) {
+    .blogs-hero-section { padding-top: 110px; }
+    .blogs-hero-wrapper { grid-template-columns: 1fr; gap: 45px; text-align: center; }
+    .blogs-hero-badge, .blogs-hero-desc { margin-left: auto; margin-right: auto; }
+    .blogs-hero-actions { justify-content: center; }
+    .blogs-hero-graphics { height: 360px; max-width: 580px; margin: 0 auto; }
+    .blogs-bg-layer { height: 250px; }
+    .blogs-fg-layer { height: 200px; }
+}
+
+@media (max-width: 576px) {
+    .blogs-hero-graphics { height: 280px; }
+    .blogs-bg-layer { height: 180px; width: 78%; }
+    .blogs-fg-layer { height: 150px; width: 65%; }
+}
+
+</style>
+
+<!-- DYNAMIC REVEAL INSIGHTS FEED DECK -->
+<section class="insights-feed-section scroll-reveal-view" id="insights-feed">
+    
+    <div class="insights-header">
+        <span class="insights-mini-badge">Expert Analytics</span>
+        <h2 class="insights-main-heading">Latest Tactical <span>Briefings</span></h2>
+        <p class="insights-interactive-subtitle">High-fidelity reports breaking down biological mechanics, velocity scaling, and pro tournament setups.</p>
+    </div>
+
+    <!-- Fluid Responsive Knowledge Grid Container -->
+    <div class="insights-fluid-grid">
+        
+        <!-- Blog Card 01 -->
+        <div class="insight-showcase-card">
+            <div class="insight-media-wrapper">
+                <div class="insight-neon-halo"></div>
+                <img src="./Assests/biometric.webp" alt="Advanced weight tracking neural sensor data mapping" class="insight-card-img">
+                <div class="insight-floating-badge">Biomechanics</div>
+            </div>
+            <div class="insight-body-deck">
+                <span class="insight-date-stamp">July 26, 2026</span>
+                <h3>Optimizing Reaction Latency Chains</h3>
+                <p class="insight-interactive-caption">How isolated visual field drill arrays and high-frequency coordinate tracking shave milliseconds off critical target gamecourt execution frames.</p>
+                <div class="insight-meta-footer">
+                    <a href="404.html" onclick="handleNavigation404(event)" class="insight-read-link">
+                        <span>Analyze Report</span>
+                        <svg viewBox="0 0 24 24" class="insight-arrow-icon"><path d="M5 12h14M12 5l7 7-7 7" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Blog Card 02 -->
+        <div class="insight-showcase-card">
+            <div class="insight-media-wrapper">
+                <div class="insight-neon-halo"></div>
+                <img src="./Assests/diet.webp" alt="Precision macro sports nutrition meal distribution profile" class="insight-card-img">
+                <div class="insight-floating-badge">Nutrition Matrix</div>
+            </div>
+            <div class="insight-body-deck">
+                <span class="insight-date-stamp">July 19, 2026</span>
+                <h3>Metabolic Fueling for Overtime Blocks</h3>
+                <p class="insight-interactive-caption">A clean tactical deep dive into targeted glycogen replacement loading windows and exact intra-workout fluid balance frameworks.</p>
+                <div class="insight-meta-footer">
+                    <a href="404.html" onclick="handleNavigation404(event)" class="insight-read-link">
+                        <span>Analyze Report</span>
+                        <svg viewBox="0 0 24 24" class="insight-arrow-icon"><path d="M5 12h14M12 5l7 7-7 7" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Blog Card 03 -->
+        <div class="insight-showcase-card">
+            <div class="insight-media-wrapper">
+                <div class="insight-neon-halo"></div>
+                <img src="./Assests/sports analytics.webp" alt="High speed thermal camera sports tracking display" class="insight-card-img">
+                <div class="insight-floating-badge">Recovery Lab</div>
+            </div>
+            <div class="insight-body-deck">
+                <span class="insight-date-stamp">July 11, 2026</span>
+                <h3>The Cryo-Thermal Shock Protocol</h3>
+                <p class="insight-interactive-caption">Analyzing specific localized tissue cellular data transformations and micro-exposure shock variables inside recovery clusters.</p>
+                <div class="insight-meta-footer">
+                    <a href="404.html" onclick="handleNavigation404(event)" class="insight-read-link">
+                        <span>Analyze Report</span>
+                        <svg viewBox="0 0 24 24" class="insight-arrow-icon"><path d="M5 12h14M12 5l7 7-7 7" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<style>
+    /* --- COMPACT INSIGHTS GRID DESIGN SYSTEM --- */
+.insights-feed-section {
+    padding: 50px 5% 30px 5%; /* Enforces requested 50px Top, 30px Bottom compression track bounds exactly */
+    background-color: #ffffff; /* Smooth white layout framework background alignment */
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: hidden;
+}
+
+/* Structural Header Sections Typography */
+.insights-header {
+    text-align: center;
+    margin-bottom: 40px;
+    max-width: 700px;
+}
+
+.insights-mini-badge {
+    color: #ff4a11; /* System Neon Orange Primary */
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 12px;
+    display: inline-block;
+}
+
+.insights-main-heading {
+    font-size: clamp(28px, 4vw, 40px);
+    font-weight: 900;
+    color: #0f1115;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+    line-height: 1.1;
+}
+
+.insights-main-heading span {
+    color: #ff4a11;
+    text-shadow: 0 0 20px rgba(255, 74, 17, 0.05);
+}
+
+.insights-interactive-subtitle {
+    font-size: 15px;
+    color: #667085;
+    line-height: 1.5;
+    cursor: default;
+    display: inline-block;
+    transition: color 0.4s ease, text-shadow 0.4s ease, transform 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+    will-change: transform, text-shadow;
+}
+
+.insights-feed-section:hover .insights-main-heading span {
+    text-shadow: 0 0 25px rgba(255, 74, 17, 0.35);
+}
+
+.insights-interactive-subtitle:hover {
+    color: #0f1115;
+    transform: scale(1.02);
+    text-shadow: 0 0 15px rgba(255, 74, 17, 0.15);
+}
+
+/* Three-Column Fluid Grid System Layout Deck */
+.insights-fluid-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(310px, 1fr));
+    gap: 30px;
+    width: 100%;
+    max-width: 1300px;
+}
+
+/* Individual Article Card Structuring Blocks */
+.insight-showcase-card {
+    background: #ffffff;
+    border-radius: 16px;
+    overflow: hidden;
+    border: 1px solid #e1e4eb;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.01);
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.5s cubic-bezier(0.25, 1, 0.5, 1), 
+                border-color 0.4s ease, 
+                box-shadow 0.4s ease;
+    will-change: transform, box-shadow;
+}
+
+.insight-media-wrapper {
+    position: relative;
+    height: 220px;
+    overflow: hidden;
+    background-color: #f8f9fa;
+}
+
+.insight-card-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.6s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+/* Custom Neon Radial Glow Mask Overlay */
+.insight-neon-halo {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at center, rgba(255, 74, 17, 0.22) 0%, transparent 75%);
+    opacity: 0;
+    z-index: 2;
+    pointer-events: none;
+    transition: opacity 0.4s ease;
+}
+
+.insight-floating-badge {
+    position: absolute;
+    bottom: 15px;
+    left: 15px;
+    background: #0f1115;
+    color: #ffffff;
+    padding: 5px 14px;
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    border-radius: 4px;
+    z-index: 3;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Card Content Details Framing */
+.insight-body-deck {
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.insight-date-stamp {
+    font-size: 12px;
+    color: #667085;
+    font-weight: 600;
+    margin-bottom: 8px;
+    display: inline-block;
+}
+
+.insight-body-deck h3 {
+    font-size: 19px;
+    color: #0f1115;
+    margin-bottom: 12px;
+    font-weight: 800;
+    line-height: 1.35;
+    transition: color 0.3s ease;
+}
+
+.insight-interactive-caption {
+    font-size: 14px;
+    color: #555e6b;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    cursor: default;
+    display: inline-block;
+    transition: color 0.4s ease, text-shadow 0.4s ease, transform 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+    will-change: transform, text-shadow;
+}
+
+/* Card Footer Anchors Tracking Line */
+.insight-meta-footer {
+    border-top: 1px solid #e1e4eb;
+    padding-top: 15px;
+    margin-top: auto;
+}
+
+.insight-read-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    color: #0f1115;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    transition: color 0.3s ease;
+}
+
+.insight-arrow-icon {
+    width: 14px;
+    height: 14px;
+    transition: transform 0.3s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+/* Collective Card Hover Chain Reactions Triggers */
+.insight-showcase-card:hover {
+    transform: translateY(-6px);
+    border-color: #ff4a11;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.06), 0 0 25px rgba(255, 74, 17, 0.1);
+}
+
+.insight-showcase-card:hover .insight-card-img {
+    transform: scale(1.05);
+}
+
+.insight-showcase-card:hover .insight-neon-halo {
+    opacity: 1;
+}
+
+.insight-showcase-card:hover .insight-body-deck h3 {
+    color: #ff4a11;
+}
+
+.insight-showcase-card:hover .insight-interactive-caption {
+    color: #0f1115;
+    transform: scale(1.015);
+    text-shadow: 0 0 12px rgba(255, 74, 17, 0.12);
+}
+
+.insight-read-link:hover {
+    color: #ff4a11;
+}
+
+.insight-read-link:hover .insight-arrow-icon {
+    transform: translateX(5px);
+}
+
+/* --- ADAPTIVE GRAPHIC RESPONSIVENESS OVERLAYS BREAKPOINTS --- */
+@media (max-width: 768px) {
+    .insights-feed-section {
+        padding: 50px 6% 30px 6%;
+    }
+}
+
+</style>
+
+<!-- DYNAMIC MEDIA VIDEO BREAKDOWN DECK -->
+<section class="media-deck-section scroll-reveal-view" id="media-vault">
+    
+    <div class="media-deck-header">
+        <span class="media-mini-badge">Video Analyses</span>
+        <h2 class="media-main-heading">Live Playbook <span>Video Feeds</span></h2>
+        <p class="media-interactive-subtitle">Stream multi-angle tactical recordings, on-court velocity breakdowns, and live biomechanics seminar logs.</p>
+    </div>
+
+    <!-- Fluid Responsive Multi-Column Asymmetric Media Grid -->
+    <div class="media-fluid-grid">
+        
+        <!-- Video Card 01: Featured Wide Block -->
+        <div class="video-showcase-box featured-wide-node">
+            <div class="video-img-hull">
+                <div class="video-neon-overlay"></div>
+                <img src="./Assests/football.webp" alt="Apex basketball court combat tactical team video tracking session" class="video-source-asset">
+                
+                <!-- Floating Glassmorphic Play Trigger Node Combo -->
+                <button class="video-play-trigger-btn" aria-label="Stream Featured Telemetry Video">
+                    <svg viewBox="0 0 24 24" class="play-vector-svg"><path d="M8 5v14l11-7z" fill="currentColor"/></svg>
+                </button>
+                <div class="video-duration-tag">Live Stream</div>
+            </div>
+            <div class="video-content-deck">
+                <span class="video-category-tag">Featured Briefing</span>
+                <h3>Court Control Geometry: Designing the 5-Man Fastbreak Chain</h3>
+                <p class="video-interactive-body">A detailed, step-by-step review of continuous spatial coordinate shifts and explosive joint velocity transitions mapped across regional playoff brackets.</p>
+            </div>
+        </div>
+
+        <!-- Video Card 02: Mini Track Column Block -->
+        <div class="video-showcase-box">
+            <div class="video-img-hull">
+                <div class="video-neon-overlay"></div>
+                <img src="./Assests/drill.webp" alt="Soccer tactical force plate acceleration drill breakdown" class="video-source-asset">
+                
+                <button class="video-play-trigger-btn mini-btn-scale" aria-label="Stream Soccer Analytics Video">
+                    <svg viewBox="0 0 24 24" class="play-vector-svg"><path d="M8 5v14l11-7z" fill="currentColor"/></svg>
+                </button>
+                <div class="video-duration-tag">14:22 Mins</div>
+            </div>
+            <div class="video-content-deck">
+                <span class="video-category-tag">Turf Drills</span>
+                <h3>VO2 Max Fatigue Shifting</h3>
+                <p class="video-interactive-body">Isolating force-plate muscle stress balances during extreme high-speed recovery transitions lines.</p>
+            </div>
+        </div>
+
+        <!-- Video Card 03: Mini Track Column Block -->
+        <div class="video-showcase-box">
+            <div class="video-img-hull">
+                <div class="video-neon-overlay"></div>
+                <img src="./Assests/postworkout.webp" alt="Tennis serve kinetic loading velocity trace tracking" class="video-source-asset">
+                
+                <button class="video-play-trigger-btn mini-btn-scale" aria-label="Stream Tennis Physics Video">
+                    <svg viewBox="0 0 24 24" class="play-vector-svg"><path d="M8 5v14l11-7z" fill="currentColor"/></svg>
+                </button>
+                <div class="video-duration-tag">08:45 Mins</div>
+            </div>
+            <div class="video-content-deck">
+                <span class="video-category-tag">Court Science</span>
+                <h3>Clay Surface Grip Physics</h3>
+                <p class="video-interactive-body">Tracking baseline load weights shifts to optimize directional sliding deceleration thresholds safely.</p>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<style>
+    /* --- COMPACT MULTIMEDIA VIDEO DECK SYSTEM --- */
+.media-deck-section {
+    padding: 50px 5% 30px 5%; /* Configured requested 50px Top, 30px Bottom padding tracking limits */
+    background-color: #ffffff;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: hidden;
+}
+
+/* Header Elements Typography Layout */
+.media-deck-header {
+    text-align: center;
+    margin-bottom: 40px;
+    max-width: 700px;
+}
+
+.media-mini-badge {
+    color: #ff4a11; /* System Neon Orange Primary */
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 12px;
+    display: inline-block;
+}
+
+.media-main-heading {
+    font-size: clamp(28px, 4vw, 40px);
+    font-weight: 900;
+    color: #0f1115;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+    line-height: 1.1;
+}
+
+.media-main-heading span {
+    color: #ff4a11;
+    text-shadow: 0 0 20px rgba(255, 74, 17, 0.05);
+}
+
+.media-interactive-subtitle {
+    font-size: 15px;
+    color: #667085;
+    line-height: 1.5;
+    cursor: default;
+    display: inline-block;
+    transition: color 0.4s ease, text-shadow 0.4s ease, transform 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+    will-change: transform, text-shadow;
+}
+
+.media-deck-section:hover .media-main-heading span {
+    text-shadow: 0 0 25px rgba(255, 74, 17, 0.35);
+}
+
+.media-interactive-subtitle:hover {
+    color: #0f1115;
+    transform: scale(1.02);
+    text-shadow: 0 0 15px rgba(255, 74, 17, 0.15);
+}
+
+/* Creative Asymmetric Media Grid Deck Layout */
+.media-fluid-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Forms geometric block bases */
+    gap: 30px;
+    width: 100%;
+    max-width: 1300px;
+}
+
+/* Individual Video Showcase Card Components */
+.video-showcase-box {
+    background: #ffffff;
+    border-radius: 16px;
+    overflow: hidden;
+    border: 1px solid #e1e4eb;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.01);
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.5s cubic-bezier(0.25, 1, 0.5, 1), 
+                border-color 0.4s ease, 
+                box-shadow 0.4s ease;
+    will-change: transform, box-shadow;
+}
+
+/* Forces Featured item to expand completely across top row horizon */
+.featured-wide-node {
+    grid-column: span 2;
+}
+
+.video-img-hull {
+    position: relative;
+    width: 100%;
+    height: 250px;
+    overflow: hidden;
+    background-color: #f8f9fa;
+}
+
+/* Sets larger structural frame box tracking for main featured loop */
+.featured-wide-node .video-img-hull {
+    height: 380px;
+}
+
+.video-source-asset {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.6s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.video-neon-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at center, rgba(255, 74, 17, 0.2) 0%, transparent 80%);
+    opacity: 0;
+    z-index: 2;
+    pointer-events: none;
+    transition: opacity 0.4s ease;
+}
+
+/* Premium Floating Media Trigger Vectors */
+.video-play-trigger-btn {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(1);
+    width: 65px;
+    height: 65px;
+    border-radius: 50%;
+    background-color: #ff4a11;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #ffffff;
+    z-index: 3;
+    box-shadow: 0 0 0 0 rgba(255, 74, 17, 0.5), 0 8px 20px rgba(255, 74, 17, 0.3);
+    transition: transform 0.3s cubic-bezier(0.25, 1, 0.5, 1), background-color 0.3s ease, box-shadow 0.4s ease;
+}
+
+.play-vector-svg {
+    width: 20px;
+    height: 24px;
+    transform: translateX(1px); /* Balances internal arrow geometry weights */
+}
+
+.mini-btn-scale {
+    width: 50px;
+    height: 50px;
+}
+
+.mini-btn-scale .play-vector-svg {
+    width: 16px;
+    height: 16px;
+}
+
+.video-duration-tag {
+    position: absolute;
+    bottom: 15px;
+    right: 15px;
+    background: rgba(15, 17, 21, 0.85);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    color: #ffffff;
+    padding: 5px 12px;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    border-radius: 4px;
+    z-index: 3;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Card Content Details Framing */
+.video-content-deck {
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+}
+
+.video-category-tag {
+    color: #ff4a11;
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 8px;
+    display: inline-block;
+}
+
+.video-content-deck h3 {
+    font-size: 20px;
+    color: #0f1115;
+    margin-bottom: 10px;
+    font-weight: 800;
+    transition: color 0.3s ease;
+}
+
+.video-interactive-body {
+    font-size: 14px;
+    color: #555e6b;
+    line-height: 1.6;
+    cursor: default;
+    display: inline-block;
+    transition: color 0.4s ease, text-shadow 0.4s ease, transform 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+    will-change: transform, text-shadow;
+}
+
+/* Collective Card Hover Chain Reactions Triggers */
+.video-showcase-box:hover {
+    transform: translateY(-6px);
+    border-color: #ff4a11;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.05), 0 0 25px rgba(255, 74, 17, 0.1);
+}
+
+.video-showcase-box:hover .video-source-asset { transform: scale(1.04); }
+.video-showcase-box:hover .video-neon-overlay { opacity: 1; }
+
+.video-showcase-box:hover .video-content-deck h3 { color: #ff4a11; }
+
+.video-showcase-box:hover .video-interactive-body {
+    color: #0f1115;
+    transform: scale(1.015);
+    text-shadow: 0 0 12px rgba(255, 74, 17, 0.12);
+}
+
+.video-showcase-box:hover .video-play-trigger-btn {
+    background-color: #0f1115;
+    transform: translate(-50%, -50%) scale(1.08);
+    box-shadow: 0 0 20px rgba(255, 74, 17, 0.4), 0 8px 25px rgba(0, 0, 0, 0.25);
+}
+
+/* --- ADAPTIVE GRAPHIC RESPONSIVENESS OVERLAYS BREAKPOINTS --- */
+@media (max-width: 850px) {
+    .media-fluid-grid {
+        grid-template-columns: 1fr; /* Collapses asymmetric split stacks to a single track row loop */
+    }
+    
+    .featured-wide-node {
+        grid-column: auto;
+    }
+
+    .featured-wide-node .video-img-hull {
+        height: 250px; /* Restores standard heights profile bounds on small displays */
+    }
+}
+
+@media (max-width: 480px) {
+    .video-img-hull { height: 190px; }
+    .featured-wide-node .video-img-hull { height: 190px; }
+    .video-play-trigger-btn { width: 48px; height: 48px; }
+    .play-vector-svg { width: 14px; height: 14px; }
+}
+
+</style>
+
+<section class="action-banner scroll-reveal-view" id="cta-banner">
+    <!-- Clean Background Image Layer -->
+    <img src="./Assests/cycling.webp" alt="Apex Stadium Background" class="banner-bg-asset">
+    <div class="banner-dark-overlay"></div>
+    <div class="banner-glow-halo"></div>
+
+    <div class="banner-container">
+        <!-- Line 1: Primed Heading -->
+        <h2 class="banner-line-one">Break Your Boundaries.</h2>
+        
+        <!-- Line 2: Glow-Accentuated Sub-Heading -->
+        <p class="banner-line-two">Join the elite athletic movement and claim your <span>Stackly Rank Today</span></p>
+        
+        <!-- Interactive Action Button -->
+        <div class="banner-action-row">
+            <a href="404.html" class="banner-btn">
+                <span>Access Registration</span>
+                <svg viewBox="0 0 24 24">
+                    <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10zM9 11l2 2 4-4" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+                </svg>
+            </a>
+        </div>
+    </div>
+</section>
+
+<style>
+    /* --- TWO-LINE HIGH-ENERGY ACTION BANNER --- */
+.action-banner {
+    position: relative;
+    width: 100%;
+    padding: 80px 5%; /* Tight, balanced vertical spacing architecture */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    background-color: #090a0f; /* Fallback baseline dark canvas */
+}
+
+/* Background Image Layer Logic */
+.banner-bg-asset {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 1;
+    transform: scale(1.05);
+    transition: transform 0.8s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.action-banner:hover .banner-bg-asset {
+    transform: scale(1.01); /* Subtle kinetic pull on background during hover states */
+}
+
+/* Overlay Layer Shields */
+.banner-dark-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, rgba(9, 10, 15, 0.9) 0%, rgba(9, 10, 15, 0.7) 100%);
+    z-index: 2;
+}
+
+.banner-glow-halo {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at center, rgba(255, 74, 17, 0.15) 0%, transparent 70%);
+    opacity: 0;
+    z-index: 3;
+    pointer-events: none;
+    transition: opacity 0.5s ease;
+}
+
+.action-banner:hover .banner-glow-halo {
+    opacity: 1;
+}
+
+/* Content Container Architecture */
+.banner-container {
+    position: relative;
+    width: 100%;
+    max-width: 1100px;
+    text-align: center;
+    z-index: 4;
+}
+
+/* Line 1 Typography Frame */
+.banner-line-one {
+    font-size: clamp(32px, 5vw, 56px);
+    font-weight: 900;
+    text-transform: uppercase;
+    color: #ffffff;
+    line-height: 1.1;
+    margin-bottom: 12px;
+    letter-spacing: -1px;
+    transition: transform 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.banner-line-one:hover {
+    transform: scale(1.02);
+}
+
+/* Line 2 Typography Frame & Glow Parameters */
+.banner-line-two {
+    font-size: clamp(16px, 2.2vw, 22px);
+    font-weight: 600;
+    color: #b3b8c3;
+    line-height: 1.4;
+    margin-bottom: 35px;
+    cursor: default;
+    transition: color 0.4s ease, transform 0.4s ease;
+}
+
+.banner-line-two span {
+    color: var(--primary);
+    position: relative;
+    display: inline-block;
+    transition: text-shadow 0.4s ease, color 0.4s ease;
+}
+
+/* High-contrast hover ignition link states */
+.banner-line-two:hover {
+    color: #ffffff;
+}
+
+.banner-line-two:hover span {
+    color: #ffffff;
+    text-shadow: 0 0 20px var(--primary), 0 0 40px var(--primary-glow);
+}
+
+/* Premium Action Button Interaction Matrix */
+.banner-action-row {
+    display: flex;
+    justify-content: center;
+}
+
+.banner-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    padding: 16px 42px;
+    background-color: var(--primary);
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    border-radius: 8px;
+    box-shadow: 0 10px 25px rgba(255, 74, 17, 0.25);
+    transition: all 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+    border: 1px solid transparent;
+}
+
+.banner-btn svg {
+    width: 18px;
+    height: 18px;
+    fill: none;
+    transition: transform 0.3s ease;
+}
+
+.banner-btn:hover {
+    background-color: transparent;
+    border-color: var(--primary);
+    color: var(--primary);
+    box-shadow: 0 0 30px var(--primary-glow);
+    transform: translateY(-4px);
+}
+
+.banner-btn:hover svg {
+    transform: rotate(360deg) scale(1.1);
+}
+
+/* --- ADAPTIVE BANNER RESPONSIVENESS OVERLAYS --- */
+@media (max-width: 768px) {
+    .action-banner {
+        padding: 60px 5%;
+    }
+    .banner-line-two {
+        margin-bottom: 25px;
+    }
+    .banner-btn {
+        padding: 14px 32px;
+        width: 100%;
+        justify-content: center;
+    }
+}
+
+</style>
+
+<!-- SYSTEM RESPONSIVE EXPERT AUTHORS PANEL -->
+<section class="authors-grid-section scroll-reveal-view" id="blog-contributors">
+    
+    <div class="authors-header">
+        <span class="authors-mini-badge">Editorial Board</span>
+        <h2 class="authors-main-heading">The Minds Behind <span>The Tactics</span></h2>
+        <p class="authors-interactive-subtitle">Train under specialized sports science journalists, Olympic researchers, and certified high-velocity movement biomechanists.</p>
+    </div>
+
+    <div class="authors-container">
+        
+        <!-- Author Profile Card 01 -->
+        <div class="author-profile-card">
+            <div class="author-glow-halo"></div>
+            <div class="author-media-frame">
+                <div class="author-neon-overlay"></div>
+                <!-- FIXED: Face-centered profile portrait asset -->
+                <img src="./Assests/marcus.webp" alt="Dr. Aris Thorne" class="author-avatar-img">
+                <div class="author-floating-tag">Ph.D. Biomechanics</div>
+            </div>
+            <div class="author-body-deck">
+                <h3>Dr. Aris Thorne</h3>
+                <span class="author-specialty">Senior Sports Scientist</span>
+                <p class="author-interactive-caption">Publishing continuous telemetry reports analyzing joint deceleration mechanics and muscular stress distribution parameters safely.</p>
+                <div class="author-meta-footer">
+                    <span class="publication-count-tag">
+                        <svg viewBox="0 0 24 24" class="pub-svg-icon"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-5 14H7v-2h7v2zm3-4H7v-2h10v2zm0-4H7V7h10v2z" fill="currentColor"/></svg>
+                        42 Papers Published
+                    </span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Author Profile Card 02 -->
+        <div class="author-profile-card">
+            <div class="author-glow-halo"></div>
+            <div class="author-media-frame">
+                <div class="author-neon-overlay"></div>
+                <!-- FIXED: Face-centered profile portrait asset -->
+                <img src="./Assests/coach.webp" alt="Coach Marcus Vance" class="author-avatar-img">
+                <div class="author-floating-tag">UEFA Pro / FIBA</div>
+            </div>
+            <div class="author-body-deck">
+                <h3>Coach Marcus Vance</h3>
+                <span class="author-specialty">Tactical Playbook Analyst</span>
+                <p class="author-interactive-caption">Breaking down geometric fastbreak coordinate shifts, full-court defensive pressure lines, and real-time playbook synthesis modules.</p>
+                <div class="author-meta-footer">
+                    <span class="publication-count-tag">
+                        <svg viewBox="0 0 24 24" class="pub-svg-icon"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-5 14H7v-2h7v2zm3-4H7v-2h10v2zm0-4H7V7h10v2z" fill="currentColor"/></svg>
+                        19 Analysis Briefs
+                    </span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Author Profile Card 03 -->
+        <div class="author-profile-card">
+            <div class="author-glow-halo"></div>
+            <div class="author-media-frame">
+                <div class="author-neon-overlay"></div>
+                <!-- FIXED: Face-centered profile portrait asset -->
+                <img src="./Assests/sarah.webp" alt="Elena Rostova" class="author-avatar-img">
+                <div class="author-floating-tag">LN / CSCS Elite</div>
+            </div>
+            <div class="author-body-deck">
+                <h3>Elena Rostova</h3>
+                <span class="author-specialty">Metabolic Performance Lead</span>
+                <p class="author-interactive-caption">Specializing in specific glycogen loading cycles, intra-workout electrolyte maps, and custom micro-nutrient recovery planning tracks.</p>
+                <div class="author-meta-footer">
+                    <span class="publication-count-tag">
+                        <svg viewBox="0 0 24 24" class="pub-svg-icon"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-5 14H7v-2h7v2zm3-4H7v-2h10v2zm0-4H7V7h10v2z" fill="currentColor"/></svg>
+                        31 Fueling Guides
+                    </span>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<style>
+
+    /* --- FIXED PORTRAIT IMAGES ALIGNMENT SYSTEM --- */
+.author-media-frame {
+    position: relative;
+    width: 100%;
+    height: 250px; /* Locks matching structural portrait container heights */
+    overflow: hidden;
+    background-color: #f4f5f7;
+    display: flex; /* Centers the image object path on the container's block axis */
+    align-items: flex-start;
+}
+
+.author-avatar-img {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important;
+    /* Locks the vertical crop anchor to 15% from the top ceiling line where faces reside */
+    object-position: center 15% !important; 
+    display: block;
+    transition: transform 0.6s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.author-profile-card:hover .author-avatar-img {
+    transform: scale(1.04);
+}
+
+    /* --- COMPACT AUTHORS GRID DESIGN SYSTEM --- */
+.authors-grid-section {
+    padding: 50px 5% 30px 5%; /* Enforces requested 50px Top, 30px Bottom padding bounds precisely */
+    background-color: #ffffff; /* Smooth clean white background canvas integration */
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: hidden;
+    position: relative;
+    border-top: 1px solid #f0f2f5;
+}
+
+/* Section Header Typography */
+.authors-header {
+    text-align: center;
+    margin-bottom: 40px;
+    max-width: 700px;
+}
+
+.authors-mini-badge {
+    color: #ff4a11; /* System Neon Orange Primary */
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 12px;
+    display: inline-block;
+}
+
+.authors-main-heading {
+    font-size: clamp(28px, 4vw, 40px);
+    font-weight: 900;
+    color: #0f1115;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+    line-height: 1.1;
+}
+
+.authors-main-heading span {
+    color: #ff4a11;
+    text-shadow: 0 0 20px rgba(255, 74, 17, 0.05);
+}
+
+.authors-grid-section:hover .authors-main-heading span {
+    text-shadow: 0 0 25px rgba(255, 74, 17, 0.35);
+}
+
+.authors-interactive-subtitle {
+    font-size: 15px;
+    color: #667085;
+    line-height: 1.5;
+    cursor: default;
+    display: inline-block;
+    transition: color 0.4s ease, text-shadow 0.4s ease, transform 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+    will-change: transform, text-shadow;
+}
+
+.authors-interactive-subtitle:hover {
+    color: #0f1115;
+    transform: scale(1.02);
+    text-shadow: 0 0 15px rgba(255, 74, 17, 0.15);
+}
+
+/* Three-Column Fluid Grid System Layout Deck */
+.authors-container {
+    width: 100%;
+    max-width: 1300px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(310px, 1fr));
+    gap: 30px;
+}
+
+/* Contributors Profile Card Structural Cells */
+.author-profile-card {
+    background: #ffffff;
+    border-radius: 16px;
+    overflow: hidden;
+    border: 1px solid #e1e4eb;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.01);
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.5s cubic-bezier(0.25, 1, 0.5, 1), 
+                border-color 0.4s ease, 
+                box-shadow 0.4s ease;
+    will-change: transform, box-shadow;
+}
+
+.author-media-frame {
+    position: relative;
+    height: 250px;
+    overflow: hidden;
+    background-color: #f8f9fa;
+}
+
+.author-avatar-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center top;
+    transition: transform 0.6s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+/* Custom Neon Radial Shroud Overlay */
+.author-glow-halo {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at center, rgba(255, 74, 17, 0.22) 0%, transparent 75%);
+    opacity: 0;
+    z-index: 2;
+    pointer-events: none;
+    transition: opacity 0.4s ease;
+}
+
+.author-neon-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at center, rgba(255, 74, 17, 0.16) 0%, transparent 85%);
+    opacity: 0;
+    z-index: 3;
+    pointer-events: none;
+    transition: opacity 0.4s ease;
+}
+
+/* Floating Technical Badges */
+.author-floating-tag {
+    position: absolute;
+    bottom: 15px;
+    left: 15px;
+    background: #0f1115;
+    color: #ffffff;
+    padding: 5px 14px;
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    border-radius: 4px;
+    z-index: 4;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Card Content Details Framing */
+.author-body-deck {
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.author-body-deck h3 {
+    font-size: 20px;
+    color: #0f1115;
+    margin-bottom: 2px;
+    font-weight: 800;
+    transition: color 0.3s ease;
+}
+
+.author-specialty {
+    font-size: 13px;
+    color: #ff4a11;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    display: inline-block;
+    margin-bottom: 14px;
+}
+
+.author-interactive-caption {
+    font-size: 14px;
+    color: #555e6b;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    cursor: default;
+    display: inline-block;
+    transition: color 0.4s ease, text-shadow 0.4s ease, transform 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+    will-change: transform, text-shadow;
+}
+
+/* Card Footer Anchors Tracking Line */
+.author-meta-footer {
+    border-top: 1px solid #e1e4eb;
+    padding-top: 15px;
+    margin-top: auto;
+}
+
+.publication-count-tag {
+    font-size: 13px;
+    color: #667085;
+    font-weight: 600;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.pub-svg-icon {
+    width: 15px;
+    height: 15px;
+    color: #667085;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+/* Collective Card Hover Chain Reactions Triggers */
+.author-profile-card:hover {
+    transform: translateY(-6px);
+    border-color: #ff4a11;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.05), 0 0 25px rgba(255, 74, 17, 0.1);
+}
+
+.author-profile-card:hover .author-avatar-img {
+    transform: scale(1.04);
+}
+
+.author-profile-card:hover .author-glow-halo,
+.author-profile-card:hover .author-neon-overlay {
+    opacity: 1;
+}
+
+.author-profile-card:hover .author-body-deck h3 {
+    color: #ff4a11;
+}
+
+.author-profile-card:hover .author-interactive-caption {
+    color: #0f1115;
+    transform: scale(1.015);
+    text-shadow: 0 0 12px rgba(255, 74, 17, 0.12);
+}
+
+.author-profile-card:hover .pub-svg-icon {
+    color: #ff4a11;
+    transform: scale(1.1) rotate(5deg);
+}
+
+.author-profile-card:hover .publication-count-tag span {
+    color: #0f1115;
+}
+
+/* --- ADAPTIVE GRAPHIC RESPONSIVENESS OVERLAYS BREAKPOINTS --- */
+@media (max-width: 768px) {
+    .authors-grid-section {
+        padding: 50px 6% 30px 6%;
+    }
+}
+
+</style>
+
+<!-- DYNAMIC RESPONSIVE PODCAST STREAM STATION -->
+<section class="podcast-deck-section scroll-reveal-view" id="podcast-room">
+    <div class="podcast-master-wrapper">
+        
+        <!-- Left Column: Layered Asymmetric Media Graphic Deck -->
+        <div class="podcast-graphic-deck">
+            <div class="podcast-mesh-glow"></div>
+            
+            <!-- Structural Layer 1: Background Multi-Surface Grid Frame -->
+            <div class="podcast-img-hull podcast-bg-layer">
+                <div class="podcast-neon-filter"></div>
+                <img src="./Assests/metabolism.webp" alt="Apex Training Facility metabolic nutrition lab setups" class="podcast-asset-img">
+            </div>
+
+            <!-- Structural Layer 2: Foreground Elevation Control Badge Frame -->
+            <div class="podcast-img-hull podcast-fg-layer">
+                <div class="podcast-neon-filter"></div>
+                <img src="./Assests/sports court recordings.webp" alt="Athletic recording microphone telemetry equipment" class="podcast-asset-img">
+                
+                <!-- Animated Vector Equalizer Audio Bar Audio Waves -->
+                <div class="audio-equalizer-mesh">
+                    <span class="eq-bar"></span>
+                    <span class="eq-bar"></span>
+                    <span class="eq-bar"></span>
+                    <span class="eq-bar"></span>
+                </div>
+                <div class="podcast-floating-tag">Live Audio Room</div>
+            </div>
+        </div>
+
+        <!-- Right Column: Core Typographical Messaging Deck -->
+        <div class="podcast-text-deck">
+            <span class="podcast-mini-badge">Stackly Broadcast Network</span>
+            <h2 class="podcast-main-heading">The Absolute Performance <br><span>Voice Station</span></h2>
+            
+            <p class="podcast-interactive-body">
+                Tune in to weekly tactical broadcast episodes. Our discipline directors and visiting human performance scientists unpack raw data matrices, target workload stress thresholds, and advanced tissue rehabilitation blueprints.
+            </p>
+
+            <div class="podcast-actions-row">
+                <a href="404.html" onclick="handleNavigation404(event)" class="podcast-btn-primary">
+                    <span>Listen Live Room</span>
+                    <svg viewBox="0 0 24 24" class="podcast-svg-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 12 10 10-4.48 10-12S17.52 2 12 2zm-1 14H9V8h2v8zm4 0h-2V8h2v8z" fill="currentColor"/></svg>
+                </a>
+                <a href="404.html" onclick="handleNavigation404(event)" class="podcast-btn-secondary">Browse Archive</a>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<style>
+    /* --- COMPACT PODCAST DECK DESIGN SYSTEM --- */
+.podcast-deck-section {
+    padding: 50px 5% 30px 5%; /* Configured requested 50px Top, 30px Bottom padding bounds precisely */
+    background-color: #ffffff; /* Clean white canvas layout scheme tracking alignment */
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+    position: relative;
+    border-top: 1px solid #f0f2f5;
+}
+
+.podcast-master-wrapper {
+    width: 100%;
+    max-width: 1300px;
+    display: grid;
+    grid-template-columns: 0.95fr 1.05fr; /* Asymmetric grid separation balance layout */
+    gap: 60px;
+    align-items: center;
+}
+
+/* Left Grid Column Graphics Assembly */
+.podcast-graphic-deck {
+    position: relative;
+    width: 100%;
+    height: 440px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.podcast-mesh-glow {
+    position: absolute;
+    width: 110%;
+    height: 110%;
+    background: radial-gradient(circle at center, rgba(255, 74, 17, 0.1) 0%, transparent 65%);
+    z-index: 1;
+    pointer-events: none;
+}
+
+.podcast-img-hull {
+    position: absolute;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.06);
+    border: 5px solid #ffffff;
+    outline: 1px solid #e1e4eb;
+    transition: transform 0.5s cubic-bezier(0.25, 1, 0.5, 1), 
+                border-color 0.4s ease, 
+                box-shadow 0.4s ease;
+    will-change: transform, box-shadow;
+}
+
+.podcast-asset-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.6s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.podcast-neon-filter {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at center, rgba(255, 74, 17, 0.16) 0%, transparent 80%);
+    opacity: 0;
+    z-index: 2;
+    transition: opacity 0.4s ease;
+    pointer-events: none;
+}
+
+/* Multi-Layer Overlapping Sets Positions Layout Matrix */
+.podcast-bg-layer {
+    width: 72%;
+    height: 300px;
+    left: 0;
+    top: 20px;
+    z-index: 2;
+    transform: rotate(-2.5deg);
+}
+
+.podcast-fg-layer {
+    width: 62%;
+    height: 250px;
+    right: 0;
+    bottom: 20px;
+    z-index: 3;
+    transform: rotate(2.5deg);
+}
+
+/* Kinetic Sound Equalizer Animation Nodes */
+.audio-equalizer-mesh {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    height: 24px;
+    display: flex;
+    align-items: flex-end;
+    gap: 3px;
+    z-index: 4;
+    background: #0f1115;
+    padding: 8px 12px;
+    border-radius: 6px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.eq-bar {
+    width: 3px;
+    height: 100%;
+    background-color: #ff4a11;
+    transform-origin: bottom;
+    animation: bounceEqualizer 0.6s ease-in-out infinite alternate;
+}
+
+.eq-bar:nth-child(2) { animation-delay: 0.15s; height: 60%; }
+.eq-bar:nth-child(3) { animation-delay: 0.3s; height: 85%; }
+.eq-bar:nth-child(4) { animation-delay: 0.45s; height: 40%; }
+
+@keyframes bounceEqualizer {
+    0% { transform: scaleY(0.3); }
+    100% { transform: scaleY(1.1); filter: drop-shadow(0 0 4px rgba(255, 74, 17, 0.6)); }
+}
+
+.podcast-floating-tag {
+    position: absolute;
+    bottom: 15px;
+    left: 15px;
+    background: #0f1115;
+    color: #ffffff;
+    padding: 5px 14px;
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    border-radius: 4px;
+    z-index: 4;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Collective Multi-Layer Hover Grid Mechanics */
+.podcast-img-hull:hover {
+    z-index: 5;
+    border-color: #ff4a11;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1), 0 0 25px rgba(255, 74, 17, 0.18);
+}
+
+.podcast-img-hull:hover .podcast-asset-img { transform: scale(1.04); }
+.podcast-img-hull:hover .podcast-neon-filter { opacity: 1; }
+
+.podcast-bg-layer:hover { transform: scale(1.02) rotate(-0.5deg) translateY(-4px); }
+.podcast-fg-layer:hover { transform: scale(1.02) rotate(0.5deg) translateY(-4px); }
+
+/* Right Grid Column Content Typography Styling */
+.podcast-text-deck {
+    display: flex;
+    flex-direction: column;
+}
+
+.podcast-mini-badge {
+    color: #ff4a11;
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 12px;
+}
+
+.podcast-main-heading {
+    font-size: clamp(28px, 4vw, 40px);
+    font-weight: 900;
+    color: #0f1115;
+    text-transform: uppercase;
+    line-height: 1.1;
+    margin-bottom: 20px;
+}
+
+.podcast-main-heading span {
+    color: #ff4a11;
+    text-shadow: 0 0 20px rgba(255, 74, 17, 0.05);
+}
+
+.podcast-deck-section:hover .podcast-main-heading span {
+    text-shadow: 0 0 25px rgba(255, 74, 17, 0.35);
+}
+
+.podcast-interactive-body {
+    font-size: 15px;
+    color: #555e6b;
+    line-height: 1.6;
+    margin-bottom: 35px;
+    max-width: 560px;
+    cursor: default;
+    display: inline-block;
+    transition: color 0.4s ease, text-shadow 0.4s ease, transform 0.4s ease;
+    will-change: transform, text-shadow;
+}
+
+.podcast-interactive-body:hover {
+    color: #0f1115;
+    transform: scale(1.015);
+    text-shadow: 0 0 15px rgba(255, 74, 17, 0.12);
+}
+
+/* Control Buttons Action Rows */
+.podcast-actions-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.podcast-btn-primary, .podcast-btn-secondary {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 15px 35px;
+    border-radius: 8px;
+    font-size: 13.5px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    text-decoration: none;
+    transition: all 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.podcast-btn-primary {
+    background-color: #0f1115;
+    color: #ffffff;
+    gap: 10px;
+    box-shadow: 0 8px 22px rgba(9, 10, 15, 0.12);
+}
+
+.podcast-svg-icon {
+    width: 14px;
+    height: 14px;
+    transition: transform 0.3s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.podcast-btn-primary:hover {
+    background-color: #ff4a11;
+    box-shadow: 0 10px 25px rgba(255, 74, 17, 0.35);
+    transform: translateY(-3px);
+}
+
+.podcast-btn-primary:hover .podcast-svg-icon {
+    transform: scale(1.1) rotate(90deg);
+}
+
+.podcast-btn-secondary {
+    background: transparent;
+    color: #0f1115;
+    border: 2px solid #e1e4eb;
+}
+
+.podcast-btn-secondary:hover {
+    border-color: #0f1115;
+    background-color: rgba(9, 10, 15, 0.02);
+    transform: translateY(-2px);
+}
+
+/* --- ADAPTIVE GRAPHIC RESPONSIVENESS BREAKPOINTS --- */
+@media (max-width: 992px) {
+    .podcast-master-wrapper {
+        grid-template-columns: 1fr;
+        gap: 45px;
+    }
+    .podcast-text-deck { text-align: center; }
+    .podcast-mini-badge, .podcast-interactive-body { margin-left: auto; margin-right: auto; }
+    .podcast-actions-row { justify-content: center; }
+    .podcast-graphic-deck {
+        height: 360px;
+        max-width: 580px;
+        margin: 0 auto;
+    }
+    .podcast-bg-layer { height: 250px; }
+    .podcast-fg-layer { height: 200px; }
+}
+
+@media (max-width: 576px) {
+    .podcast-graphic-deck { height: 280px; }
+    .podcast-bg-layer { height: 180px; width: 78%; }
+    .podcast-fg-layer { height: 150px; width: 65%; }
+}
+
+</style>
+
+<!-- DYNAMIC RESPONSIVE DOWNLOADABLE RESOURCES MESH -->
+<section class="downloads-mesh-section scroll-reveal-view" id="tactical-blueprints">
+    
+    <div class="downloads-header">
+        <span class="downloads-mini-badge">Intelligence Vault</span>
+        <h2 class="downloads-main-heading">Download Tactical <span>Blueprints</span></h2>
+        <p class="downloads-interactive-subtitle">Access offline biometric playbooks, macro hydration spreadsheets, and training schedule layouts.</p>
+    </div>
+
+    <div class="downloads-master-container">
+        
+        <!-- Left Column: Visual Asset Deck Panel -->
+        <div class="downloads-graphic-hull">
+            <div class="downloads-radial-halo"></div>
+            <div class="downloads-img-bezel">
+                <div class="downloads-neon-overlay"></div>
+                <img src="./Assests/sports analytics.webp" alt="Apex Training Facility database vault server room" class="downloads-asset-img">
+                <div class="downloads-floating-badge">Vault Synced</div>
+            </div>
+        </div>
+
+        <!-- Right Column: Interactive Resource Cards Stack -->
+        <div class="downloads-cards-stack">
+            
+            <!-- Resource Card 01 -->
+            <div class="download-resource-card">
+                <div class="download-glow-mask"></div>
+                <div class="download-vector-frame">
+                    <!-- SVG Document Blueprint Icon -->
+                    <svg viewBox="0 0 24 24" class="download-svg-vector"><path d="M14 2H6c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 1.99 2H18c1.1 0 2-.9 2-2V8l-6-6zm2 16H8v-2h8v2zm0-4H8v-2h8v2zm-3-5V3.5L18.5 9H13z" fill="currentColor"/></svg>
+                </div>
+                <div class="download-content-block">
+                    <h3>2026 Core Biomechanics Playbook</h3>
+                    <p class="download-interactive-body">A detailed 45-page PDF breaking down muscle chain deceleration stress boundaries and neural delay profiles.</p>
+                    <a href="404.html" onclick="handleNavigation404(event)" class="download-action-trigger">
+                        <span>Get PDF Guide (14.2 MB)</span>
+                        <svg viewBox="0 0 24 24" class="download-arrow-icon"><path d="M19.35 10.04C18.67 6.59 15.64 4 12 4 9.11 4 6.6 5.64 5.35 8.04 2.34 8.36 0 10.91 0 14c0 3.31 2.69 6 6 6h13c2.76 0 4-2.24 4-5 0-2.64-2.05-4.78-4.65-4.96zM17 13l-5 5-5-5h3V9h4v4h3z" fill="currentColor"/></svg>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Resource Card 02 -->
+            <div class="download-resource-card">
+                <div class="download-glow-mask"></div>
+                <div class="download-vector-frame">
+                    <!-- SVG Hydration Spreadsheet Grid Icon -->
+                    <svg viewBox="0 0 24 24" class="download-svg-vector"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-5 14H7v-2h7v2zm3-4H7v-2h10v2zm0-4H7V7h10v2z" fill="currentColor"/></svg>
+                </div>
+                <div class="download-content-block">
+                    <h3>Macro Glycogen Hydration Matrix</h3>
+                    <p class="download-interactive-body">Customizable optimization spreadsheet tailored for advanced intra-workout mineral ratio calculation sweeps.</p>
+                    <a href="404.html" onclick="handleNavigation404(event)" class="download-action-trigger">
+                        <span>Get XLSX Sheet (2.4 MB)</span>
+                        <svg viewBox="0 0 24 24" class="download-arrow-icon"><path d="M19.35 10.04C18.67 6.59 15.64 4 12 4 9.11 4 6.6 5.64 5.35 8.04 2.34 8.36 0 10.91 0 14c0 3.31 2.69 6 6 6h13c2.76 0 4-2.24 4-5 0-2.64-2.05-4.78-4.65-4.96zM17 13l-5 5-5-5h3V9h4v4h3z" fill="currentColor"/></svg>
+                    </a>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+</section>
+
+<style>
+    /* --- COMPACT RESOURCE DOWNLOAD SECTION --- */
+.downloads-mesh-section {
+    padding: 50px 5% 30px 5%; /* Exact requested 50px Top, 30px Bottom compression track parameters */
+    background-color: #ffffff; /* Smooth alignment with clean white canvas background */
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: hidden;
+    position: relative;
+    border-top: 1px solid #f0f2f5;
+}
+
+/* Structural Header Sections Typography */
+.downloads-header {
+    text-align: center;
+    margin-bottom: 40px;
+    max-width: 700px;
+}
+
+.downloads-mini-badge {
+    color: #ff4a11; /* System Neon Orange Primary */
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 12px;
+    display: inline-block;
+}
+
+.downloads-main-heading {
+    font-size: clamp(28px, 4vw, 40px);
+    font-weight: 900;
+    color: #0f1115;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+    line-height: 1.1;
+}
+
+.downloads-main-heading span {
+    color: #ff4a11;
+    text-shadow: 0 0 20px rgba(255, 74, 17, 0.05);
+}
+
+.downloads-interactive-subtitle {
+    font-size: 15px;
+    color: #667085;
+    line-height: 1.5;
+    cursor: default;
+    display: inline-block;
+    transition: color 0.4s ease, text-shadow 0.4s ease, transform 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+    will-change: transform, text-shadow;
+}
+
+.downloads-mesh-section:hover .downloads-main-heading span {
+    text-shadow: 0 0 25px rgba(255, 74, 17, 0.35);
+}
+
+.downloads-interactive-subtitle:hover {
+    color: #0f1115;
+    transform: scale(1.02);
+    text-shadow: 0 0 15px rgba(255, 74, 17, 0.15);
+}
+
+/* Master Balanced Layout Columns Grid Deck */
+.downloads-master-container {
+    width: 100%;
+    max-width: 1300px;
+    display: grid;
+    grid-template-columns: 0.8fr 1.2fr; /* Splits visual graphic cards and descriptions stacks cleanly */
+    gap: 50px;
+    align-items: center; /* Aligns columns straight along block center axis */
+}
+
+/* Left Wing Column Assets Housing */
+.downloads-graphic-hull {
+    position: relative;
+    width: 100%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.downloads-radial-halo {
+    position: absolute;
+    width: 110%;
+    height: 110%;
+    background: radial-gradient(circle at center, rgba(255, 74, 17, 0.12) 0%, transparent 65%);
+    pointer-events: none;
+    z-index: 1;
+}
+
+.downloads-img-bezel {
+    position: relative;
+    width: 100%;
+    height: 350px; /* Precise height framework to manage grid balance layout */
+    border-radius: 16px;
+    overflow: hidden;
+    border: 1px solid #e1e4eb;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.02);
+    z-index: 2;
+    transition: transform 0.5s cubic-bezier(0.25, 1, 0.5, 1), border-color 0.4s ease;
+}
+
+.downloads-asset-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.6s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.downloads-neon-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at center, rgba(255, 74, 17, 0.18) 0%, transparent 75%);
+    opacity: 0;
+    z-index: 3;
+    pointer-events: none;
+    transition: opacity 0.4s ease;
+}
+
+.downloads-floating-badge {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    background: #0f1115;
+    color: #ffffff;
+    padding: 6px 14px;
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    border-radius: 4px;
+    z-index: 4;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.downloads-graphic-hull:hover .downloads-img-bezel {
+    transform: translateY(-4px) scale(1.01);
+    border-color: #ff4a11;
+}
+
+.downloads-graphic-hull:hover .downloads-asset-img { transform: scale(1.04); }
+.downloads-graphic-hull:hover .downloads-neon-overlay { opacity: 1; }
+
+/* Right Wing Column Resource Cards Stack */
+.downloads-cards-stack {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 100%;
+    justify-content: center;
+}
+
+.download-resource-card {
+    background: #ffffff;
+    border: 1px solid #e1e4eb;
+    border-radius: 12px;
+    padding: 22px 25px;
+    display: grid;
+    grid-template-columns: 0.22fr 1.78fr; /* Proportional asymmetrical inside columns grid mapping */
+    gap: 20px;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.01);
+    transition: border-color 0.3s ease, box-shadow 0.3s ease, transform 0.3s cubic-bezier(0.25, 1, 0.5, 1);
+    will-change: transform, box-shadow;
+}
+
+/* Custom Neon Radial Glow Overlay Mask */
+.download-glow-mask {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at top left, rgba(255, 74, 17, 0.1) 0%, transparent 70%);
+    opacity: 0;
+    z-index: 1;
+    pointer-events: none;
+    transition: opacity 0.4s ease;
+}
+
+/* Left Slot: Vector Icon Badges Frame */
+.download-vector-frame {
+    width: 44px;
+    height: 44px;
+    border-radius: 8px;
+    background-color: rgba(15, 17, 21, 0.04);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    z-index: 2;
+    transition: background-color 0.3s ease, transform 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.download-svg-vector {
+    width: 20px;
+    height: 20px;
+    fill: #0f1115;
+    transition: fill 0.3s ease;
+}
+
+/* Right Slot: Content Details */
+.download-content-block {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    position: relative;
+    z-index: 2;
+}
+
+.download-content-block h3 {
+    font-size: 18px;
+    color: #0f1115;
+    font-weight: 800;
+    transition: color 0.3s ease;
+}
+
+.download-interactive-body {
+    font-size: 14px;
+    color: #555e6b;
+    line-height: 1.5;
+    cursor: default;
+    display: inline-block;
+    transition: color 0.3s ease;
+}
+
+/* Interactive Download CTA Trigger Links */
+.download-action-trigger {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    color: #ff4a11;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 12.5px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-top: 6px;
+    width: max-content;
+    transition: text-shadow 0.3s ease, color 0.3s ease;
+}
+
+.download-arrow-icon {
+    width: 14px;
+    height: 14px;
+    transition: transform 0.3s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+/* Collective Card Hover Chain Reactions Triggers */
+.download-resource-card:hover {
+    border-color: #ff4a11;
+    transform: translateX(6px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.03), 0 0 20px rgba(255, 74, 17, 0.05);
+}
+
+.download-resource-card:hover .download-glow-mask {
+    opacity: 1;
+}
+
+.download-resource-card:hover .download-vector-frame {
+    background-color: #ff4a11;
+    transform: scale(1.05) rotate(5deg);
+}
+
+.download-resource-card:hover .download-svg-vector {
+    fill: #ffffff;
+}
+
+.download-resource-card:hover .download-content-block h3 {
+    color: #ff4a11;
+}
+
+.download-resource-card:hover .download-interactive-body {
+    color: #0f1115;
+}
+
+.download-action-trigger:hover {
+    color: #0f1115;
+    text-shadow: 0 0 10px rgba(255, 74, 17, 0.2);
+}
+
+.download-action-trigger:hover .download-arrow-icon {
+    transform: translateY(2px) scale(1.05);
+}
+
+/* --- SYSTEM RESPONSIVENESS OVERLAYS BREAKPOINTS --- */
+@media (max-width: 992px) {
+    .downloads-master-container {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+    .downloads-graphic-hull {
+        height: 280px;
+        max-width: 580px;
+        margin: 0 auto;
+    }
+    .downloads-img-bezel {
+        height: 100%;
+    }
+}
+
+@media (max-width: 640px) {
+    .download-resource-card {
+        grid-template-columns: 1fr; /* Stacks image slots cleanly above descriptive cards on micro displays */
+        gap: 15px;
+        text-align: center;
+        justify-items: center;
+    }
+    .download-action-trigger {
+        margin: 6px auto 0 auto;
+    }
+    .download-resource-card:hover {
+        transform: translateY(-4px); /* Shifts animation orientation vector to vertical lift on mobile */
+    }
+}
+
+</style>
+
+
+
+<!-- SYSTEM COMPACT SINGLE-LINE ACTION STRIP -->
+<section class="strip-cta-section scroll-reveal-view" id="action-strip">
+    <div class="strip-wrapper">
+        
+        <!-- Left Wing: Split Visual Composition -->
+        <div class="strip-image-deck">
+            <div class="strip-glow-halo"></div>
+            <!-- Dynamic Foreground Imagery Stack -->
+            <img src="./Assests/athletic running.webp" alt="Athletic biometric training array asset" class="strip-inline-img">
+            <img src="./Assests/drill.webp" alt="Coaching playbook data analytics asset" class="strip-inline-img edge-stacked">
+        </div>
+
+        <!-- Right Wing: Linear Action Channel Content -->
+        <div class="strip-content-deck">
+            <h3 class="strip-title-text">Ready to optimize your absolute performance? <span>Claim your grid rank.</span></h3>
+            
+            <a href="404.html" class="strip-action-btn">
+                <span>Deploy Registration</span>
+                <svg viewBox="0 0 24 24" class="strip-svg-icon"><path d="M5 12h14M12 5l7 7-7 7" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg>
+            </a>
+        </div>
+
+    </div>
+</section>
+
+<style>
+    /* --- LINEAR COMPACT ACTION STRIP --- */
+.strip-cta-section {
+    padding: 50px 5% 30px 5%; /* Enforces requested 50px Top, 30px Bottom bounds exactly */
+    background-color: #ffffff;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+    position: relative;
+    border-top: 1px solid #f0f2f5;
+}
+
+.strip-wrapper {
+    width: 100%;
+    max-width: 1300px;
+    background: #ffffff;
+    border: 1px solid #e1e4eb;
+    border-radius: 20px;
+    padding: 25px 40px; /* Highly compressed inside padding track */
+    display: grid;
+    grid-template-columns: 0.4fr 1.6fr; /* Horizontal linear separation formatting */
+    gap: 40px;
+    align-items: center;
+    box-shadow: 0 10px 35px rgba(0, 0, 0, 0.02);
+    transition: border-color 0.4s ease, box-shadow 0.4s ease;
+}
+
+/* Visual Housing & Overlap Mechanics */
+.strip-image-deck {
+    position: relative;
+    display: flex;
+    align-items: center;
+    height: 70px;
+}
+
+.strip-inline-img {
+    width: 65px;
+    height: 65px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid #ffffff;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+    transition: transform 0.4s cubic-bezier(0.25, 1, 0.5, 1), border-color 0.3s ease;
+    position: relative;
+    z-index: 2;
+}
+
+.edge-stacked {
+    margin-left: -25px; /* Creates clean modern overlay tracking */
+    z-index: 1;
+}
+
+.strip-glow-halo {
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    background: radial-gradient(circle, rgba(255, 74, 17, 0.16) 0%, transparent 70%);
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.4s ease;
+    z-index: 0;
+    left: -20px;
+}
+
+/* Linear Content Delivery Deck */
+.strip-content-deck {
+    display: flex;
+    justify-content: space-between; /* Pushes single-line statement and button to opposite horizons */
+    align-items: center;
+    gap: 30px;
+    width: 100%;
+}
+
+.strip-title-text {
+    font-size: clamp(16px, 2.2vw, 22px);
+    font-weight: 800;
+    color: #0f1115;
+    line-height: 1.3;
+    cursor: default;
+    transition: transform 0.3s ease;
+}
+
+.strip-title-text span {
+    color: var(--primary);
+    display: inline-block;
+    transition: text-shadow 0.3s ease, color 0.3s ease;
+}
+
+/* Master Grid Card Collective Hover Triggers */
+.strip-wrapper:hover {
+    border-color: var(--primary);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.05), 0 0 25px rgba(255, 74, 17, 0.08);
+}
+
+.strip-wrapper:hover .strip-inline-img {
+    transform: scale(1.05) rotate(4deg);
+    border-color: var(--primary);
+}
+
+.strip-wrapper:hover .edge-stacked {
+    transform: scale(1.05) translateX(8px) rotate(-4deg);
+}
+
+.strip-wrapper:hover .strip-glow-halo {
+    opacity: 1;
+}
+
+.strip-wrapper:hover .strip-title-text span {
+    text-shadow: 0 0 15px rgba(255, 74, 17, 0.22);
+}
+
+/* Action Trigger Elements */
+.strip-action-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 14px 32px;
+    background-color: var(--dark);
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    border-radius: 8px;
+    white-space: nowrap; /* Prevents button word break loops on small layouts */
+    box-shadow: 0 6px 20px rgba(9, 10, 15, 0.1);
+    transition: all 0.3s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.strip-svg-icon {
+    width: 15px;
+    height: 15px;
+    transition: transform 0.3s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.strip-action-btn:hover {
+    background-color: var(--primary);
+    box-shadow: 0 8px 22px var(--primary-glow);
+    transform: translateY(-2px);
+}
+
+.strip-action-btn:hover .strip-svg-icon {
+    transform: translateX(4px);
+}
+
+/* --- ADAPTIVE COMPACT LAYOUT VIEWPORT BREAKPOINTS --- */
+@media (max-width: 992px) {
+    .strip-wrapper {
+        grid-template-columns: 1fr;
+        gap: 20px;
+        padding: 30px;
+        text-align: center;
+    }
+    .strip-image-deck {
+        justify-content: center;
+    }
+    .strip-content-deck {
+        flex-direction: column;
+        gap: 25px;
+    }
+    .strip-action-btn {
+        width: 100%;
+        justify-content: center;
+    }
+}
+
+</style>
+
+<!-- High-Contrast Creative Immersive Footer Deck -->
+<footer class="stackly-footer">
+    <div class="footer-max-container">
+        
+        <!-- Primary Structural Column Array Block Grid -->
+        <div class="footer-columns-grid">
+            
+            <!-- Column 1: Brand Profile Terminal Hub with Integrated Social Vectors -->
+            <div class="footer-col brand-pillar">
+                <a href="#" class="footer-logo-link" onclick="executeScrollToTop(event)" title="Back to Top">
+                    <!-- Brand logo tag configured for your source path assets -->
+                    <img src="./Assests/sports club logo.webp" alt="Apex Sports Club Logo" class="footer-brand-logo">
+                </a>
+                <p class="footer-brand-bio">
+                    Engineering luxury tactical performance frameworks designed to bridge athletic biomechanics with competitive dominance.
+                </p>
+                <div class="company-address-box">
+                    <svg xmlns="http://w3.org" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="addr-vector"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                    <span>MMR Complex, Periyakollappatty, Chinna Thirupathi, Salem, Tamil Nadu 636008</span>
+                </div>
+
+                <!-- High-Visibility Vector Social Media Icon Row -->
+                <div class="footer-social-row">
+                    <!-- Facebook -->
+                    <button class="social-circle-btn" onclick="handleNavigation404(event, '404.html')" title="Follow on Facebook">
+                        <svg xmlns="http://w3.org" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-4h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
+                        </svg>
+                    </button>
+                    <!-- Instagram -->
+                    <button class="social-circle-btn" onclick="handleNavigation404(event, '404.html')" title="Follow on Instagram">
+                        <svg xmlns="http://w3.org" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                            <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                            <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                        </svg>
+                    </button>
+                    <!-- Telegram / Pinterest Replacement -->
+                    <button class="social-circle-btn" onclick="handleNavigation404(event, '404.html')" title="Follow on Telegram">
+                        <svg xmlns="http://w3.org" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <line x1="22" y1="2" x2="11" y2="13"></line>
+                            <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+                        </svg>
+                    </button>
+                    <!-- YouTube -->
+                    <button class="social-circle-btn" onclick="handleNavigation404(event, '404.html')" title="Follow on YouTube">
+                        <svg xmlns="http://w3.org" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 28 0 0 0 1 11.75a29 28 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 28 0 0 0 .46-5.25 29 28 0 0 0-.46-5.33z"></path>
+                            <polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"></polygon>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Column 2: Quick Menus Collection -->
+            <div class="footer-col links-pillar">
+                <h4 class="footer-heading">Quick Links</h4>
+                <div class="footer-links-list">
+                    <a href="about.html" class="footer-link">About Us</a>
+                    <a href="programs.html" class="footer-link">Programs</a>
+                    <a href="blogs.html" class="footer-link">Blogs</a>
+                    <a href="contact.html" class="footer-link">Contact Us</a>
+                </div>
+            </div>
+
+            <!-- Column 3: Corporate Profile Menus -->
+            <div class="footer-col links-pillar">
+                <h4 class="footer-heading">Support Hub</h4>
+                <div class="footer-links-list">
+     <a href="404.html" class="footer-link" onclick="handleNavigation404(event)">Roster Placement Help</a>
+        <a href="404.html" class="footer-link" onclick="handleNavigation404(event)">Court Booking Exchange</a>
+        <a href="404.html" class="footer-link" onclick="handleNavigation404(event)">Athletic FAQ Center</a>
+        <a href="404.html" class="footer-link" onclick="handleNavigation404(event)">Medical Clearance Logs</a>
+                </div>
+            </div>
+
+            <!-- Column 4: Newsletter Subscriber Actions Console -->
+            <div class="footer-col subscribe-pillar">
+                <h4 class="footer-heading">The Playground Dispatch</h4>
+                <p class="subscribe-caption">Subscribe to unlock premium custom blueprint designs and private product launches.</p>
+                
+                <form class="footer-newsletter-form" onsubmit="handleNewsletterRouting(event)">
+                    <div class="input-bezel-hull">
+                        <input type="email" placeholder="Enter your email..." class="newsletter-input" id="newsletterEmailField">
+                        <button type="submit" class="newsletter-submit-btn" title="Subscribe Now">
+                            <svg xmlns="http://w3.org" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                                <line x1="22" y1="2" x2="11" y2="13"></line>
+                                <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+                            </svg>
+                        </button>
+                    </div>
+                    <!-- Absolute Validation Error Toast Container -->
+                    <div class="form-validation-toast" id="validationToast">Please fill out this field.</div>
+                </form>
+            </div>
+
+        </div>
+
+        <!-- Secondary Bottom Regulatory Ledger Bar -->
+        <div class="footer-ledger-base">
+            <div class="ledger-left-copyright">
+                &copy; <span id="currentYear">2026</span> Stackly Club Performance Compounds. All rights reserved.
+            </div>
+            
+            <!-- Privacy Legal Links Stacks -->
+            <div class="ledger-center-legal">
+                <a href="404.html" class="legal-link" onclick="handleNavigation404(event)">Privacy Policy</a>
+                <a href="404.html" class="legal-link" onclick="handleNavigation404(event)">Terms of Service</a>
+                <a href="404.html" class="legal-link" onclick="handleNavigation404(event)">Cookie Management</a>
+            </div>
+
+            <!-- Right-Side Floating Back to Top Control Anchor Button -->
+            <button class="footer-top-arrow-btn" onclick="executeScrollToTop(event)" title="Back to Top">
+                <svg xmlns="http://w3.org" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" class="up-arrow-vector"><line x1="12" y1="19" x2="12" y2="5"></line><polyline points="5 12 12 5 19 12"></polyline></svg>
+            </button>
+        </div>
+
+    </div>
+</footer>
+
+<style>
+    /* --- COMPACT HIGH-CONTRAST SPORTS FOOTER THEME --- */
+.stackly-footer {
+    position: relative;
+    width: 100%;
+    padding: 50px 5% 30px 5%;
+    background-color: #0b0c10; /* Precise dark charcoal-obsidian backdrop */
+    color: #ffffff;
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+    border-top: 1px solid rgba(255, 74, 17, 0.15);
+}
+
+.footer-max-container {
+    width: 100%;
+    max-width: 1300px;
+}
+
+/* Master Grid Alignments Matrix */
+.footer-columns-grid {
+    display: grid;
+    grid-template-columns: 1.3fr 0.7fr 0.7fr 1.3fr; /* Keeps identical original layout structures */
+    gap: 35px;
+    margin-bottom: 50px;
+    align-items: flex-start;
+}
+
+.footer-col {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    text-align: left;
+}
+
+/* Column 1: Brand Profiles details */
+.footer-brand-logo {
+    height: 38px;
+    width: auto;
+    object-fit: contain;
+    filter: drop-shadow(0 0 8px rgba(255, 74, 17, 0.4));
+    transition: transform 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.footer-logo-link:hover .footer-brand-logo {
+    transform: scale(1.05);
+}
+
+.footer-brand-bio {
+    font-size: 13.5px;
+    color: #8c93a0;
+    line-height: 1.6;
+    margin: 18px 0;
+    max-width: 320px;
+}
+
+.company-address-box {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    font-size: 13px;
+    color: #ffffff;
+    line-height: 1.4;
+    max-width: 320px;
+}
+
+.addr-vector {
+    width: 16px;
+    height: 16px;
+    color: #ff4a11; /* System Neon Orange Primary */
+    flex-shrink: 0;
+    margin-top: 2px;
+}
+
+/* Vector Media Grid Deck */
+.footer-social-row {
+    display: flex;
+    gap: 12px;
+    margin-top: 20px;
+}
+
+.social-circle-btn {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    color: #8c93a0;
+    transition: all 0.3s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.social-circle-btn svg {
+    width: 15px;
+    height: 15px;
+}
+
+.social-circle-btn:hover {
+    background: rgba(255, 74, 17, 0.08);
+    border-color: #ff4a11;
+    color: #ff4a11;
+    box-shadow: 0 0 15px rgba(255, 74, 17, 0.4);
+    transform: translateY(-2px);
+}
+
+/* Headings with Coral Indicator Traces */
+.footer-heading {
+    font-size: 15px;
+    font-weight: 700;
+    color: #ffffff;
+    margin-bottom: 22px;
+    position: relative;
+    text-transform: none;
+}
+
+.footer-heading::after {
+    content: '';
+    position: absolute;
+    bottom: -6px;
+    left: 0;
+    width: 25px;
+    height: 2px;
+    background-color: #ff4a11; /* Coral bar indicator line accent */
+}
+
+/* Link Arrays Directory Lists */
+.footer-links-list {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.footer-link {
+    color: #8c93a0;
+    text-decoration: none;
+    font-size: 13.5px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    width: max-content;
+}
+
+.footer-link:hover {
+    color: #ff4a11;
+    transform: translateX(4px);
+    text-shadow: 0 0 10px rgba(255, 74, 17, 0.3);
+}
+
+/* Newsletter Input Components */
+.subscribe-pillar {
+    position: relative;
+}
+
+.subscribe-caption {
+    font-size: 13.5px;
+    color: #8c93a0;
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+
+.footer-newsletter-form {
+    position: relative;
+    width: 100%;
+}
+
+.input-bezel-hull {
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+.newsletter-input {
+    width: 100%;
+    padding: 13px 55px 13px 18px;
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 30px;
+    outline: none;
+    color: #ffffff;
+    font-size: 13.5px;
+    transition: all 0.3s ease;
+}
+
+.newsletter-input:focus {
+    border-color: #ff4a11;
+    background: rgba(255, 74, 17, 0.01);
+    box-shadow: 0 0 15px rgba(255, 74, 17, 0.15);
+}
+
+.newsletter-submit-btn {
+    position: absolute;
+    right: 5px;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background-color: #f75c5c; /* Soft coral action indicator fill */
+    border: none;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #ffffff;
+    transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.newsletter-submit-btn svg {
+    width: 13px;
+    height: 13px;
+    transform: rotate(0deg) translateX(-1px);
+}
+
+.newsletter-submit-btn:hover {
+    background-color: #ff4a11;
+    box-shadow: 0 0 15px rgba(255, 74, 17, 0.4);
+    transform: scale(1.05);
+}
+
+/* Validation Alert Positioning Layer */
+.form-validation-toast {
+    position: absolute;
+    bottom: -25px;
+    left: 15px;
+    color: #f75c5c;
+    font-size: 11.5px;
+    font-weight: 700;
+    opacity: 0;
+    transform: translateY(-4px);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    pointer-events: none;
+}
+
+.form-validation-toast.show-toast {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Secondary Bottom Regulatory Ledger Bar */
+.footer-ledger-base {
+    position: relative;
+    width: 100%;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+    padding-top: 25px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+.ledger-left-copyright {
+    font-size: 13px;
+    color: #555e6b;
+    font-weight: 600;
+}
+
+.ledger-center-legal {
+    display: flex;
+    gap: 25px;
+}
+
+.legal-link {
+    color: #555e6b;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+.legal-link:hover {
+    color: #ffffff;
+    text-shadow: 0 0 8px rgba(255, 255, 255, 0.3);
+}
+
+/* Back to Top Floating Arrow */
+.footer-top-arrow-btn {
+    position: absolute;
+    right: 0;
+    top: 18px;
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #8c93a0;
+    transition: all 0.3s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.up-arrow-vector {
+    width: 14px;
+    height: 14px;
+    transition: transform 0.3s ease;
+}
+
+.footer-top-arrow-btn:hover {
+    background: rgba(255, 74, 17, 0.06);
+    border-color: #ff4a11;
+    color: #ff4a11;
+    box-shadow: 0 0 15px rgba(255, 74, 17, 0.3);
+    transform: translateY(-3px);
+}
+
+.footer-top-arrow-btn:hover .up-arrow-vector {
+    transform: translateY(-2px);
+}
+
+/* --- RIGID ADAPTIVE MEDIA BREAKPOINTS SYSTEM --- */
+@media (max-width: 1024px) {
+    .footer-columns-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 40px;
+    }
+}
+
+@media (max-width: 680px) {
+    .stackly-footer {
+        padding: 50px 6% 80px 6%;
+    }
+    .footer-columns-grid {
+        grid-template-columns: 1fr;
+        gap: 35px;
+        text-align: center;
+    }
+    .footer-col {
+        text-align: center;
+        align-items: center;
+    }
+    .footer-brand-bio, .company-address-box {
+        margin: 15px auto;
+    }
+    .footer-heading::after {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    .footer-ledger-base {
+        flex-direction: column-reverse;
+        text-align: center;
+        padding-top: 30px;
+    }
+    .ledger-center-legal {
+        flex-direction: column;
+        gap: 15px;
+    }
+    .footer-top-arrow-btn {
+        position: fixed;
+        bottom: 25px;
+        right: 25px;
+        top: auto;
+        z-index: 5000;
+        background: #0b0c10;
+        box-shadow: 0 5px 20px rgba(0, 0, 0, 0.6);
+        border-color: rgba(255, 255, 255, 0.1);
+    }
+}
+
+</style>
+
+<script>
+    // --- SPORTS HUB PORTAL ROUTING ENGINE ---
+
+// 1. DYNAMIC NAVIGATION ROUTE SWITCHING TO 404.HTML
+function handleNavigation404(event) {
+    event.preventDefault(); // Intercept default anchor jump processes
+    window.location.href = '404.html';
+}
+
+// 2. BACK TO TOP SMOOTH SCROLL ACTION
+function executeScrollToTop(event) {
+    event.preventDefault();
+    window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+    });
+}
+
+// 3. NEWSLETTER FORMS INPUT FIELD VALIDATORS & ROUTERS
+function handleNewsletterRouting(event) {
+    event.preventDefault(); // Block background page resets
+    
+    const inputField = document.getElementById('newsletterEmailField');
+    const errorToast = document.getElementById('validationToast');
+    
+    if (!inputField || !errorToast) return;
+
+    const emailValueString = inputField.value.trim();
+
+    if (emailValueString === '') {
+        // Void address sequence found: fire notification overlay visibility path
+        errorToast.classList.add('show-toast');
+        inputField.focus();
+        
+        // Hide structural warning notification block after 3 seconds
+        setTimeout(() => {
+            errorToast.classList.remove('show-toast');
+        }, 3000);
+    } else {
+        // Valid structural inputs confirmed: divert target frame directly into 404 template layout
+        errorToast.classList.remove('show-toast');
+        window.location.href = '404.html';
+    }
+}
+
+// Clear error indicator banner instantly upon first alphanumeric key input event
+document.addEventListener('DOMContentLoaded', () => {
+    const inputField = document.getElementById('newsletterEmailField');
+    const errorToast = document.getElementById('validationToast');
+    
+    if (inputField && errorToast) {
+        inputField.addEventListener('input', () => {
+            if (inputField.value.trim() !== '') {
+                errorToast.classList.remove('show-toast');
+            }
+        });
+    }
+});
+
+</script>
+</body>
+</html>
+
